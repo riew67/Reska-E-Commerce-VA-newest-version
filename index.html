@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rere — E-commerce Virtual Assistant | Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio of Rere, an E-commerce Virtual Assistant specializing in Shopify product catalog management, product research, SKU & inventory tracking, and administrative operations." />
+
+  <!-- Editorial Typography: Cormorant Garamond & Playfair Display (Serif) + DM Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            espresso: '#302019',
+            'espresso-deep': '#241712',
+            ivory: '#EDE5D7',
+            beige: '#B69A79',
+            'beige-light': '#D4C2AB',
+            cream: '#F7F3EC',
+            charcoal: '#282522',
+            'charcoal-muted': '#5A534C',
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            editorial: '0.22em',
+            wide: '0.14em',
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Base Editorial Styling & Refined Scrollbar */
+    body {
+      background-color: #F7F3EC;
+      color: #282522;
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .font-editorial {
+      font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    }
+
+    /* Subtle Hairline Borders inspired by High-End Editorial Layouts */
+    .hairline-light {
+      border-color: rgba(237, 229, 215, 0.18);
+    }
+    .hairline-dark {
+      border-color: rgba(48, 32, 25, 0.14);
+    }
+
+    /* Smooth Reveal Animation */
+    .reveal-section {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Editorial Portrait Arch & Frame */
+    .portrait-backdrop {
+      background: linear-gradient(165deg, #C6AE91 0%, #B69A79 55%, #9B7F5E 100%);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F7F3EC;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #B69A79;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #302019;
+    }
+  </style>
+</head>
+<body class="selection:bg-beige selection:text-espresso">
+
+  <!-- ===================================================================== -->
+  <!-- 1. INTEGRATED STICKY MINIMALIST NAVIGATION                            -->
+  <!-- ===================================================================== -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-espresso/95 backdrop-blur-md border-b hairline-light text-ivory">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- Brand Monogram / Name -->
+        <a href="#home" class="group flex items-center gap-3 focus:outline-none">
+          <span class="w-8 h-8 border border-beige/60 flex items-center justify-center font-serif text-lg tracking-widest text-beige group-hover:bg-beige group-hover:text-espresso transition-colors duration-300" id="nav-monogram">R</span>
+          <span class="font-serif text-xl sm:text-2xl tracking-wide text-ivory font-medium" id="nav-brand-name">RERE</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav aria-label="Primary Navigation" class="hidden lg:flex items-center gap-7 text-[11px] uppercase tracking-editorial text-ivory/80">
+          <a href="#home" data-nav="home" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Home</a>
+          <a href="#services" data-nav="services" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Services</a>
+          <a href="#portfolio" data-nav="portfolio" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Portfolio</a>
+          <a href="#experience" data-nav="experience" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Experience</a>
+          <a href="#about" data-nav="about" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">About</a>
+          <a href="#skills" data-nav="skills" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Skills</a>
+          <a href="#certifications" data-nav="certifications" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Certifications</a>
+          <a href="#contact" data-nav="contact" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" type="button" aria-label="Open Navigation Menu" aria-expanded="false" class="lg:hidden p-2.5 text-ivory hover:text-beige focus:outline-none border border-ivory/20">
+          <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 7.5h16.5M3.75 12h16.5M3.75 16.5h16.5" />
+          </svg>
+          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Responsive Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-espresso border-t hairline-light px-6 py-6">
+      <nav aria-label="Mobile Navigation" class="flex flex-col space-y-4 text-xs uppercase tracking-editorial text-ivory/90">
+        <a href="#home" class="mobile-nav-link py-2 border-b hairline-light hover:text-beige">Home</a>
+        <a href="#services" class="mobile-nav-link py-2 border-b hairline-light hover:text-beige">Services</a>
+        <a href="#portfolio" class="mobile-nav-link py-2 border-b hairline-light hover:text-beige">Portfolio</a>
+        <a href="#experience" class="mobile-nav-link py-2 border-b hairline-light hover:text-beige">Experience</a>
+        <a href="#about" class="mobile-nav-link py-2 border-b hairline-light hover:text-beige">About</a>
+        <a href="#skills" class="mobile-nav-link py-2 border-b hairline-light hover:text-beige">Skills</a>
+        <a href="#certifications" class="mobile-nav-link py-2 border-b hairline-light hover:text-beige">Certifications</a>
+        <a href="#contact" class="mobile-nav-link py-2 text-beige font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================== -->
+    <!-- SECTION 01: HERO / HOMEPAGE (Deep Espresso Brown #302019)             -->
+    <!-- ===================================================================== -->
+    <section id="home" class="relative bg-espresso text-ivory pt-28 pb-20 sm:pt-36 sm:pb-28 border-b hairline-light">
+      <!-- Subtle Editorial Inner Frame Lines -->
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="border hairline-light p-6 sm:p-12 lg:p-16 relative">
+          <!-- Corner Editorial Accents -->
+          <span class="hidden sm:block absolute top-3 left-3 w-3 h-3 border-t border-l border-beige/50"></span>
+          <span class="hidden sm:block absolute top-3 right-3 w-3 h-3 border-t border-r border-beige/50"></span>
+          <span class="hidden sm:block absolute bottom-3 left-3 w-3 h-3 border-b border-l border-beige/50"></span>
+          <span class="hidden sm:block absolute bottom-3 right-3 w-3 h-3 border-b border-r border-beige/50"></span>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <!-- Left Column: Editorial Headline & Personal Brand -->
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left order-2 lg:order-1">
+              <div class="inline-flex items-center gap-3 text-[11px] uppercase tracking-editorial text-beige">
+                <span class="w-8 h-[1px] bg-beige/60 hidden sm:inline-block"></span>
+                <span id="hero-role">E-COMMERCE VIRTUAL ASSISTANT</span>
+              </div>
+
+              <div class="space-y-2">
+                <p class="font-serif italic text-xl sm:text-2xl text-beige-light" id="hero-greeting">Hello, I'm Rere</p>
+                <h1 id="hero-headline" class="font-serif text-3xl sm:text-5xl lg:text-[3.35rem] font-normal leading-[1.14] tracking-tight text-ivory">
+                  Your Behind-the-Scenes Partner in E-commerce Operations.
+                </h1>
+              </div>
+
+              <p id="hero-subheadline" class="text-ivory/80 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
+                Helping businesses stay organized through accurate product listings, product research, and reliable administrative support.
+              </p>
+
+              <!-- Primary & Secondary CTAs -->
+              <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <a href="#portfolio" id="hero-primary-cta" class="w-full sm:w-auto px-8 py-3.5 bg-beige text-espresso text-xs uppercase tracking-editorial font-medium hover:bg-ivory transition-colors duration-300 text-center">
+                  Explore My Work
+                </a>
+                <a href="#contact" id="hero-secondary-cta" class="w-full sm:w-auto px-8 py-3.5 border border-ivory/35 text-ivory text-xs uppercase tracking-editorial hover:border-beige hover:text-beige transition-colors duration-300 text-center">
+                  Let's Connect
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Editorial Framed Portrait -->
+            <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center">
+              <div class="relative w-64 sm:w-72 md:w-80">
+                <!-- Offset Editorial Border -->
+                <div class="absolute -inset-3 border border-beige/30 translate-x-2 translate-y-2 pointer-events-none"></div>
+                <div class="relative portrait-backdrop aspect-[3/4] overflow-hidden border border-beige/40 flex items-end justify-center">
+                  <img
+                    id="hero-portrait"
+                    src="foto-hero.jpg"
+                    alt="Rere — E-commerce Virtual Assistant Portrait"
+                    class="w-full h-full object-cover object-top scale-105 transition-transform duration-700 hover:scale-100"
+                    onerror="this.onerror=null; this.src='https://placehold.co/600x800/B69A79/302019?text=RERE+%7C+Portrait';"
+                  />
+                  <!-- Subtle Editorial Caption Tag -->
+                  <div class="absolute bottom-0 inset-x-0 bg-espresso/90 backdrop-blur-sm py-2.5 px-4 border-t border-beige/30 flex items-center justify-between text-[10px] uppercase tracking-editorial text-ivory/90">
+                    <span id="hero-badge-name">Rere</span>
+                    <span class="text-beige">Operations &amp; Catalog</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 02: SERVICES (Soft Cream #F7F3EC)                             -->
+    <!-- ===================================================================== -->
+    <section id="services" class="bg-cream text-charcoal py-20 sm:py-28 border-b hairline-dark reveal-section">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <!-- Section Header -->
+        <div class="max-w-2xl mb-14 sm:mb-16">
+          <p class="text-[11px] uppercase tracking-editorial text-beige font-medium mb-3">01 / SERVICES</p>
+          <h2 id="services-title" class="font-serif text-3xl sm:text-5xl font-normal text-espresso leading-tight">
+            How I Can Support Your Business
+          </h2>
+          <p class="mt-4 text-charcoal-muted text-sm sm:text-base leading-relaxed">
+            Structured, detail-driven operational support tailored to keep your online store accurate, organized, and ready for customers.
+          </p>
+        </div>
+
+        <!-- 4 Editorial Service Cards Grid (Rendered Dynamically) -->
+        <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <!-- Populated by JavaScript from portfolioData.services -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 03: PORTFOLIO / SELECTED WORK (Warm Ivory #EDE5D7)            -->
+    <!-- ===================================================================== -->
+    <section id="portfolio" class="bg-ivory text-charcoal py-20 sm:py-28 border-b hairline-dark reveal-section">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 sm:mb-16 gap-6">
+          <div class="max-w-2xl">
+            <p class="text-[11px] uppercase tracking-editorial text-espresso/70 font-medium mb-3">02 / PORTFOLIO</p>
+            <h2 id="portfolio-title" class="font-serif text-3xl sm:text-5xl font-normal text-espresso leading-tight">
+              Selected Projects
+            </h2>
+            <p id="portfolio-subtitle" class="mt-4 text-charcoal-muted text-sm sm:text-base leading-relaxed">
+              Self-initiated practice projects created to demonstrate structured Shopify product catalog management, SKU &amp; inventory tracking, and order fulfillment workflows.
+            </p>
+          </div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-cream border hairline-dark text-[11px] uppercase tracking-wider text-espresso">
+            <span class="w-2 h-2 rounded-full bg-beige"></span>
+            <span>Self-Initiated Practice Work</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Project Cards Grid -->
+        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Populated by JavaScript from portfolioData.projects -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 04: PROFESSIONAL EXPERIENCE (Deep Espresso Brown #302019)     -->
+    <!-- ===================================================================== -->
+    <section id="experience" class="bg-espresso text-ivory py-20 sm:py-28 border-b hairline-light reveal-section">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-14 sm:mb-16">
+          <p class="text-[11px] uppercase tracking-editorial text-beige mb-3">03 / PROFESSIONAL EXPERIENCE</p>
+          <h2 id="experience-title" class="font-serif text-3xl sm:text-5xl font-normal text-ivory leading-tight">
+            Beyond the Digital Workspace
+          </h2>
+          <div class="mt-5 inline-block px-4 py-1.5 border border-beige/40 text-xs uppercase tracking-editorial text-beige" id="experience-role">
+            Production Operator | Denim Manufacturing
+          </div>
+          <p id="experience-summary" class="mt-6 text-ivory/80 text-base sm:text-lg leading-relaxed font-light">
+            Experience in a fast-paced manufacturing environment cultivated strong operational discipline, meticulous attention to detail, consistent productivity management, and practical problem-solving under measurable targets.
+          </p>
+        </div>
+
+        <!-- Three Minimalist Editorial Numerical Statistics -->
+        <div id="experience-metrics-grid" class="grid grid-cols-1 md:grid-cols-3 border hairline-light divide-y md:divide-y-0 md:divide-x divide-ivory/15">
+          <!-- Populated by JavaScript from portfolioData.experience.metrics -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 05: ABOUT ME (Soft Cream #F7F3EC)                             -->
+    <!-- ===================================================================== -->
+    <section id="about" class="bg-cream text-charcoal py-20 sm:py-28 border-b hairline-dark reveal-section">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Left Column: Editorial Portrait -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-sm">
+              <div class="aspect-[4/5] bg-ivory border hairline-dark p-3 shadow-sm">
+                <div class="w-full h-full bg-[#DFD5C5] overflow-hidden relative">
+                  <img
+                    id="about-portrait"
+                    src="foto-about.jpg"
+                    alt="Rere — Professional Portrait"
+                    class="w-full h-full object-cover object-top"
+                    onerror="this.onerror=null; this.src='https://placehold.co/600x750/EDE5D7/302019?text=RERE';"
+                  />
+                </div>
+              </div>
+              <div class="mt-3 flex items-center justify-between text-[11px] uppercase tracking-editorial text-charcoal-muted">
+                <span>Profile</span>
+                <span id="about-caption-role">E-commerce VA</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Biography, Career Transition & Values -->
+          <div class="lg:col-span-7 space-y-6">
+            <p class="text-[11px] uppercase tracking-editorial text-beige font-medium">04 / ABOUT ME</p>
+            <h2 id="about-title" class="font-serif text-3xl sm:text-5xl font-normal text-espresso leading-tight">
+              A Little About Me
+            </h2>
+
+            <div class="space-y-4 text-charcoal/90 text-base leading-relaxed" id="about-paragraphs">
+              <!-- Populated by JavaScript from portfolioData.about -->
+            </div>
+
+            <!-- Career Transition Highlight Box -->
+            <div class="p-6 bg-ivory border-l-2 border-espresso space-y-2">
+              <h3 class="font-serif text-xl text-espresso font-medium">Career Transition</h3>
+              <p id="about-transition" class="text-sm text-charcoal-muted leading-relaxed">
+                <!-- Populated by JavaScript -->
+              </p>
+            </div>
+
+            <!-- Core Professional Values -->
+            <div class="pt-2">
+              <p class="text-[11px] uppercase tracking-editorial text-charcoal-muted mb-3">Core Work Principles</p>
+              <div id="about-values" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <!-- Populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 06: SKILLS & TOOLS (Warm Ivory #EDE5D7)                       -->
+    <!-- ===================================================================== -->
+    <section id="skills" class="bg-ivory text-charcoal py-20 sm:py-28 border-b hairline-dark reveal-section">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl mb-14">
+          <p class="text-[11px] uppercase tracking-editorial text-espresso/70 font-medium mb-3">05 / CAPABILITIES</p>
+          <h2 id="skills-title" class="font-serif text-3xl sm:text-5xl font-normal text-espresso leading-tight">
+            Skills &amp; Tools
+          </h2>
+          <p class="mt-4 text-charcoal-muted text-sm sm:text-base">
+            Core competencies and everyday platforms I work with to keep product catalogs, spreadsheets, and store operations running smoothly.
+          </p>
+        </div>
+
+        <!-- Three Clean Editorial Categories -->
+        <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Populated by JavaScript from portfolioData.skills -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 07: CERTIFICATIONS (Soft Cream #F7F3EC)                       -->
+    <!-- ===================================================================== -->
+    <section id="certifications" class="bg-cream text-charcoal py-20 sm:py-28 border-b hairline-dark reveal-section">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl mb-14">
+          <p class="text-[11px] uppercase tracking-editorial text-beige font-medium mb-3">06 / CREDENTIALS</p>
+          <h2 id="certifications-title" class="font-serif text-3xl sm:text-5xl font-normal text-espresso leading-tight">
+            Certifications &amp; Professional Development
+          </h2>
+          <p class="mt-4 text-charcoal-muted text-sm sm:text-base">
+            Continuous learning and verified training supporting modern digital workflows.
+          </p>
+        </div>
+
+        <!-- Dynamic Certifications Grid -->
+        <div id="certifications-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Populated by JavaScript from portfolioData.certifications -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SECTION 08: CONTACT & MINIMAL FOOTER (Deep Espresso Brown #302019)    -->
+    <!-- ===================================================================== -->
+    <section id="contact" class="bg-espresso text-ivory pt-20 sm:pt-28 pb-12 reveal-section">
+      <div class="max-w-5xl mx-auto px-5 sm:px-8 text-center">
+        <p class="text-[11px] uppercase tracking-editorial text-beige mb-4">07 / CONTACT</p>
+        <h2 id="contact-title" class="font-serif text-4xl sm:text-6xl font-normal text-ivory leading-tight">
+          Let's Work Together.
+        </h2>
+        <p id="contact-subtitle" class="mt-6 text-ivory/80 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          Looking for reliable support with your e-commerce operations? I'd love to hear about your business and how I can help.
+        </p>
+
+        <!-- Primary Contact Actions -->
+        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a id="contact-email-cta" href="mailto:rere.va.portfolio@example.com" class="w-full sm:w-auto px-9 py-4 bg-beige text-espresso text-xs uppercase tracking-editorial font-medium hover:bg-ivory transition-colors duration-300">
+            Get in Touch
+          </a>
+          <a id="contact-linkedin-cta" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-9 py-4 border border-ivory/35 text-ivory text-xs uppercase tracking-editorial hover:border-beige hover:text-beige transition-colors duration-300">
+            LinkedIn Profile
+          </a>
+        </div>
+
+        <!-- Direct Email Copy Pill -->
+        <div class="mt-8 inline-flex items-center gap-3 px-5 py-2.5 border hairline-light bg-espresso-deep/60 text-xs text-ivory/80">
+          <span id="contact-email-display">rere.va.portfolio@example.com</span>
+          <button id="copy-email-btn" type="button" class="text-beige hover:text-ivory uppercase tracking-wider text-[10px] border-l hairline-light pl-3 transition-colors">
+            Copy
+          </button>
+        </div>
+
+        <!-- Minimal Editorial Footer -->
+        <footer class="mt-20 pt-8 border-t hairline-light flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory/60">
+          <p id="footer-copyright">&copy; 2026 Rere. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            <a href="#home" class="hover:text-beige transition-colors">Back to Top</a>
+            <button id="open-admin-btn" type="button" class="hover:text-beige transition-colors underline decoration-ivory/30 underline-offset-4">
+              Owner Content Manager
+            </button>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================== -->
+  <!-- CASE STUDY MODAL (Opens within the same unified website)              -->
+  <!-- ===================================================================== -->
+  <div id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title" class="fixed inset-0 z-50 hidden overflow-y-auto bg-espresso/85 backdrop-blur-sm p-3 sm:p-6 md:p-10">
+    <div class="max-w-5xl mx-auto bg-cream text-charcoal border border-beige/40 shadow-2xl overflow-hidden my-4">
+      <!-- Sticky Top Bar inside Case Study -->
+      <div class="sticky top-0 z-10 bg-espresso text-ivory px-5 sm:px-8 py-4 flex items-center justify-between border-b hairline-light">
+        <button id="close-case-study-top" type="button" class="inline-flex items-center gap-2 text-xs uppercase tracking-editorial text-beige hover:text-ivory transition-colors">
+          <span>&larr;</span>
+          <span>Back to Selected Projects</span>
+        </button>
+        <span id="modal-project-label" class="hidden sm:inline-block text-[10px] uppercase tracking-editorial px-3 py-1 border border-beige/40 text-beige">
+          Self-Initiated Practice Project
+        </span>
+      </div>
+
+      <!-- Case Study Dynamic Body -->
+      <div id="case-study-content" class="p-6 sm:p-10 md:p-12 space-y-10">
+        <!-- Populated dynamically when a project is clicked -->
+      </div>
+
+      <!-- Bottom Return Bar -->
+      <div class="bg-ivory px-6 sm:px-10 py-6 border-t hairline-dark flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-charcoal-muted">Self-initiated practice case study created for portfolio demonstration.</p>
+        <button id="close-case-study-bottom" type="button" class="px-6 py-3 bg-espresso text-ivory text-xs uppercase tracking-editorial hover:bg-beige hover:text-espresso transition-colors">
+          &larr; Return to Portfolio
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- OPTIONAL PASSWORD-PROTECTED OWNER CONTENT MANAGER MODAL               -->
+  <!-- Allows Rere to edit content visually & export updated portfolioData.js-->
+  <!-- ===================================================================== -->
+  <div id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-modal-title" class="fixed inset-0 z-50 hidden overflow-y-auto bg-espresso/90 backdrop-blur-sm p-4 sm:p-8">
+    <div class="max-w-3xl mx-auto bg-cream text-charcoal border border-beige/50 shadow-2xl overflow-hidden my-6">
+      <div class="bg-espresso text-ivory px-6 py-4 flex items-center justify-between border-b hairline-light">
+        <div>
+          <p class="text-[10px] uppercase tracking-editorial text-beige">Owner Access</p>
+          <h3 id="admin-modal-title" class="font-serif text-xl text-ivory">Portfolio Content Manager</h3>
+        </div>
+        <button id="close-admin-btn" type="button" class="text-ivory/80 hover:text-beige text-sm uppercase tracking-wider px-3 py-1 border hairline-light">
+          Close &times;
+        </button>
+      </div>
+
+      <!-- Login Gate -->
+      <div id="admin-login-view" class="p-6 sm:p-10 space-y-5">
+        <p class="text-sm text-charcoal-muted leading-relaxed">
+          Enter your owner password to update personal details, links, certifications, or projects directly in your browser, or export a ready-to-save <code class="bg-ivory px-1.5 py-0.5 text-espresso">portfolioData.js</code> configuration file.
+        </p>
+        <div class="p-3 bg-ivory border hairline-dark text-xs text-charcoal-muted">
+          Demo Passcode: <strong class="text-espresso">rere2026</strong> (For permanent public updates across all visitors, export the updated configuration file and replace the data block in your hosted code.)
+        </div>
+        <form id="admin-login-form" class="space-y-4">
+          <div>
+            <label for="admin-password-input" class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1.5">Passcode</label>
+            <input id="admin-password-input" type="password" placeholder="Enter passcode..." class="w-full px-4 py-3 bg-white border hairline-dark text-sm focus:outline-none focus:border-espresso" required />
+          </div>
+          <p id="admin-login-error" class="hidden text-xs text-red-700">Incorrect passcode. Please try again.</p>
+          <button type="submit" class="px-6 py-3 bg-espresso text-ivory text-xs uppercase tracking-editorial hover:bg-beige hover:text-espresso transition-colors">
+            Unlock Editor
+          </button>
+        </form>
+      </div>
+
+      <!-- Authenticated Editor View -->
+      <div id="admin-editor-view" class="hidden p-6 sm:p-8 space-y-8">
+        <!-- Personal & Contact Info -->
+        <div class="space-y-4">
+          <h4 class="font-serif text-2xl text-espresso border-b hairline-dark pb-2">A. Personal &amp; Contact Information</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Display Name</label>
+              <input id="edit-name" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Professional Title</label>
+              <input id="edit-role" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Email Address</label>
+              <input id="edit-email" type="email" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">LinkedIn Profile URL</label>
+              <input id="edit-linkedin" type="url" placeholder="https://www.linkedin.com/in/your-profile" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Hero Portrait URL</label>
+              <input id="edit-hero-photo" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">About Portrait URL</label>
+              <input id="edit-about-photo" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Hero Main Headline</label>
+            <input id="edit-headline" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
+          </div>
+        </div>
+
+        <!-- Certifications Manager -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between border-b hairline-dark pb-2">
+            <h4 class="font-serif text-2xl text-espresso">B. Certifications</h4>
+            <button id="admin-add-cert-btn" type="button" class="px-3 py-1.5 bg-espresso text-ivory text-[11px] uppercase tracking-wider hover:bg-beige hover:text-espresso transition-colors">
+              + Add Certificate
+            </button>
+          </div>
+          <div id="admin-cert-list" class="space-y-4"></div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="pt-4 border-t hairline-dark flex flex-wrap items-center justify-between gap-3">
+          <button id="admin-reset-btn" type="button" class="px-4 py-2.5 border hairline-dark text-xs uppercase tracking-wider text-charcoal-muted hover:text-espresso">
+            Reset to Defaults
+          </button>
+          <div class="flex flex-wrap gap-3">
+            <button id="admin-export-btn" type="button" class="px-5 py-2.5 border border-espresso text-espresso text-xs uppercase tracking-wider hover:bg-ivory">
+              Download portfolioData.js
+            </button>
+            <button id="admin-save-btn" type="button" class="px-6 py-2.5 bg-espresso text-ivory text-xs uppercase tracking-wider hover:bg-beige hover:text-espresso transition-colors">
+              Save &amp; Apply Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subtle Notification Toast (Replaces browser alert) -->
+  <div id="toast-banner" class="fixed bottom-5 right-5 z-50 hidden bg-espresso text-ivory border border-beige px-5 py-3 shadow-lg text-xs tracking-wide">
+    <span id="toast-message">Updated successfully.</span>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- CENTRALIZED PORTFOLIO CONFIGURATION (portfolioData)                   -->
+  <!-- Edit this single configuration object to update the entire website.   -->
+  <!-- ===================================================================== -->
+  <script>
+    const defaultPortfolioData = {
+      /* A. PERSONAL INFORMATION */
+      personal: {
+        name: "Rere",
+        monogram: "R",
+        role: "E-commerce Virtual Assistant",
+        heroPortraitUrl: "foto-hero.jpg",
+        aboutPortraitUrl: "foto-about.jpg",
+        email: "reskarliani@gmail.com",
+        linkedinUrl: "", // Masukkan link LinkedIn-mu di sini nanti di antara tanda kutip
+        copyrightYear: "2026"
+      },
+
+      /* B. HERO SECTION */
+      hero: {
+        greeting: "Hello, I'm Rere",
+        headline: "Your Behind-the-Scenes Partner in E-commerce Operations.",
+        supportingText: "Helping businesses stay organized through accurate product listings, product research, and reliable administrative support.",
+        primaryCtaLabel: "Explore My Work",
+        secondaryCtaLabel: "Let's Connect"
+      },
+
+      /* C. SERVICES */
+      servicesSection: {
+        title: "How I Can Support Your Business",
+        items: [
+          {
+            number: "01",
+            title: "Product Listing Management",
+            icon: "catalog",
+            description: "Structured and accurate storefront catalog preparation so every item is presented clearly and consistently.",
+            bullets: [
+              "Product uploads",
+              "Product titles and descriptions",
+              "Pricing and SKUs",
+              "Product variations"
+            ]
+          },
+          {
+            number: "02",
+            title: "Product Research",
+            icon: "research",
+            description: "Methodical gathering and structuring of product details and market benchmarks to support informed merchandising.",
+            bullets: [
+              "Product information gathering",
+              "Competitor research",
+              "Product data organization"
+            ]
+          },
+          {
+            number: "03",
+            title: "Inventory & Order Tracking",
+            icon: "inventory",
+            description: "Clean spreadsheet-based tracking systems that keep stock levels visible and daily order statuses organized.",
+            bullets: [
+              "Inventory monitoring",
+              "SKU organization",
+              "Order status tracking using spreadsheets"
+            ]
+          },
+          {
+            number: "04",
+            title: "E-commerce Administrative Support",
+            icon: "admin",
+            description: "Dependable back-office assistance to maintain clean records, organized catalogs, and smooth daily routines.",
+            bullets: [
+              "Data entry",
+              "Catalog organization",
+              "General administrative assistance"
+            ]
+          }
+        ]
+      },
+
+      /* D. PORTFOLIO PROJECTS */
+      portfolioSection: {
+        title: "Selected Projects",
+        subtitle: "Self-initiated practice projects designed to demonstrate structured e-commerce workflows, catalog organization, and operational tracking.",
+        projects: [
+          {
+            id: "shopify-product-catalog",
+            number: "PROJECT 01",
+            label: "Self-Initiated Practice Project",
+            category: "Storefront & Catalog Setup",
+            title: "Shopify Product Catalog Management",
+            shortDescription: "End-to-end catalog setup for two fictional practice brands (Soleil & Co. and Veloce), featuring structured titles, descriptions, SKUs, variants, and collections.",
+            tools: ["Shopify", "Product Categorization", "SKU Structuring"],
+            overview: "This self-initiated practice project demonstrates how a clean, customer-ready Shopify product catalog is structured from raw product details into organized collections. Two distinct fictional practice brands—Soleil & Co. (Botanical Skincare) and Veloce (Minimalist Activewear)—were built with two products each, complete with SKU codes, pricing, variants, and collection assignments.",
+            objectives: [
+              "Create consistent, scannable product titles and structured descriptions.",
+              "Assign standardized SKU formats across brands, categories, and product variants.",
+              "Configure product options (sizes and shades) alongside clear pricing.",
+              "Organize products into logical collections and categories for intuitive store navigation."
+            ],
+            workflow: [
+              "Drafted product copy, specifications, pricing, and standardized SKU codes in a preparation sheet.",
+              "Created product entries in Shopify with clear titles, benefit-led descriptions, and product types.",
+              "Configured multi-option product variants (volume sizes and color/fit options) with individual SKUs.",
+              "Grouped items into curated collections and verified storefront presentation."
+            ],
+            keySkills: [
+              "Shopify Product Management",
+              "Product Listing & Copy Formatting",
+              "Variant & Pricing Configuration",
+              "SKU Naming Conventions",
+              "Collection & Category Organization"
+            ],
+            mockupType: "shopify",
+            practiceBrands: [
+              {
+                brandName: "Soleil & Co.",
+                niche: "Botanical Skincare (Fictional Practice Brand)",
+                collection: "Daily Hydration Collection",
+                products: [
+                  {
+                    title: "Neroli Dew Balancing Mist",
+                    sku: "SOL-SKN-001",
+                    price: "$28.00",
+                    category: "Facial Mists & Toners",
+                    variants: "50 ml ($28.00) / 100 ml ($44.00)",
+                    description: "Lightweight botanical facial mist formulated with neroli blossom water and glycerin to refresh skin throughout the day."
+                  },
+                  {
+                    title: "Squalane Barrier Moisture Cream",
+                    sku: "SOL-SKN-002",
+                    price: "$36.00",
+                    category: "Moisturizers",
+                    variants: "Standard Jar 50g ($36.00) / Refill Pod 50g ($30.00)",
+                    description: "Fragrance-free daily barrier cream crafted with plant-derived squalane and oat extract for lasting comfort."
+                  }
+                ]
+              },
+              {
+                brandName: "Veloce",
+                niche: "Minimalist Essentials & Activewear (Fictional Practice Brand)",
+                collection: "Studio Core Collection",
+                products: [
+                  {
+                    title: "Sculpt Seamless Studio Tank",
+                    sku: "VEL-APP-101",
+                    price: "$42.00",
+                    category: "Tops",
+                    variants: "Espresso / Ivory / Charcoal — Sizes XS, S, M, L",
+                    description: "Breathable four-way stretch ribbed tank designed with a clean square neckline for low-impact studio sessions."
+                  },
+                  {
+                    title: "Motion High-Rise 7/8 Legging",
+                    sku: "VEL-APP-102",
+                    price: "$68.00",
+                    category: "Bottoms",
+                    variants: "Espresso / Charcoal — Sizes XS, S, M, L",
+                    description: "Matte-finish high-rise legging featuring a supportive waistband and concealed interior key pocket."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: "sku-inventory-tracking",
+            number: "PROJECT 02",
+            label: "Self-Initiated Practice Project",
+            category: "Inventory Operations",
+            title: "SKU & Inventory Tracking System",
+            shortDescription: "A structured Google Sheets inventory tracker monitoring SKU records, real-time stock quantities, reorder thresholds, and automated stock status indicators.",
+            tools: ["Google Sheets", "Data Organization", "Conditional Formatting"],
+            overview: "Designed as a practical back-office spreadsheet solution for small e-commerce stores, this Google Sheets inventory tracker centralizes product SKUs, category tags, current stock levels, and reorder points so store owners can spot low-stock items before stockouts occur.",
+            objectives: [
+              "Establish a single source of truth for all active product SKUs and variants.",
+              "Track available stock quantities against defined minimum reorder thresholds.",
+              "Use clear status indicators (In Stock, Low Stock, Restock Needed) for rapid daily review."
+            ],
+            workflow: [
+              "Structured standardized columns: SKU ID, Brand/Collection, Product Name, Variant, Stock Qty, Reorder Level, and Status.",
+              "Entered fictional practice catalog records across skincare and apparel items.",
+              "Applied conditional status logic and clean visual hierarchy for fast operational scanning."
+            ],
+            keySkills: [
+              "SKU Management",
+              "Inventory Monitoring",
+              "Spreadsheet Structuring",
+              "Data Accuracy & Verification"
+            ],
+            mockupType: "inventory",
+            spreadsheetRows: [
+              { sku: "SOL-SKN-001-50", product: "Neroli Dew Balancing Mist (50 ml)", category: "Skincare", stock: 48, threshold: 15, status: "In Stock" },
+              { sku: "SOL-SKN-002-50", product: "Squalane Barrier Cream (50g)", category: "Skincare", stock: 11, threshold: 15, status: "Low Stock" },
+              { sku: "VEL-APP-101-ESP-M", product: "Sculpt Studio Tank — Espresso / M", category: "Apparel", stock: 34, threshold: 10, status: "In Stock" },
+              { sku: "VEL-APP-102-CHR-S", product: "Motion 7/8 Legging — Charcoal / S", category: "Apparel", stock: 4, threshold: 12, status: "Restock Needed" },
+              { sku: "VEL-APP-101-IVR-S", product: "Sculpt Studio Tank — Ivory / S", category: "Apparel", stock: 22, threshold: 10, status: "In Stock" }
+            ]
+          },
+          {
+            id: "ecommerce-order-tracking",
+            number: "PROJECT 03",
+            label: "Self-Initiated Practice Project",
+            category: "Fulfillment & Order Logs",
+            title: "E-commerce Order Tracking System",
+            shortDescription: "An organized Google Sheets order log tracking dummy order IDs, ordered items, order dates, fulfillment stages, and courier tracking statuses.",
+            tools: ["Google Sheets", "Order Administration", "Process Tracking"],
+            overview: "This self-initiated practice project simulates a daily order management log used to monitor incoming customer orders from payment confirmation through packing, dispatch, and final delivery—reducing missed shipments and simplifying status updates.",
+            objectives: [
+              "Maintain a chronological log of fictional orders with unique Order IDs and dates.",
+              "Link each order accurately to product names, SKUs, and quantities.",
+              "Track fulfillment stages clearly across Pending, Processing, Shipped, and Delivered."
+            ],
+            workflow: [
+              "Built a clean order tracking table with Order ID, Order Date, Product & SKU, Qty, Fulfillment Status, and Tracking Reference.",
+              "Populated realistic dummy order scenarios covering multiple fulfillment stages.",
+              "Organized status filtering so pending shipments can be prioritized each morning."
+            ],
+            keySkills: [
+              "Order Status Tracking",
+              "Structured Data Entry",
+              "Attention to Detail",
+              "Operational Record Keeping"
+            ],
+            mockupType: "orders",
+            orderRows: [
+              { orderId: "#ORD-1041", date: "2026-10-18", item: "Neroli Dew Balancing Mist (100 ml)", sku: "SOL-SKN-001-100", qty: 1, status: "Delivered", tracking: "TRK-884920" },
+              { orderId: "#ORD-1042", date: "2026-10-19", item: "Sculpt Studio Tank — Espresso / M", sku: "VEL-APP-101-ESP-M", qty: 2, status: "Shipped", tracking: "TRK-885104" },
+              { orderId: "#ORD-1043", date: "2026-10-20", item: "Squalane Barrier Moisture Cream", sku: "SOL-SKN-002-50", qty: 1, status: "Processing", tracking: "Pending Label" },
+              { orderId: "#ORD-1044", date: "2026-10-21", item: "Motion High-Rise 7/8 Legging — S", sku: "VEL-APP-102-CHR-S", qty: 1, status: "Pending", tracking: "Awaiting Dispatch" }
+            ]
+          },
+          {
+            id: "return-refund-dashboard",
+            number: "PROJECT 04",
+            label: "Self-Initiated Practice Project",
+            category: "Post-Purchase Operations",
+            title: "Return & Refund Management Dashboard",
+            shortDescription: "Structured Notion & spreadsheet dashboard tracking return IDs, return reasons, item conditions, refund resolutions, and return distribution analytics.",
+            tools: ["Notion", "Google Sheets", "Return Analytics"],
+            overview: "Built an organized Return & Refund Dashboard to monitor post-purchase return requests (#RET-2001 to #RET-2005), evaluate item conditions against policy rules, assign appropriate resolutions (Full Refund, Replacement/Exchange, Store Credit), and summarize refund totals ($310.00 across 5 cases).",
+            objectives: [
+              "Log every Return ID alongside its Original Order ID and customer contact details.",
+              "Standardize return reason categorization (Defective/Damaged, Wrong Size, Wrong Item Sent, Changed Mind).",
+              "Track item condition inspections to determine accurate resolution actions and analyze refund distributions."
+            ],
+            workflow: [
+              "Recorded incoming customer return requests with unique Return IDs and original order references.",
+              "Verified item condition status (Damaged, Unopened, Opened - Good) and assigned resolution actions.",
+              "Compiled a Product Return Analysis & Summary table tracking total case counts and refund amounts by reason."
+            ],
+            keySkills: [
+              "Return & Refund Administration",
+              "Policy-Based Issue Resolution",
+              "Data Summarization & Pivot Analysis",
+              "Customer Record Accuracy"
+            ],
+            mockupType: "returns",
+            returnRows: [
+              { returnId: "#RET-2001", orderId: "#VA-1004", customer: "Sarah Jenkins", reason: "Defective/Damaged", condition: "Damaged", action: "Replacement/Exchange", amount: "$30.00" },
+              { returnId: "#RET-2002", orderId: "#VA-1008", customer: "Michael Chen", reason: "Wrong Size", condition: "Unopened", action: "Store Credit", amount: "$45.00" },
+              { returnId: "#RET-2003", orderId: "#VA-1012", customer: "Amanda Vance", reason: "Wrong Item Sent", condition: "Unopened", action: "Full Refund", amount: "$120.00" },
+              { returnId: "#RET-2004", orderId: "#VA-1015", customer: "David Miller", reason: "Changed Mind", condition: "Opened - Good", action: "Full Refund", amount: "$85.00" },
+              { returnId: "#RET-2005", orderId: "#VA-1019", customer: "Jessica Taylor", reason: "Defective/Damaged", condition: "Damaged", action: "Full Refund", amount: "$30.00" }
+            ]
+          },
+          {
+            id: "customer-support-sop",
+            number: "PROJECT 05",
+            label: "Self-Initiated Practice Project",
+            category: "Customer Experience & SOP",
+            title: "Customer Support & Operations SOP",
+            shortDescription: "Standardized Notion operational handbook featuring priority workflows and ready-to-use customer support response scripts.",
+            tools: ["Notion", "Customer Support Scripts", "SOP Documentation"],
+            overview: "Created a centralized Customer Support & Operations SOP in Notion to standardize daily operational priorities and equip support workflows with clear, polite, and consistent response templates for common customer inquiries such as order status and tracking updates.",
+            objectives: [
+              "Establish clear task status tracking and priority levels (High Priority) for operational documentation.",
+              "Standardize customer communication tone with structured Trigger-and-Response scripts.",
+              "Speed up ticket handling for recurring scenarios like shipping updates and tracking link requests."
+            ],
+            workflow: [
+              "Structured the Notion SOP workspace with status properties, priority tags, and categorized script sections.",
+              "Drafted clear trigger conditions and empathetic response templates with bracketed dynamic placeholders.",
+              "Reviewed scripts for clarity, warmth, and operational accuracy."
+            ],
+            keySkills: [
+              "SOP Documentation",
+              "Customer Support Communication",
+              "Template & Script Writing",
+              "Workflow Standardization"
+            ],
+            mockupType: "sop",
+            sopScenarios: [
+              {
+                scenario: "Scenario A: Order Status & Shipping Update",
+                trigger: "Customer asks where their order is or requests tracking info.",
+                response: "\"Hi [Customer Name]! Thanks for reaching out. Your order #[Order Number] is on its way! You can track it here: [Tracking Link].\""
+              },
+              {
+                scenario: "Scenario B: Return & Exchange Inquiry",
+                trigger: "Customer requests a size exchange or reports a damaged item upon arrival.",
+                response: "\"Hi [Customer Name], I'm sorry to hear about the issue with order #[Order Number]. I've logged return #[Return ID] and we'll get this sorted right away.\""
+              }
+            ]
+          }
+        ]
+      },
+
+      /* E. PROFESSIONAL EXPERIENCE */
+      experience: {
+        title: "Beyond the Digital Workspace",
+        position: "Production Operator | Denim Manufacturing",
+        summary: "Working in a precision-driven manufacturing environment built a strong foundation in operational discipline, meticulous attention to detail, steady productivity management, and calm problem-solving—qualities I bring directly into e-commerce store operations.",
+        metrics: [
+          {
+            value: "92%",
+            label: "OPERATIONAL EFFICIENCY",
+            description: "Achieved 92% production efficiency, the highest among three operators working under comparable production conditions."
+          },
+          {
+            value: "8%",
+            label: "QUALITY CONTROL",
+            description: "Recorded an 8% rejection rate, the lowest among the three operators."
+          },
+          {
+            value: "2,506.7",
+            label: "PRODUCTIVITY MANAGEMENT",
+            description: "Achieved 2,506.7 in total production output, exceeding the most senior operator's output while maintaining higher efficiency and a lower rejection rate."
+          }
+        ]
+      },
+
+      /* F. ABOUT ME */
+      about: {
+        title: "A Little About Me",
+        paragraphs: [
+          "I'm an aspiring E-commerce Virtual Assistant with hands-on practice in Shopify store operations and Google Sheets. My background in manufacturing has taught me the importance of accuracy, consistency, accountability, and working efficiently toward goals.",
+          "I'm continuously developing my digital and administrative skills to help businesses manage their daily e-commerce operations more effectively."
+        ],
+        careerTransition: "Transitioning from physical production operations into digital e-commerce support was a natural step: both worlds rely on clean standard procedures, zero-error data handling, and reliable daily execution behind the scenes.",
+        values: [
+          { title: "Accuracy", subtitle: "Clean SKUs & listings" },
+          { title: "Consistency", subtitle: "Reliable daily routines" },
+          { title: "Accountability", subtitle: "Ownership of tasks" },
+          { title: "Efficiency", subtitle: "Structured workflows" }
+        ]
+      },
+
+      /* G. SKILLS & TOOLS */
+      skillsSection: {
+        title: "Skills & Tools",
+        categories: [
+          {
+            category: "E-commerce",
+            items: [
+              "Shopify Product Management",
+              "Product Listing",
+              "Product Catalog Organization",
+              "SKU Management",
+              "Inventory Tracking",
+              "Order Tracking"
+            ]
+          },
+          {
+            category: "Administrative",
+            items: [
+              "Data Entry",
+              "Spreadsheet Management",
+              "Product Research",
+              "Attention to Detail",
+              "Time Management"
+            ]
+          },
+          {
+            category: "Tools",
+            items: [
+              "Shopify",
+              "Google Sheets",
+              "Google Docs",
+              "Microsoft Excel"
+            ]
+          }
+        ]
+      },
+
+      /* H. CERTIFICATIONS */
+      certificationsSection: {
+        title: "Certifications & Professional Development",
+        items: [
+          {
+            title: "AI Career Readiness",
+            organization: "ASEAN Digital Academy",
+            date: "2026",
+            description: "Foundational training in practical AI productivity tools, digital workplace readiness, and structured problem-solving.",
+            imageUrl: "",
+            credentialUrl: ""
+          }
+        ]
+      },
+
+      /* I. CONTACT SECTION */
+      contactSection: {
+        title: "Let's Work Together.",
+        supportingText: "Looking for reliable support with your e-commerce operations? I'd love to hear about your business and how I can help.",
+        primaryButtonText: "Get in Touch",
+        linkedinButtonText: "Connect on LinkedIn"
+      }
+    };
+
+    let portfolioData = JSON.parse(JSON.stringify(defaultPortfolioData));
+    try {
+      const savedData = localStorage.getItem("rere_portfolio_data_v1");
+      if (savedData) {
+        const parsed = JSON.parse(savedData);
+        portfolioData = { ...portfolioData, ...parsed };
+      }
+    } catch (e) {}
+  </script>
+
+  <!-- ===================================================================== -->
+  <!-- APPLICATION RENDERING & INTERACTION LOGIC                             -->
+  <!-- ===================================================================== -->
+  <script>
+    const serviceIcons = {
+      catalog: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>`,
+      research: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>`,
+      inventory: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25" /></svg>`,
+      admin: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" /></svg>`
+    };
+
+    function escapeHtml(str) {
+      if (str === null || str === undefined) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast-banner");
+      const msgEl = document.getElementById("toast-message");
+      msgEl.textContent = message;
+      toast.classList.remove("hidden");
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => {
+        toast.classList.add("hidden");
+      }, 3200);
+    }
+
+    function renderPortfolio() {
+      const { personal, hero, servicesSection, portfolioSection, experience, about, skillsSection, certificationsSection, contactSection } = portfolioData;
+
+      document.title = `${personal.name} — ${personal.role} | Personal Portfolio`;
+      document.getElementById("nav-monogram").textContent = personal.monogram || personal.name.charAt(0);
+      document.getElementById("nav-brand-name").textContent = personal.name.toUpperCase();
+      document.getElementById("hero-role").textContent = personal.role.toUpperCase();
+      document.getElementById("hero-greeting").textContent = hero.greeting;
+      document.getElementById("hero-headline").textContent = hero.headline;
+      document.getElementById("hero-subheadline").textContent = hero.supportingText;
+      document.getElementById("hero-primary-cta").textContent = hero.primaryCtaLabel;
+      document.getElementById("hero-secondary-cta").textContent = hero.secondaryCtaLabel;
+      document.getElementById("hero-badge-name").textContent = personal.name;
+
+      const heroImg = document.getElementById("hero-portrait");
+      heroImg.src = personal.heroPortraitUrl || "https://placehold.co/600x800/B69A79/302019?text=Portrait";
+
+      document.getElementById("services-title").textContent = servicesSection.title;
+      const servicesGrid = document.getElementById("services-grid");
+      servicesGrid.innerHTML = servicesSection.items.map(service => `
+        <article class="bg-ivory/75 border hairline-dark p-7 sm:p-9 hover:bg-ivory hover:border-espresso/30 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 bg-cream border hairline-dark flex items-center justify-center">
+                ${serviceIcons[service.icon] || serviceIcons.catalog}
+              </div>
+              <span class="font-serif text-2xl text-beige italic">${escapeHtml(service.number)}</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-[1.7rem] text-espresso font-normal mb-3">${escapeHtml(service.title)}</h3>
+            <p class="text-sm text-charcoal-muted leading-relaxed mb-6">${escapeHtml(service.description)}</p>
+          </div>
+          <ul class="space-y-2.5 pt-5 border-t hairline-dark">
+            ${service.bullets.map(b => `
+              <li class="flex items-start gap-2.5 text-sm text-charcoal">
+                <span class="text-beige mt-1 text-xs">&#9670;</span>
+                <span>${escapeHtml(b)}</span>
+              </li>
+            `).join("")}
+          </ul>
+        </article>
+      `).join("");
+
+      document.getElementById("portfolio-title").textContent = portfolioSection.title;
+      document.getElementById("portfolio-subtitle").textContent = portfolioSection.subtitle;
+      const portfolioGrid = document.getElementById("portfolio-grid");
+      portfolioGrid.innerHTML = portfolioSection.projects.map(project => `
+        <article class="bg-cream border hairline-dark flex flex-col justify-between group hover:border-espresso/40 transition-all duration-300">
+          <div>
+            <div class="aspect-[16/10] bg-espresso p-5 flex flex-col justify-between relative overflow-hidden border-b hairline-dark">
+              <div class="flex items-center justify-between text-[10px] uppercase tracking-editorial text-beige">
+                <span>${escapeHtml(project.number)}</span>
+                <span>${escapeHtml(project.category)}</span>
+              </div>
+              ${renderProjectThumbnailPreview(project)}
+              <div class="flex items-center justify-between text-[10px] text-ivory/70">
+                <span>${escapeHtml(project.label)}</span>
+                <span class="text-beige group-hover:translate-x-1 transition-transform">&rarr;</span>
+              </div>
+            </div>
+            <div class="p-6 sm:p-7 space-y-4">
+              <div class="inline-block px-2.5 py-1 bg-ivory border hairline-dark text-[10px] uppercase tracking-wider text-espresso">
+                ${escapeHtml(project.label)}
+              </div>
+              <h3 class="font-serif text-2xl text-espresso font-normal leading-snug group-hover:text-beige transition-colors">
+                ${escapeHtml(project.title)}
+              </h3>
+              <p class="text-sm text-charcoal-muted leading-relaxed">
+                ${escapeHtml(project.shortDescription)}
+              </p>
+            </div>
+          </div>
+          <div class="px-6 sm:px-7 pb-7 pt-2 space-y-5">
+            <div class="flex flex-wrap gap-2">
+              ${project.tools.map(tool => `
+                <span class="text-[11px] px-2.5 py-1 bg-ivory text-charcoal border hairline-dark">${escapeHtml(tool)}</span>
+              `).join("")}
+            </div>
+            <button
+              type="button"
+              onclick="openCaseStudy('${escapeHtml(project.id)}')"
+              class="w-full py-3.5 px-5 bg-espresso text-ivory text-xs uppercase tracking-editorial hover:bg-beige hover:text-espresso transition-colors duration-300 flex items-center justify-center gap-2"
+            >
+              <span>View Case Study</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </article>
+      `).join("");
+
+      document.getElementById("experience-title").textContent = experience.title;
+      document.getElementById("experience-role").textContent = experience.position;
+      document.getElementById("experience-summary").textContent = experience.summary;
+      const metricsGrid = document.getElementById("experience-metrics-grid");
+      metricsGrid.innerHTML = experience.metrics.map(m => `
+        <div class="p-8 sm:p-10 space-y-4">
+          <p class="text-[11px] uppercase tracking-editorial text-beige">${escapeHtml(m.label)}</p>
+          <p class="font-serif text-5xl sm:text-6xl text-ivory font-normal tracking-tight">${escapeHtml(m.value)}</p>
+          <p class="text-sm text-ivory/75 leading-relaxed font-light">${escapeHtml(m.description)}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("about-title").textContent = about.title;
+      document.getElementById("about-caption-role").textContent = personal.role;
+      const aboutImg = document.getElementById("about-portrait");
+      aboutImg.src = personal.aboutPortraitUrl || "https://placehold.co/600x750/EDE5D7/302019?text=Portrait";
+
+      document.getElementById("about-paragraphs").innerHTML = about.paragraphs
+        .map(p => `<p>${escapeHtml(p)}</p>`)
+        .join("");
+      document.getElementById("about-transition").textContent = about.careerTransition;
+      document.getElementById("about-values").innerHTML = about.values
+        .map(v => `
+          <div class="p-3.5 bg-ivory border hairline-dark">
+            <p class="font-serif text-lg text-espresso">${escapeHtml(v.title)}</p>
+            <p class="text-[11px] text-charcoal-muted mt-0.5">${escapeHtml(v.subtitle)}</p>
+          </div>
+        `).join("");
+
+      document.getElementById("skills-title").textContent = skillsSection.title;
+      document.getElementById("skills-grid").innerHTML = skillsSection.categories.map((cat, idx) => `
+        <div class="bg-cream border hairline-dark p-7 sm:p-8">
+          <div class="flex items-center justify-between pb-4 mb-6 border-b hairline-dark">
+            <h3 class="font-serif text-2xl text-espresso">${escapeHtml(cat.category)}</h3>
+            <span class="font-serif italic text-beige text-lg">0${idx + 1}</span>
+          </div>
+          <ul class="space-y-3">
+            ${cat.items.map(skill => `
+              <li class="flex items-center justify-between text-sm text-charcoal py-1.5 border-b border-espresso/5 last:border-none">
+                <span>${escapeHtml(skill)}</span>
+                <span class="w-1.5 h-1.5 bg-beige"></span>
+              </li>
+            `).join("")}
+          </ul>
+        </div>
+      `).join("");
+
+      document.getElementById("certifications-title").textContent = certificationsSection.title;
+      document.getElementById("certifications-grid").innerHTML = certificationsSection.items.map(cert => `
+        <article class="bg-ivory border hairline-dark p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            ${cert.imageUrl ? `
+              <div class="aspect-[16/10] bg-cream border hairline-dark overflow-hidden">
+                <img src="${escapeHtml(cert.imageUrl)}" alt="${escapeHtml(cert.title)}" class="w-full h-full object-cover" onerror="this.parentElement.style.display='none'" />
+              </div>
+            ` : `
+              <div class="p-4 bg-cream border hairline-dark flex items-center justify-between">
+                <span class="text-[10px] uppercase tracking-editorial text-beige">Verified Credential</span>
+                <span class="font-serif italic text-espresso text-sm">${escapeHtml(cert.date)}</span>
+              </div>
+            `}
+            <div>
+              <p class="text-xs uppercase tracking-wider text-charcoal-muted">${escapeHtml(cert.organization)}</p>
+              <h3 class="font-serif text-2xl text-espresso mt-1">${escapeHtml(cert.title)}</h3>
+            </div>
+            ${cert.description ? `<p class="text-sm text-charcoal-muted leading-relaxed">${escapeHtml(cert.description)}</p>` : ""}
+          </div>
+          <div class="pt-6 mt-6 border-t hairline-dark flex items-center justify-between">
+            <span class="text-xs text-charcoal-muted">Completed: ${escapeHtml(cert.date)}</span>
+            ${cert.credentialUrl ? `
+              <a href="${escapeHtml(cert.credentialUrl)}" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-editorial text-espresso hover:text-beige font-medium underline underline-offset-4">
+                View Certificate &rarr;
+              </a>
+            ` : `
+              <span class="text-[11px] uppercase tracking-wider text-charcoal-muted/70">Credential Recorded</span>
+            `}
+          </div>
+        </article>
+      `).join("");
+
+      document.getElementById("contact-title").textContent = contactSection.title;
+      document.getElementById("contact-subtitle").textContent = contactSection.supportingText;
+      const emailCta = document.getElementById("contact-email-cta");
+      emailCta.textContent = contactSection.primaryButtonText;
+      emailCta.href = `mailto:${personal.email}?subject=${encodeURIComponent("E-commerce Virtual Assistant Inquiry")}`;
+      document.getElementById("contact-email-display").textContent = personal.email;
+
+      const linkedinCta = document.getElementById("contact-linkedin-cta");
+      if (personal.linkedinUrl && personal.linkedinUrl.trim() !== "") {
+        linkedinCta.href = personal.linkedinUrl;
+        linkedinCta.textContent = contactSection.linkedinButtonText;
+        linkedinCta.classList.remove("hidden");
+      } else {
+        linkedinCta.classList.add("hidden");
+      }
+
+      document.getElementById("footer-copyright").innerHTML = `&copy; ${escapeHtml(personal.copyrightYear)} ${escapeHtml(personal.name)}. All rights reserved.`;
+    }
+
+    function renderProjectThumbnailPreview(project) {
+      if (project.mockupType === "shopify") {
+        return `
+          <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
+            <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
+              <span>SHOPIFY ADMIN &bull; CATALOG</span>
+              <span class="text-beige">4 Products / 2 Brands</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2 text-[10px]">
+              <div class="p-2 bg-ivory/5 border border-ivory/10">
+                <p class="text-beige font-medium">Soleil &amp; Co.</p>
+                <p class="text-ivory/70 truncate">SOL-SKN-001 &bull; $28.00</p>
+              </div>
+              <div class="p-2 bg-ivory/5 border border-ivory/10">
+                <p class="text-beige font-medium">Veloce</p>
+                <p class="text-ivory/70 truncate">VEL-APP-101 &bull; $42.00</p>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      if (project.mockupType === "inventory") {
+        return `
+          <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
+            <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
+              <span>GOOGLE SHEETS &bull; INVENTORY</span>
+              <span class="text-beige">SKU Tracker</span>
+            </div>
+            <div class="space-y-1.5 text-[10px]">
+              <div class="flex justify-between text-ivory/80">
+                <span>SOL-SKN-001-50</span>
+                <span class="text-emerald-300">In Stock (48)</span>
+              </div>
+              <div class="flex justify-between text-ivory/80">
+                <span>SOL-SKN-002-50</span>
+                <span class="text-amber-300">Low Stock (11)</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      if (project.mockupType === "returns") {
+        return `
+          <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
+            <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
+              <span>NOTION &bull; RETURN DASHBOARD</span>
+              <span class="text-beige">5 Cases &bull; $310.00</span>
+            </div>
+            <div class="space-y-1.5 text-[10px]">
+              <div class="flex justify-between text-ivory/80">
+                <span>#RET-2001 &bull; Defective</span>
+                <span class="text-amber-300">Exchange</span>
+              </div>
+              <div class="flex justify-between text-ivory/80">
+                <span>#RET-2003 &bull; Wrong Item</span>
+                <span class="text-rose-300">Full Refund</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      if (project.mockupType === "sop") {
+        return `
+          <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
+            <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
+              <span>NOTION &bull; CS &amp; OPS SOP</span>
+              <span class="text-beige">Priority: High</span>
+            </div>
+            <div class="space-y-1 text-[10px]">
+              <p class="text-beige font-medium">Scenario A: Shipping Update</p>
+              <p class="text-ivory/75 truncate">"Hi [Customer Name]! Your order #[Order Number] is on its way..."</p>
+            </div>
+          </div>
+        `;
+      }
+      return `
+        <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
+          <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
+            <span>GOOGLE SHEETS &bull; ORDERS</span>
+            <span class="text-beige">Fulfillment Log</span>
+          </div>
+          <div class="space-y-1.5 text-[10px]">
+            <div class="flex justify-between text-ivory/80">
+              <span>#ORD-1041</span>
+              <span class="text-emerald-300">Delivered</span>
+            </div>
+            <div class="flex justify-between text-ivory/80">
+              <span>#ORD-1042</span>
+              <span class="text-beige">Shipped</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function openCaseStudy(projectId) {
+      const project = portfolioData.portfolioSection.projects.find(p => p.id === projectId);
+      if (!project) return;
+
+      document.getElementById("modal-project-label").textContent = project.label;
+      const container = document.getElementById("case-study-content");
+
+      let mockupHtml = "";
+      if (project.mockupType === "shopify" && project.practiceBrands) {
+        mockupHtml = `
+          <div class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Storefront &amp; Catalog Structure Preview</h4>
+              <span class="text-xs text-charcoal-muted">2 Fictional Practice Brands &bull; 4 Structured Listings</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${project.practiceBrands.map(brand => `
+                <div class="bg-white border hairline-dark p-5 sm:p-6 space-y-5">
+                  <div class="border-b hairline-dark pb-3">
+                    <div class="flex items-center justify-between">
+                      <h5 class="font-serif text-2xl text-espresso">${escapeHtml(brand.brandName)}</h5>
+                      <span class="text-[10px] uppercase tracking-wider px-2.5 py-1 bg-ivory text-espresso">${escapeHtml(brand.collection)}</span>
+                    </div>
+                    <p class="text-xs text-charcoal-muted mt-1">${escapeHtml(brand.niche)}</p>
+                  </div>
+                  <div class="space-y-4">
+                    ${brand.products.map(prod => `
+                      <div class="p-4 bg-cream border hairline-dark space-y-2">
+                        <div class="flex items-start justify-between gap-2">
+                          <div>
+                            <span class="text-[10px] uppercase tracking-wider text-beige font-medium">${escapeHtml(prod.category)}</span>
+                            <h6 class="font-serif text-lg text-espresso font-medium">${escapeHtml(prod.title)}</h6>
+                          </div>
+                          <span class="font-medium text-sm text-espresso">${escapeHtml(prod.price)}</span>
+                        </div>
+                        <p class="text-xs text-charcoal-muted leading-relaxed">${escapeHtml(prod.description)}</p>
+                        <div class="pt-2 border-t hairline-dark text-[11px] space-y-1 text-charcoal">
+                          <p><strong class="font-medium">SKU:</strong> <code class="bg-ivory px-1.5 py-0.5">${escapeHtml(prod.sku)}</code></p>
+                          <p><strong class="font-medium">Variants:</strong> ${escapeHtml(prod.variants)}</p>
+                        </div>
+                      </div>
+                    `).join("")}
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      } else if (project.mockupType === "inventory" && project.spreadsheetRows) {
+        mockupHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Organized Spreadsheet Preview (Fictional Data)</h4>
+              <span class="text-xs text-charcoal-muted">Google Sheets &bull; Inventory_Master_Log</span>
+            </div>
+            <div class="overflow-x-auto border hairline-dark bg-white">
+              <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-espresso text-ivory text-[11px] uppercase tracking-wider">
+                    <th class="py-3 px-4">SKU Code</th>
+                    <th class="py-3 px-4">Product &amp; Variant</th>
+                    <th class="py-3 px-4">Category</th>
+                    <th class="py-3 px-4">Stock Qty</th>
+                    <th class="py-3 px-4">Reorder Min</th>
+                    <th class="py-3 px-4">Inventory Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-espresso/10">
+                  ${project.spreadsheetRows.map(row => {
+                    const badgeClass = row.status === "In Stock"
+                      ? "bg-emerald-50 text-emerald-800 border-emerald-200"
+                      : row.status === "Low Stock"
+                        ? "bg-amber-50 text-amber-800 border-amber-200"
+                        : "bg-rose-50 text-rose-800 border-rose-200";
+                    return `
+                      <tr class="hover:bg-cream/60">
+                        <td class="py-3 px-4 font-mono text-xs text-espresso">${escapeHtml(row.sku)}</td>
+                        <td class="py-3 px-4 font-medium text-charcoal">${escapeHtml(row.product)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.category)}</td>
+                        <td class="py-3 px-4 font-medium">${escapeHtml(row.stock)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.threshold)}</td>
+                        <td class="py-3 px-4">
+                          <span class="inline-block px-2.5 py-0.5 text-[11px] border ${badgeClass}">${escapeHtml(row.status)}</span>
+                        </td>
+                      </tr>
+                    `;
+                  }).join("")}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      } else if (project.mockupType === "orders" && project.orderRows) {
+        mockupHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Order Tracking Spreadsheet Preview (Dummy Records)</h4>
+              <span class="text-xs text-charcoal-muted">Google Sheets &bull; Daily_Order_Fulfillment</span>
+            </div>
+            <div class="overflow-x-auto border hairline-dark bg-white">
+              <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-espresso text-ivory text-[11px] uppercase tracking-wider">
+                    <th class="py-3 px-4">Order ID</th>
+                    <th class="py-3 px-4">Order Date</th>
+                    <th class="py-3 px-4">Product Name</th>
+                    <th class="py-3 px-4">SKU</th>
+                    <th class="py-3 px-4">Qty</th>
+                    <th class="py-3 px-4">Status</th>
+                    <th class="py-3 px-4">Tracking Info</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-espresso/10">
+                  ${project.orderRows.map(row => {
+                    const badgeClass = row.status === "Delivered"
+                      ? "bg-emerald-50 text-emerald-800 border-emerald-200"
+                      : row.status === "Shipped"
+                        ? "bg-sky-50 text-sky-800 border-sky-200"
+                        : "bg-amber-50 text-amber-800 border-amber-200";
+                    return `
+                      <tr class="hover:bg-cream/60">
+                        <td class="py-3 px-4 font-mono text-xs font-medium text-espresso">${escapeHtml(row.orderId)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.date)}</td>
+                        <td class="py-3 px-4 font-medium text-charcoal">${escapeHtml(row.item)}</td>
+                        <td class="py-3 px-4 font-mono text-xs text-charcoal-muted">${escapeHtml(row.sku)}</td>
+                        <td class="py-3 px-4">${escapeHtml(row.qty)}</td>
+                        <td class="py-3 px-4">
+                          <span class="inline-block px-2.5 py-0.5 text-[11px] border ${badgeClass}">${escapeHtml(row.status)}</span>
+                        </td>
+                        <td class="py-3 px-4 text-xs text-charcoal-muted">${escapeHtml(row.tracking)}</td>
+                      </tr>
+                    `;
+                  }).join("")}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      } else if (project.mockupType === "returns" && project.returnRows) {
+        mockupHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Return &amp; Refund Dashboard Log (Fictional Records)</h4>
+              <span class="text-xs text-charcoal-muted">Total Summary: 5 Cases &bull; $310.00 Refunded/Credited</span>
+            </div>
+            <div class="overflow-x-auto border hairline-dark bg-white">
+              <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-espresso text-ivory text-[11px] uppercase tracking-wider">
+                    <th class="py-3 px-4">Return ID</th>
+                    <th class="py-3 px-4">Order ID</th>
+                    <th class="py-3 px-4">Customer</th>
+                    <th class="py-3 px-4">Return Reason</th>
+                    <th class="py-3 px-4">Item Condition</th>
+                    <th class="py-3 px-4">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-espresso/10">
+                  ${project.returnRows.map(row => {
+                    const badgeClass = row.action === "Full Refund"
+                      ? "bg-rose-50 text-rose-800 border-rose-200"
+                      : row.action === "Store Credit"
+                        ? "bg-purple-50 text-purple-800 border-purple-200"
+                        : "bg-amber-50 text-amber-800 border-amber-200";
+                    return `
+                      <tr class="hover:bg-cream/60">
+                        <td class="py-3 px-4 font-mono text-xs font-medium text-espresso">${escapeHtml(row.returnId)}</td>
+                        <td class="py-3 px-4 font-mono text-xs text-charcoal-muted">${escapeHtml(row.orderId)}</td>
+                        <td class="py-3 px-4 font-medium text-charcoal">${escapeHtml(row.customer)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.reason)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.condition)}</td>
+                        <td class="py-3 px-4">
+                          <span class="inline-block px-2.5 py-0.5 text-[11px] border ${badgeClass}">${escapeHtml(row.action)}</span>
+                        </td>
+                      </tr>
+                    `;
+                  }).join("")}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      } else if (project.mockupType === "sop" && project.sopScenarios) {
+        mockupHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Customer Support Scripts Preview (Notion SOP)</h4>
+              <span class="text-xs text-charcoal-muted">Status: Active SOP &bull; Priority: High</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${project.sopScenarios.map(item => `
+                <div class="bg-white border hairline-dark p-5 sm:p-6 space-y-3">
+                  <h5 class="font-serif text-xl text-espresso font-medium">${escapeHtml(item.scenario)}</h5>
+                  <p class="text-xs text-charcoal-muted"><strong class="text-espresso">Trigger:</strong> ${escapeHtml(item.trigger)}</p>
+                  <div class="p-4 bg-cream border-l-2 border-espresso text-xs sm:text-sm text-charcoal leading-relaxed">
+                    <p class="text-[10px] uppercase tracking-wider text-beige font-medium mb-1">Response Template</p>
+                    <p>${escapeHtml(item.response)}</p>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      container.innerHTML = `
+        <div class="space-y-4 border-b hairline-dark pb-8">
+          <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-editorial text-beige">
+            <span>${escapeHtml(project.number)}</span>
+            <span>&bull;</span>
+            <span>${escapeHtml(project.category)}</span>
+          </div>
+          <h3 id="modal-project-title" class="font-serif text-3xl sm:text-5xl text-espresso font-normal leading-tight">
+            ${escapeHtml(project.title)}
+          </h3>
+          <div class="flex flex-wrap gap-2 pt-2">
+            ${project.tools.map(t => `<span class="px-3 py-1 bg-ivory border hairline-dark text-xs text-espresso">${escapeHtml(t)}</span>`).join("")}
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div class="lg:col-span-7 space-y-3">
+            <h4 class="font-serif text-2xl text-espresso">Project Overview</h4>
+            <p class="text-sm sm:text-base text-charcoal/90 leading-relaxed">${escapeHtml(project.overview)}</p>
+          </div>
+          <div class="lg:col-span-5 bg-ivory p-6 border hairline-dark space-y-3">
+            <h4 class="font-serif text-2xl text-espresso">Objectives</h4>
+            <ul class="space-y-2.5">
+              ${project.objectives.map(obj => `
+                <li class="flex items-start gap-2.5 text-sm text-charcoal">
+                  <span class="text-beige mt-1 text-xs">&#9670;</span>
+                  <span>${escapeHtml(obj)}</span>
+                </li>
+              `).join("")}
+            </ul>
+          </div>
+        </div>
+        ${mockupHtml}
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-2">
+          <div class="lg:col-span-7 space-y-4">
+            <h4 class="font-serif text-2xl text-espresso">Step-by-Step Workflow</h4>
+            <ol class="space-y-3">
+              ${project.workflow.map((step, i) => `
+                <li class="flex items-start gap-4 p-4 bg-white border hairline-dark">
+                  <span class="font-serif italic text-xl text-beige">0${i + 1}</span>
+                  <span class="text-sm text-charcoal leading-relaxed">${escapeHtml(step)}</span>
+                </li>
+              `).join("")}
+            </ol>
+          </div>
+          <div class="lg:col-span-5 space-y-4">
+            <h4 class="font-serif text-2xl text-espresso">Key Skills Demonstrated</h4>
+            <div class="bg-espresso text-ivory p-6 space-y-3">
+              ${project.keySkills.map(skill => `
+                <div class="flex items-center gap-3 text-sm border-b hairline-light pb-2.5 last:border-none last:pb-0">
+                  <span class="w-1.5 h-1.5 bg-beige"></span>
+                  <span>${escapeHtml(skill)}</span>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+      const modal = document.getElementById("case-study-modal");
+      modal.classList.remove("hidden");
+      modal.scrollTop = 0;
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeCaseStudy() {
+      document.getElementById("case-study-modal").classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    function openAdminModal() {
+      document.getElementById("admin-modal").classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeAdminModal() {
+      document.getElementById("admin-modal").classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    function populateAdminFields() {
+      document.getElementById("edit-name").value = portfolioData.personal.name || "";
+      document.getElementById("edit-role").value = portfolioData.personal.role || "";
+      document.getElementById("edit-email").value = portfolioData.personal.email || "";
+      document.getElementById("edit-linkedin").value = portfolioData.personal.linkedinUrl || "";
+      document.getElementById("edit-hero-photo").value = portfolioData.personal.heroPortraitUrl || "";
+      document.getElementById("edit-about-photo").value = portfolioData.personal.aboutPortraitUrl || "";
+      document.getElementById("edit-headline").value = portfolioData.hero.headline || "";
+      renderAdminCertList();
+    }
+
+    function renderAdminCertList() {
+      const list = document.getElementById("admin-cert-list");
+      list.innerHTML = portfolioData.certificationsSection.items.map((cert, index) => `
+        <div class="p-4 bg-ivory border hairline-dark space-y-3" data-cert-index="${index}">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-medium uppercase tracking-wider text-espresso">Certificate #${index + 1}</span>
+            <button type="button" onclick="removeAdminCert(${index})" class="text-xs text-red-700 hover:underline">Remove</button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <input type="text" data-field="title" value="${escapeHtml(cert.title)}" placeholder="Certificate Title" class="px-3 py-2 bg-white border hairline-dark text-xs" />
+            <input type="text" data-field="organization" value="${escapeHtml(cert.organization)}" placeholder="Issuing Organization" class="px-3 py-2 bg-white border hairline-dark text-xs" />
+            <input type="text" data-field="date" value="${escapeHtml(cert.date)}" placeholder="Completion Date (e.g. Oct 2026)" class="px-3 py-2 bg-white border hairline-dark text-xs" />
+            <input type="url" data-field="credentialUrl" value="${escapeHtml(cert.credentialUrl || "")}" placeholder="Credential Link URL (optional)" class="px-3 py-2 bg-white border hairline-dark text-xs" />
+            <input type="text" data-field="imageUrl" value="${escapeHtml(cert.imageUrl || "")}" placeholder="Certificate Image URL (optional)" class="sm:col-span-2 px-3 py-2 bg-white border hairline-dark text-xs" />
+          </div>
+        </div>
+      `).join("");
+    }
+
+    window.removeAdminCert = function(index) {
+      portfolioData.certificationsSection.items.splice(index, 1);
+      renderAdminCertList();
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderPortfolio();
+
+      const mobileBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("menu-icon-open");
+      const iconClose = document.getElementById("menu-icon-close");
+
+      mobileBtn.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        iconOpen.classList.toggle("hidden", !isHidden);
+        iconClose.classList.toggle("hidden", isHidden);
+        mobileBtn.setAttribute("aria-expanded", String(isHidden));
+      });
+
+      document.querySelectorAll(".mobile-nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+          mobileBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      const sections = document.querySelectorAll("main section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const observerOptions = { root: null, rootMargin: "-25% 0px -60% 0px", threshold: 0 };
+      const navObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach(link => {
+              const isMatch = link.getAttribute("data-nav") === id;
+              link.classList.toggle("text-beige", isMatch);
+              link.classList.toggle("border-beige", isMatch);
+              link.classList.toggle("border-transparent", !isMatch);
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(sec => navObserver.observe(sec));
+
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("is-visible");
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll(".reveal-section").forEach(el => revealObserver.observe(el));
+
+      document.getElementById("close-case-study-top").addEventListener("click", closeCaseStudy);
+      document.getElementById("close-case-study-bottom").addEventListener("click", closeCaseStudy);
+      document.getElementById("case-study-modal").addEventListener("click", e => {
+        if (e.target.id === "case-study-modal") closeCaseStudy();
+      });
+
+      document.getElementById("copy-email-btn").addEventListener("click", () => {
+        const emailText = portfolioData.personal.email;
+        const tempInput = document.createElement("textarea");
+        tempInput.value = emailText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+          document.execCommand("copy");
+          showToast(`Copied ${emailText} to clipboard`);
+        } catch (err) {
+          showToast("Email: " + emailText);
+        }
+        document.body.removeChild(tempInput);
+      });
+
+      document.getElementById("open-admin-btn").addEventListener("click", openAdminModal);
+      document.getElementById("close-admin-btn").addEventListener("click", closeAdminModal);
+
+      document.getElementById("admin-login-form").addEventListener("submit", e => {
+        e.preventDefault();
+        const pass = document.getElementById("admin-password-input").value;
+        if (pass === "rere2026") {
+          document.getElementById("admin-login-error").classList.add("hidden");
+          document.getElementById("admin-login-view").classList.add("hidden");
+          document.getElementById("admin-editor-view").classList.remove("hidden");
+          populateAdminFields();
+        } else {
+          document.getElementById("admin-login-error").classList.remove("hidden");
+        }
+      });
+
+      document.getElementById("admin-add-cert-btn").addEventListener("click", () => {
+        portfolioData.certificationsSection.items.push({
+          title: "New Certification Title",
+          organization: "Issuing Organization",
+          date: "2026",
+          description: "",
+          imageUrl: "",
+          credentialUrl: ""
+        });
+        renderAdminCertList();
+      });
+
+      document.getElementById("admin-save-btn").addEventListener("click", () => {
+        portfolioData.personal.name = document.getElementById("edit-name").value.trim() || "Rere";
+        portfolioData.personal.monogram = portfolioData.personal.name.charAt(0).toUpperCase();
+        portfolioData.personal.role = document.getElementById("edit-role").value.trim() || "E-commerce Virtual Assistant";
+        portfolioData.personal.email = document.getElementById("edit-email").value.trim();
+        portfolioData.personal.linkedinUrl = document.getElementById("edit-linkedin").value.trim();
+        portfolioData.personal.heroPortraitUrl = document.getElementById("edit-hero-photo").value.trim();
+        portfolioData.personal.aboutPortraitUrl = document.getElementById("edit-about-photo").value.trim();
+        portfolioData.hero.headline = document.getElementById("edit-headline").value.trim();
+
+        const certCards = document.querySelectorAll("#admin-cert-list [data-cert-index]");
+        const updatedCerts = [];
+        certCards.forEach(card => {
+          updatedCerts.push({
+            title: card.querySelector('[data-field="title"]').value.trim(),
+            organization: card.querySelector('[data-field="organization"]').value.trim(),
+            date: card.querySelector('[data-field="date"]').value.trim(),
+            credentialUrl: card.querySelector('[data-field="credentialUrl"]').value.trim(),
+            imageUrl: card.querySelector('[data-field="imageUrl"]').value.trim(),
+            description: ""
+          });
+        });
+        portfolioData.certificationsSection.items = updatedCerts;
+
+        try {
+          localStorage.setItem("rere_portfolio_data_v1", JSON.stringify(portfolioData));
+        } catch (e) {}
+
+        renderPortfolio();
+        closeAdminModal();
+        showToast("Portfolio content updated.");
+      });
+
+      document.getElementById("admin-reset-btn").addEventListener("click", () => {
+        localStorage.removeItem("rere_portfolio_data_v1");
+        portfolioData = JSON.parse(JSON.stringify(defaultPortfolioData));
+        populateAdminFields();
+        renderPortfolio();
+        showToast("Restored default portfolio settings.");
+      });
+
+      document.getElementById("admin-export-btn").addEventListener("click", () => {
+        const fileContent = `// Centralized Portfolio Configuration for Rere\nconst defaultPortfolioData = ${JSON.stringify(portfolioData, null, 2)};\n`;
+        const blob = new Blob([fileContent], { type: "application/javascript" });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "portfolioData.js";
+        a.click();
+        URL.revokeObjectURL(url);
+        showToast("Downloaded portfolioData.js");
+      });
+
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape") {
+          closeCaseStudy();
+          closeAdminModal();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
