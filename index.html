@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rere — Shopify Virtual Assistant | Personal Portfolio</title>
-  <meta name="description" content="Personal portfolio of Rere, Shopify Virtual Assistant specializing in catalog management, product research, and order fulfillment." />
+  <title>rere.shopifyVA — Shopify Virtual Assistant | Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio of rere.shopifyVA, Shopify Virtual Assistant specializing in catalog management, product research, inventory tracking, and order fulfillment." />
 
   <!-- Editorial Typography: Cormorant Garamond & Playfair Display (Serif) + DM Sans (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,7 +41,6 @@
   </script>
 
   <style>
-    /* Base Editorial Styling & Refined Scrollbar */
     body {
       background-color: #F7F3EC;
       color: #282522;
@@ -54,7 +53,6 @@
       font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
     }
 
-    /* Subtle Hairline Borders inspired by High-End Editorial Layouts */
     .hairline-light {
       border-color: rgba(237, 229, 215, 0.18);
     }
@@ -62,7 +60,6 @@
       border-color: rgba(48, 32, 25, 0.14);
     }
 
-    /* Smooth Reveal Animation */
     .reveal-section {
       opacity: 0;
       transform: translateY(18px);
@@ -73,12 +70,10 @@
       transform: translateY(0);
     }
 
-    /* Editorial Portrait Arch & Frame */
     .portrait-backdrop {
       background: linear-gradient(165deg, #C6AE91 0%, #B69A79 55%, #9B7F5E 100%);
     }
 
-    /* Custom Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
       height: 8px;
@@ -102,13 +97,11 @@
   <header id="site-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-espresso/95 backdrop-blur-md border-b hairline-light text-ivory">
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20">
-        <!-- Brand Monogram / Name -->
         <a href="#home" class="group flex items-center gap-3 focus:outline-none">
           <span class="w-8 h-8 border border-beige/60 flex items-center justify-center font-serif text-lg tracking-widest text-beige group-hover:bg-beige group-hover:text-espresso transition-colors duration-300" id="nav-monogram">R</span>
-          <span class="font-serif text-xl sm:text-2xl tracking-wide text-ivory font-medium" id="nav-brand-name">reVA</span>
+          <span class="font-serif text-xl sm:text-2xl tracking-wide text-ivory font-medium" id="nav-brand-name">RERE.SHOPIFYVA</span>
         </a>
 
-        <!-- Desktop Navigation Links -->
         <nav aria-label="Primary Navigation" class="hidden lg:flex items-center gap-7 text-[11px] uppercase tracking-editorial text-ivory/80">
           <a href="#home" data-nav="home" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Home</a>
           <a href="#services" data-nav="services" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Services</a>
@@ -120,7 +113,6 @@
           <a href="#contact" data-nav="contact" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Contact</a>
         </nav>
 
-        <!-- Mobile Menu Toggle -->
         <button id="mobile-menu-btn" type="button" aria-label="Open Navigation Menu" aria-expanded="false" class="lg:hidden p-2.5 text-ivory hover:text-beige focus:outline-none border border-ivory/20">
           <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 7.5h16.5M3.75 12h16.5M3.75 16.5h16.5" />
@@ -132,7 +124,6 @@
       </div>
     </div>
 
-    <!-- Mobile Responsive Drawer -->
     <div id="mobile-menu" class="hidden lg:hidden bg-espresso border-t hairline-light px-6 py-6">
       <nav aria-label="Mobile Navigation" class="flex flex-col space-y-4 text-xs uppercase tracking-editorial text-ivory/90">
         <a href="#home" class="mobile-nav-link py-2 border-b hairline-light hover:text-beige">Home</a>
@@ -152,17 +143,14 @@
     <!-- SECTION 01: HERO / HOMEPAGE (Deep Espresso Brown #302019)             -->
     <!-- ===================================================================== -->
     <section id="home" class="relative bg-espresso text-ivory pt-28 pb-20 sm:pt-36 sm:pb-28 border-b hairline-light">
-      <!-- Subtle Editorial Inner Frame Lines -->
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
         <div class="border hairline-light p-6 sm:p-12 lg:p-16 relative">
-          <!-- Corner Editorial Accents -->
           <span class="hidden sm:block absolute top-3 left-3 w-3 h-3 border-t border-l border-beige/50"></span>
           <span class="hidden sm:block absolute top-3 right-3 w-3 h-3 border-t border-r border-beige/50"></span>
           <span class="hidden sm:block absolute bottom-3 left-3 w-3 h-3 border-b border-l border-beige/50"></span>
           <span class="hidden sm:block absolute bottom-3 right-3 w-3 h-3 border-b border-r border-beige/50"></span>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <!-- Left Column: Editorial Headline & Personal Brand -->
             <div class="lg:col-span-7 space-y-6 text-center lg:text-left order-2 lg:order-1">
               <div class="inline-flex items-center gap-3 text-[11px] uppercase tracking-editorial text-beige">
                 <span class="w-8 h-[1px] bg-beige/60 hidden sm:inline-block"></span>
@@ -172,7 +160,7 @@
               <div class="space-y-2">
                 <p class="font-serif italic text-xl sm:text-2xl text-beige-light" id="hero-greeting">Hello, I'm Rere</p>
                 <h1 id="hero-headline" class="font-serif text-3xl sm:text-5xl lg:text-[3.35rem] font-normal leading-[1.14] tracking-tight text-ivory">
-Your Behind-the-Scenes Partner for Shopify Stores.
+                  Your Behind-the-Scenes Partner for Shopify Operations.
                 </h1>
               </div>
 
@@ -180,7 +168,6 @@ Your Behind-the-Scenes Partner for Shopify Stores.
                 Helping businesses stay organized through accurate product listings, product research, and reliable administrative support.
               </p>
 
-              <!-- Primary & Secondary CTAs -->
               <div class="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <a href="#portfolio" id="hero-primary-cta" class="w-full sm:w-auto px-8 py-3.5 bg-beige text-espresso text-xs uppercase tracking-editorial font-medium hover:bg-ivory transition-colors duration-300 text-center">
                   Explore My Work
@@ -191,10 +178,8 @@ Your Behind-the-Scenes Partner for Shopify Stores.
               </div>
             </div>
 
-            <!-- Right Column: Editorial Framed Portrait -->
             <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center">
               <div class="relative w-64 sm:w-72 md:w-80">
-                <!-- Offset Editorial Border -->
                 <div class="absolute -inset-3 border border-beige/30 translate-x-2 translate-y-2 pointer-events-none"></div>
                 <div class="relative portrait-backdrop aspect-[3/4] overflow-hidden border border-beige/40 flex items-end justify-center">
                   <img
@@ -204,9 +189,8 @@ Your Behind-the-Scenes Partner for Shopify Stores.
                     class="w-full h-full object-cover object-top scale-105 transition-transform duration-700 hover:scale-100"
                     onerror="this.onerror=null; this.src='https://placehold.co/600x800/B69A79/302019?text=RERE+%7C+Portrait';"
                   />
-                  <!-- Subtle Editorial Caption Tag -->
                   <div class="absolute bottom-0 inset-x-0 bg-espresso/90 backdrop-blur-sm py-2.5 px-4 border-t border-beige/30 flex items-center justify-between text-[10px] uppercase tracking-editorial text-ivory/90">
-                    <span id="hero-badge-name">Rere</span>
+                    <span id="hero-badge-name">rere.shopifyVA</span>
                     <span class="text-beige">Operations &amp; Catalog</span>
                   </div>
                 </div>
@@ -222,7 +206,6 @@ Your Behind-the-Scenes Partner for Shopify Stores.
     <!-- ===================================================================== -->
     <section id="services" class="bg-cream text-charcoal py-20 sm:py-28 border-b hairline-dark reveal-section">
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <!-- Section Header -->
         <div class="max-w-2xl mb-14 sm:mb-16">
           <p class="text-[11px] uppercase tracking-editorial text-beige font-medium mb-3">01 / SERVICES</p>
           <h2 id="services-title" class="font-serif text-3xl sm:text-5xl font-normal text-espresso leading-tight">
@@ -233,10 +216,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </p>
         </div>
 
-        <!-- 4 Editorial Service Cards Grid (Rendered Dynamically) -->
-        <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          <!-- Populated by JavaScript from portfolioData.services -->
-        </div>
+        <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"></div>
       </div>
     </section>
 
@@ -245,7 +225,6 @@ Your Behind-the-Scenes Partner for Shopify Stores.
     <!-- ===================================================================== -->
     <section id="portfolio" class="bg-ivory text-charcoal py-20 sm:py-28 border-b hairline-dark reveal-section">
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <!-- Section Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 sm:mb-16 gap-6">
           <div class="max-w-2xl">
             <p class="text-[11px] uppercase tracking-editorial text-espresso/70 font-medium mb-3">02 / PORTFOLIO</p>
@@ -262,10 +241,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </div>
         </div>
 
-        <!-- Dynamic Project Cards Grid -->
-        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Populated by JavaScript from portfolioData.projects -->
-        </div>
+        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
       </div>
     </section>
 
@@ -274,7 +250,6 @@ Your Behind-the-Scenes Partner for Shopify Stores.
     <!-- ===================================================================== -->
     <section id="experience" class="bg-espresso text-ivory py-20 sm:py-28 border-b hairline-light reveal-section">
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
-        <!-- Section Header -->
         <div class="max-w-3xl mb-14 sm:mb-16">
           <p class="text-[11px] uppercase tracking-editorial text-beige mb-3">03 / PROFESSIONAL EXPERIENCE</p>
           <h2 id="experience-title" class="font-serif text-3xl sm:text-5xl font-normal text-ivory leading-tight">
@@ -288,10 +263,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </p>
         </div>
 
-        <!-- Three Minimalist Editorial Numerical Statistics -->
-        <div id="experience-metrics-grid" class="grid grid-cols-1 md:grid-cols-3 border hairline-light divide-y md:divide-y-0 md:divide-x divide-ivory/15">
-          <!-- Populated by JavaScript from portfolioData.experience.metrics -->
-        </div>
+        <div id="experience-metrics-grid" class="grid grid-cols-1 md:grid-cols-3 border hairline-light divide-y md:divide-y-0 md:divide-x divide-ivory/15"></div>
       </div>
     </section>
 
@@ -301,7 +273,6 @@ Your Behind-the-Scenes Partner for Shopify Stores.
     <section id="about" class="bg-cream text-charcoal py-20 sm:py-28 border-b hairline-dark reveal-section">
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <!-- Left Column: Editorial Portrait -->
           <div class="lg:col-span-5 flex justify-center">
             <div class="relative w-full max-w-sm">
               <div class="aspect-[4/5] bg-ivory border hairline-dark p-3 shadow-sm">
@@ -322,31 +293,22 @@ Your Behind-the-Scenes Partner for Shopify Stores.
             </div>
           </div>
 
-          <!-- Right Column: Biography, Career Transition & Values -->
           <div class="lg:col-span-7 space-y-6">
             <p class="text-[11px] uppercase tracking-editorial text-beige font-medium">04 / ABOUT ME</p>
             <h2 id="about-title" class="font-serif text-3xl sm:text-5xl font-normal text-espresso leading-tight">
               A Little About Me
             </h2>
 
-            <div class="space-y-4 text-charcoal/90 text-base leading-relaxed" id="about-paragraphs">
-              <!-- Populated by JavaScript from portfolioData.about -->
-            </div>
+            <div class="space-y-4 text-charcoal/90 text-base leading-relaxed" id="about-paragraphs"></div>
 
-            <!-- Career Transition Highlight Box -->
             <div class="p-6 bg-ivory border-l-2 border-espresso space-y-2">
               <h3 class="font-serif text-xl text-espresso font-medium">Career Transition</h3>
-              <p id="about-transition" class="text-sm text-charcoal-muted leading-relaxed">
-                <!-- Populated by JavaScript -->
-              </p>
+              <p id="about-transition" class="text-sm text-charcoal-muted leading-relaxed"></p>
             </div>
 
-            <!-- Core Professional Values -->
             <div class="pt-2">
               <p class="text-[11px] uppercase tracking-editorial text-charcoal-muted mb-3">Core Work Principles</p>
-              <div id="about-values" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <!-- Populated by JavaScript -->
-              </div>
+              <div id="about-values" class="grid grid-cols-2 sm:grid-cols-4 gap-3"></div>
             </div>
           </div>
         </div>
@@ -368,10 +330,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </p>
         </div>
 
-        <!-- Three Clean Editorial Categories -->
-        <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Populated by JavaScript from portfolioData.skills -->
-        </div>
+        <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
       </div>
     </section>
 
@@ -390,10 +349,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </p>
         </div>
 
-        <!-- Dynamic Certifications Grid -->
-        <div id="certifications-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Populated by JavaScript from portfolioData.certifications -->
-        </div>
+        <div id="certifications-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
       </div>
     </section>
 
@@ -410,9 +366,8 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           Looking for reliable support with your Shopify operations? I'd love to hear about your business and how I can help.
         </p>
 
-        <!-- Primary Contact Actions -->
         <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a id="contact-email-cta" href="mailto:rere.va.portfolio@example.com" class="w-full sm:w-auto px-9 py-4 bg-beige text-espresso text-xs uppercase tracking-editorial font-medium hover:bg-ivory transition-colors duration-300">
+          <a id="contact-email-cta" href="mailto:reskarliani@gmail.com" class="w-full sm:w-auto px-9 py-4 bg-beige text-espresso text-xs uppercase tracking-editorial font-medium hover:bg-ivory transition-colors duration-300">
             Get in Touch
           </a>
           <a id="contact-linkedin-cta" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-9 py-4 border border-ivory/35 text-ivory text-xs uppercase tracking-editorial hover:border-beige hover:text-beige transition-colors duration-300">
@@ -420,17 +375,15 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </a>
         </div>
 
-        <!-- Direct Email Copy Pill -->
         <div class="mt-8 inline-flex items-center gap-3 px-5 py-2.5 border hairline-light bg-espresso-deep/60 text-xs text-ivory/80">
-          <span id="contact-email-display">rere.va.portfolio@example.com</span>
+          <span id="contact-email-display">reskarliani@gmail.com</span>
           <button id="copy-email-btn" type="button" class="text-beige hover:text-ivory uppercase tracking-wider text-[10px] border-l hairline-light pl-3 transition-colors">
             Copy
           </button>
         </div>
 
-        <!-- Minimal Editorial Footer -->
         <footer class="mt-20 pt-8 border-t hairline-light flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory/60">
-          <p id="footer-copyright">&copy; 2026 Rere. All rights reserved.</p>
+          <p id="footer-copyright">&copy; 2026 rere.shopifyVA. All rights reserved.</p>
           <div class="flex items-center gap-6">
             <a href="#home" class="hover:text-beige transition-colors">Back to Top</a>
             <button id="open-admin-btn" type="button" class="hover:text-beige transition-colors underline decoration-ivory/30 underline-offset-4">
@@ -443,11 +396,10 @@ Your Behind-the-Scenes Partner for Shopify Stores.
   </main>
 
   <!-- ===================================================================== -->
-  <!-- CASE STUDY MODAL (Opens within the same unified website)              -->
+  <!-- CASE STUDY MODAL                                                      -->
   <!-- ===================================================================== -->
   <div id="case-study-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title" class="fixed inset-0 z-50 hidden overflow-y-auto bg-espresso/85 backdrop-blur-sm p-3 sm:p-6 md:p-10">
     <div class="max-w-5xl mx-auto bg-cream text-charcoal border border-beige/40 shadow-2xl overflow-hidden my-4">
-      <!-- Sticky Top Bar inside Case Study -->
       <div class="sticky top-0 z-10 bg-espresso text-ivory px-5 sm:px-8 py-4 flex items-center justify-between border-b hairline-light">
         <button id="close-case-study-top" type="button" class="inline-flex items-center gap-2 text-xs uppercase tracking-editorial text-beige hover:text-ivory transition-colors">
           <span>&larr;</span>
@@ -458,12 +410,8 @@ Your Behind-the-Scenes Partner for Shopify Stores.
         </span>
       </div>
 
-      <!-- Case Study Dynamic Body -->
-      <div id="case-study-content" class="p-6 sm:p-10 md:p-12 space-y-10">
-        <!-- Populated dynamically when a project is clicked -->
-      </div>
+      <div id="case-study-content" class="p-6 sm:p-10 md:p-12 space-y-10"></div>
 
-      <!-- Bottom Return Bar -->
       <div class="bg-ivory px-6 sm:px-10 py-6 border-t hairline-dark flex flex-col sm:flex-row items-center justify-between gap-4">
         <p class="text-xs text-charcoal-muted">Self-initiated practice case study created for portfolio demonstration.</p>
         <button id="close-case-study-bottom" type="button" class="px-6 py-3 bg-espresso text-ivory text-xs uppercase tracking-editorial hover:bg-beige hover:text-espresso transition-colors">
@@ -474,8 +422,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
   </div>
 
   <!-- ===================================================================== -->
-  <!-- OPTIONAL PASSWORD-PROTECTED OWNER CONTENT MANAGER MODAL               -->
-  <!-- Allows Rere to edit content visually & export updated portfolioData.js-->
+  <!-- OWNER CONTENT MANAGER MODAL                                           -->
   <!-- ===================================================================== -->
   <div id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-modal-title" class="fixed inset-0 z-50 hidden overflow-y-auto bg-espresso/90 backdrop-blur-sm p-4 sm:p-8">
     <div class="max-w-3xl mx-auto bg-cream text-charcoal border border-beige/50 shadow-2xl overflow-hidden my-6">
@@ -489,7 +436,6 @@ Your Behind-the-Scenes Partner for Shopify Stores.
         </button>
       </div>
 
-      <!-- Login Gate -->
       <div id="admin-login-view" class="p-6 sm:p-10 space-y-5">
         <p class="text-sm text-charcoal-muted leading-relaxed">
           Enter your owner password to update personal details, links, certifications, or projects directly in your browser, or export a ready-to-save <code class="bg-ivory px-1.5 py-0.5 text-espresso">portfolioData.js</code> configuration file.
@@ -509,9 +455,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
         </form>
       </div>
 
-      <!-- Authenticated Editor View -->
       <div id="admin-editor-view" class="hidden p-6 sm:p-8 space-y-8">
-        <!-- Personal & Contact Info -->
         <div class="space-y-4">
           <h4 class="font-serif text-2xl text-espresso border-b hairline-dark pb-2">A. Personal &amp; Contact Information</h4>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -546,7 +490,6 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </div>
         </div>
 
-        <!-- Certifications Manager -->
         <div class="space-y-4">
           <div class="flex items-center justify-between border-b hairline-dark pb-2">
             <h4 class="font-serif text-2xl text-espresso">B. Certifications</h4>
@@ -557,7 +500,6 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           <div id="admin-cert-list" class="space-y-4"></div>
         </div>
 
-        <!-- Action Buttons -->
         <div class="pt-4 border-t hairline-dark flex flex-wrap items-center justify-between gap-3">
           <button id="admin-reset-btn" type="button" class="px-4 py-2.5 border hairline-dark text-xs uppercase tracking-wider text-charcoal-muted hover:text-espresso">
             Reset to Defaults
@@ -575,14 +517,13 @@ Your Behind-the-Scenes Partner for Shopify Stores.
     </div>
   </div>
 
-  <!-- Subtle Notification Toast (Replaces browser alert) -->
+  <!-- Notification Toast -->
   <div id="toast-banner" class="fixed bottom-5 right-5 z-50 hidden bg-espresso text-ivory border border-beige px-5 py-3 shadow-lg text-xs tracking-wide">
     <span id="toast-message">Updated successfully.</span>
   </div>
 
   <!-- ===================================================================== -->
   <!-- CENTRALIZED PORTFOLIO CONFIGURATION (portfolioData)                   -->
-  <!-- Edit this single configuration object to update the entire website.   -->
   <!-- ===================================================================== -->
   <script>
     const defaultPortfolioData = {
@@ -662,7 +603,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
       /* D. PORTFOLIO PROJECTS */
       portfolioSection: {
         title: "Selected Projects",
-        subtitle: "Self-initiated practice projects designed to demonstrate structured e-commerce workflows, catalog organization, and operational tracking.",
+        subtitle: "Self-initiated practice projects designed to demonstrate structured Shopify workflows, catalog organization, and operational tracking.",
         projects: [
           {
             id: "shopify-product-catalog",
@@ -670,9 +611,23 @@ Your Behind-the-Scenes Partner for Shopify Stores.
             label: "Self-Initiated Practice Project",
             category: "Storefront & Catalog Setup",
             title: "Shopify Product Catalog Management",
-            shortDescription: "End-to-end catalog setup for two fictional practice brands (Soleil & Co. and Veloce), featuring structured titles, descriptions, SKUs, variants, and collections.",
-            tools: ["Shopify", "Product Categorization", "SKU Structuring"],
-            overview: "This self-initiated practice project demonstrates how a clean, customer-ready Shopify product catalog is structured from raw product details into organized collections. Two distinct fictional practice brands—Soleil & Co. (Botanical Skincare) and Veloce (Minimalist Activewear)—were built with two products each, complete with SKU codes, pricing, variants, and collection assignments.",
+            shortDescription: "End-to-end catalog setup for two fictional practice brands (Soleil & Co. and Veloce Atelier), featuring structured titles, descriptions, SKUs, variants, and collections.",
+            tools: ["Shopify", "Notion", "Product Categorization", "SKU Structuring"],
+            previewImages: [
+              { src: "porto-soleil-store.jpg", alt: "Soleil & Co. Shopify Product Page Preview", caption: "Soleil & Co. Storefront" },
+              { src: "porto-veloce-store.jpg", alt: "Veloce Atelier Shopify Product Page Preview", caption: "Veloce Atelier Storefront" }
+            ],
+            notionLinks: [
+              {
+                label: "Soleil & Co. Operations & Content Hub",
+                url: "https://app.notion.com/p/Soleil-Co-Operations-Content-Hub-404c6e19f42e80c0beb1cad627ce9b73?source=copy_link"
+              },
+              {
+                label: "Veloce Atelier Operations & Content Hub",
+                url: "https://app.notion.com/p/Veloce-Atelier-Operations-Content-hub-404c6e19f42e8044b683ef36da7b115f?source=copy_link"
+              }
+            ],
+            overview: "This self-initiated practice project demonstrates how a clean, customer-ready Shopify product catalog is structured from raw product details into organized collections. Two distinct fictional practice brands—Soleil & Co. (Botanical Skincare) and Veloce Atelier (Minimalist Essentials & Activewear)—were built with structured product entries, SKU codes, pricing, variants, and collection assignments.",
             objectives: [
               "Create consistent, scannable product titles and structured descriptions.",
               "Assign standardized SKU formats across brands, categories, and product variants.",
@@ -680,7 +635,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
               "Organize products into logical collections and categories for intuitive store navigation."
             ],
             workflow: [
-              "Drafted product copy, specifications, pricing, and standardized SKU codes in a preparation sheet.",
+              "Drafted product copy, specifications, pricing, and standardized SKU codes in a preparation hub.",
               "Created product entries in Shopify with clear titles, benefit-led descriptions, and product types.",
               "Configured multi-option product variants (volume sizes and color/fit options) with individual SKUs.",
               "Grouped items into curated collections and verified storefront presentation."
@@ -718,7 +673,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
                 ]
               },
               {
-                brandName: "Veloce",
+                brandName: "Veloce Atelier",
                 niche: "Minimalist Essentials & Activewear (Fictional Practice Brand)",
                 collection: "Studio Core Collection",
                 products: [
@@ -748,9 +703,16 @@ Your Behind-the-Scenes Partner for Shopify Stores.
             label: "Self-Initiated Practice Project",
             category: "Inventory Operations",
             title: "SKU & Inventory Tracking System",
-            shortDescription: "A structured Google Sheets inventory tracker monitoring SKU records, real-time stock quantities, reorder thresholds, and automated stock status indicators.",
-            tools: ["Google Sheets", "Data Organization", "Conditional Formatting"],
-            overview: "Designed as a practical back-office spreadsheet solution for small e-commerce stores, this Google Sheets inventory tracker centralizes product SKUs, category tags, current stock levels, and reorder points so store owners can spot low-stock items before stockouts occur.",
+            shortDescription: "A structured Notion & spreadsheet inventory tracker monitoring SKU records, real-time stock quantities, reorder thresholds, and stock status indicators.",
+            tools: ["Notion", "Google Sheets", "Data Organization", "SKU Management"],
+            previewImages: [],
+            notionLinks: [
+              {
+                label: "Product Catalog & Inventory Tracker",
+                url: "https://app.notion.com/p/Product-Catalog-Inventory-Tracker-416c6e19f42e804ba7c6dbfe8b6b5aa2?source=copy_link"
+              }
+            ],
+            overview: "Designed as a practical back-office tracking system for small Shopify stores, this inventory tracker centralizes product SKUs, category tags, current stock levels, and reorder points so store owners can spot low-stock items before stockouts occur.",
             objectives: [
               "Establish a single source of truth for all active product SKUs and variants.",
               "Track available stock quantities against defined minimum reorder thresholds.",
@@ -759,12 +721,12 @@ Your Behind-the-Scenes Partner for Shopify Stores.
             workflow: [
               "Structured standardized columns: SKU ID, Brand/Collection, Product Name, Variant, Stock Qty, Reorder Level, and Status.",
               "Entered fictional practice catalog records across skincare and apparel items.",
-              "Applied conditional status logic and clean visual hierarchy for fast operational scanning."
+              "Applied clear status logic and visual hierarchy for fast operational scanning."
             ],
             keySkills: [
               "SKU Management",
               "Inventory Monitoring",
-              "Spreadsheet Structuring",
+              "Spreadsheet & Notion Structuring",
               "Data Accuracy & Verification"
             ],
             mockupType: "inventory",
@@ -777,14 +739,21 @@ Your Behind-the-Scenes Partner for Shopify Stores.
             ]
           },
           {
-            id: "ecommerce-order-tracking",
+            id: "shopify-order-tracking",
             number: "PROJECT 03",
             label: "Self-Initiated Practice Project",
             category: "Fulfillment & Order Logs",
-            title: "E-commerce Order Tracking System",
-            shortDescription: "An organized Google Sheets order log tracking dummy order IDs, ordered items, order dates, fulfillment stages, and courier tracking statuses.",
-            tools: ["Google Sheets", "Order Administration", "Process Tracking"],
-            overview: "This self-initiated practice project simulates a daily order management log used to monitor incoming customer orders from payment confirmation through packing, dispatch, and final delivery—reducing missed shipments and simplifying status updates.",
+            title: "Shopify Order & Fulfillment Tracker",
+            shortDescription: "An organized logistics & order tracking dashboard monitoring dummy order IDs, ordered items, order dates, fulfillment stages, and courier tracking statuses.",
+            tools: ["Notion", "Google Sheets", "Order Administration", "Process Tracking"],
+            previewImages: [],
+            notionLinks: [
+              {
+                label: "Package Tracking & Logistics Dashboard",
+                url: "https://app.notion.com/p/Package-Tracking-Logistics-Dashboard-411c6e19f42e8060badac42dac7a0c80?source=copy_link"
+              }
+            ],
+            overview: "This self-initiated practice project simulates a daily order and package management log used to monitor incoming customer orders from payment confirmation through packing, dispatch, and final delivery—reducing missed shipments and simplifying status updates.",
             objectives: [
               "Maintain a chronological log of fictional orders with unique Order IDs and dates.",
               "Link each order accurately to product names, SKUs, and quantities.",
@@ -817,6 +786,13 @@ Your Behind-the-Scenes Partner for Shopify Stores.
             title: "Return & Refund Management Dashboard",
             shortDescription: "Structured Notion & spreadsheet dashboard tracking return IDs, return reasons, item conditions, refund resolutions, and return distribution analytics.",
             tools: ["Notion", "Google Sheets", "Return Analytics"],
+            previewImages: [],
+            notionLinks: [
+              {
+                label: "Return & Refund Dashboard",
+                url: "https://app.notion.com/p/Return-Refund-Dashboard-413c6e19f42e804e86f7eec2da197afd?source=copy_link"
+              }
+            ],
             overview: "Built an organized Return & Refund Dashboard to monitor post-purchase return requests (#RET-2001 to #RET-2005), evaluate item conditions against policy rules, assign appropriate resolutions (Full Refund, Replacement/Exchange, Store Credit), and summarize refund totals ($310.00 across 5 cases).",
             objectives: [
               "Log every Return ID alongside its Original Order ID and customer contact details.",
@@ -851,6 +827,16 @@ Your Behind-the-Scenes Partner for Shopify Stores.
             title: "Customer Support & Operations SOP",
             shortDescription: "Standardized Notion operational handbook featuring priority workflows and ready-to-use customer support response scripts.",
             tools: ["Notion", "Customer Support Scripts", "SOP Documentation"],
+            previewImages: [
+              { src: "porto-veloce-sop-top.jpg", alt: "Veloce Atelier Notion Customer Support & Operations SOP Header", caption: "Notion SOP Overview" },
+              { src: "porto-veloce-sop-scripts.png", alt: "Veloce Atelier Notion Customer Support Scripts Preview", caption: "Support Response Scripts" }
+            ],
+            notionLinks: [
+              {
+                label: "Customer Support Operations SOP",
+                url: "https://app.notion.com/p/Customer-Support-Operations-SOP-40bc6e19f42e80ddbfa9e721b3bf1056?source=copy_link"
+              }
+            ],
             overview: "Created a centralized Customer Support & Operations SOP in Notion to standardize daily operational priorities and equip support workflows with clear, polite, and consistent response templates for common customer inquiries such as order status and tracking updates.",
             objectives: [
               "Establish clear task status tracking and priority levels (High Priority) for operational documentation.",
@@ -873,12 +859,12 @@ Your Behind-the-Scenes Partner for Shopify Stores.
               {
                 scenario: "Scenario A: Order Status & Shipping Update",
                 trigger: "Customer asks where their order is or requests tracking info.",
-                response: "\"Hi [Customer Name]! Thanks for reaching out. Your order #[Order Number] is on its way! You can track it here: [Tracking Link].\""
+                response: "\"Hi [Customer Name]! Thanks for reaching out. Your order #[Order Number] is on its way! You can track it here: [Tracking Link]. Please give the link 24–48 hours to show live updates.\""
               },
               {
-                scenario: "Scenario B: Return & Exchange Inquiry",
-                trigger: "Customer requests a size exchange or reports a damaged item upon arrival.",
-                response: "\"Hi [Customer Name], I'm sorry to hear about the issue with order #[Order Number]. I've logged return #[Return ID] and we'll get this sorted right away.\""
+                scenario: "Scenario B: Out of Stock Item",
+                trigger: "Customer asks about a sold-out item.",
+                response: "\"Hi [Customer Name]! Thanks for asking about [Product Name]. It's currently out of stock, but we're restocking around [Estimated Date].\""
               }
             ]
           }
@@ -913,7 +899,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
       about: {
         title: "A Little About Me",
         paragraphs: [
-          "I'm an aspiring Shopify Virtual Assistant with hands-on practice in Shopify store operations and Google Sheets. My background in manufacturing has taught me the importance of accuracy, consistency, accountability, and working efficiently toward goals.",
+          "I'm an aspiring Shopify Virtual Assistant with hands-on practice in Shopify store operations, Notion documentation, and Google Sheets. My background in manufacturing has taught me the importance of accuracy, consistency, accountability, and working efficiently toward goals.",
           "I'm continuously developing my digital and administrative skills to help businesses manage their daily e-commerce operations more effectively."
         ],
         careerTransition: "Transitioning from physical production operations into digital e-commerce support was a natural step: both worlds rely on clean standard procedures, zero-error data handling, and reliable daily execution behind the scenes.",
@@ -937,7 +923,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
               "Product Catalog Organization",
               "SKU Management",
               "Inventory Tracking",
-              "Order Tracking"
+              "Order & Return Tracking"
             ]
           },
           {
@@ -945,17 +931,17 @@ Your Behind-the-Scenes Partner for Shopify Stores.
             items: [
               "Data Entry",
               "Spreadsheet Management",
+              "SOP Documentation",
               "Product Research",
-              "Attention to Detail",
-              "Time Management"
+              "Attention to Detail"
             ]
           },
           {
             category: "Tools",
             items: [
               "Shopify",
+              "Notion",
               "Google Sheets",
-              "Google Docs",
               "Microsoft Excel"
             ]
           }
@@ -1003,7 +989,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
     const serviceIcons = {
       catalog: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>`,
       research: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>`,
-      inventory: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25" /></svg>`,
+      inventory: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125m0 0h17.25" /></svg>`,
       admin: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" /></svg>`
     };
 
@@ -1028,11 +1014,56 @@ Your Behind-the-Scenes Partner for Shopify Stores.
       }, 3200);
     }
 
+    function renderNotionLinksBlock(notionLinks, compact = false) {
+      if (!Array.isArray(notionLinks) || notionLinks.length === 0) return "";
+      if (compact) {
+        return `
+          <div class="space-y-1.5 pt-1">
+            <p class="text-[10px] uppercase tracking-wider text-charcoal-muted font-medium">Notion Workspace Links</p>
+            <div class="flex flex-col gap-1.5">
+              ${notionLinks.map(link => `
+                <a
+                  href="${escapeHtml(link.url)}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs text-espresso hover:text-beige underline underline-offset-4 truncate transition-colors"
+                >
+                  &#8599; ${escapeHtml(link.label)}
+                </a>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }
+      return `
+        <div class="p-6 bg-ivory border hairline-dark space-y-3">
+          <div class="flex items-center justify-between border-b hairline-dark pb-2">
+            <h4 class="font-serif text-2xl text-espresso">Live Notion Deliverables</h4>
+            <span class="text-[10px] uppercase tracking-editorial text-beige">Direct Access</span>
+          </div>
+          <p class="text-xs text-charcoal-muted">Open the full workspace or tracker directly in Notion:</p>
+          <div class="flex flex-wrap gap-3 pt-1">
+            ${notionLinks.map(link => `
+              <a
+                href="${escapeHtml(link.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-4 py-2.5 bg-espresso text-ivory text-xs uppercase tracking-wider hover:bg-beige hover:text-espresso transition-colors"
+              >
+                <span>${escapeHtml(link.label)}</span>
+                <span>&#8599;</span>
+              </a>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
     function renderPortfolio() {
       const { personal, hero, servicesSection, portfolioSection, experience, about, skillsSection, certificationsSection, contactSection } = portfolioData;
 
       document.title = `${personal.name} — ${personal.role} | Personal Portfolio`;
-      document.getElementById("nav-monogram").textContent = personal.monogram || personal.name.charAt(0);
+      document.getElementById("nav-monogram").textContent = personal.monogram || personal.name.charAt(0).toUpperCase();
       document.getElementById("nav-brand-name").textContent = personal.name.toUpperCase();
       document.getElementById("hero-role").textContent = personal.role.toUpperCase();
       document.getElementById("hero-greeting").textContent = hero.greeting;
@@ -1076,13 +1107,13 @@ Your Behind-the-Scenes Partner for Shopify Stores.
       portfolioGrid.innerHTML = portfolioSection.projects.map(project => `
         <article class="bg-cream border hairline-dark flex flex-col justify-between group hover:border-espresso/40 transition-all duration-300">
           <div>
-            <div class="aspect-[16/10] bg-espresso p-5 flex flex-col justify-between relative overflow-hidden border-b hairline-dark">
-              <div class="flex items-center justify-between text-[10px] uppercase tracking-editorial text-beige">
+            <div class="aspect-[16/10] bg-espresso p-4 flex flex-col justify-between relative overflow-hidden border-b hairline-dark">
+              <div class="flex items-center justify-between text-[10px] uppercase tracking-editorial text-beige z-10">
                 <span>${escapeHtml(project.number)}</span>
                 <span>${escapeHtml(project.category)}</span>
               </div>
               ${renderProjectThumbnailPreview(project)}
-              <div class="flex items-center justify-between text-[10px] text-ivory/70">
+              <div class="flex items-center justify-between text-[10px] text-ivory/70 z-10">
                 <span>${escapeHtml(project.label)}</span>
                 <span class="text-beige group-hover:translate-x-1 transition-transform">&rarr;</span>
               </div>
@@ -1097,6 +1128,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
               <p class="text-sm text-charcoal-muted leading-relaxed">
                 ${escapeHtml(project.shortDescription)}
               </p>
+              ${renderNotionLinksBlock(project.notionLinks, true)}
             </div>
           </div>
           <div class="px-6 sm:px-7 pb-7 pt-2 space-y-5">
@@ -1217,31 +1249,44 @@ Your Behind-the-Scenes Partner for Shopify Stores.
     }
 
     function renderProjectThumbnailPreview(project) {
-      if (project.mockupType === "shopify") {
+      if (Array.isArray(project.previewImages) && project.previewImages.length > 0) {
+        if (project.previewImages.length === 1) {
+          const img = project.previewImages[0];
+          return `
+            <div class="my-2 flex-1 relative overflow-hidden border border-ivory/15 bg-espresso-deep">
+              <img
+                src="${escapeHtml(img.src)}"
+                alt="${escapeHtml(img.alt)}"
+                class="w-full h-full object-cover object-top"
+                onerror="this.parentElement.outerHTML = renderFallbackPreview('${escapeHtml(project.mockupType)}')"
+              />
+            </div>
+          `;
+        }
         return `
-          <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
-            <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
-              <span>SHOPIFY ADMIN &bull; CATALOG</span>
-              <span class="text-beige">4 Products / 2 Brands</span>
-            </div>
-            <div class="grid grid-cols-2 gap-2 text-[10px]">
-              <div class="p-2 bg-ivory/5 border border-ivory/10">
-                <p class="text-beige font-medium">Soleil &amp; Co.</p>
-                <p class="text-ivory/70 truncate">SOL-SKN-001 &bull; $28.00</p>
+          <div class="my-2 flex-1 grid grid-cols-2 gap-1.5 overflow-hidden">
+            ${project.previewImages.slice(0, 2).map(img => `
+              <div class="relative h-full min-h-[84px] overflow-hidden border border-ivory/15 bg-espresso-deep">
+                <img
+                  src="${escapeHtml(img.src)}"
+                  alt="${escapeHtml(img.alt)}"
+                  class="w-full h-full object-cover object-top"
+                  onerror="this.parentElement.innerHTML = '<div class=\\'p-2 text-[10px] text-beige\\'>${escapeHtml(img.caption)}</div>'"
+                />
               </div>
-              <div class="p-2 bg-ivory/5 border border-ivory/10">
-                <p class="text-beige font-medium">Veloce</p>
-                <p class="text-ivory/70 truncate">VEL-APP-101 &bull; $42.00</p>
-              </div>
-            </div>
+            `).join("")}
           </div>
         `;
       }
-      if (project.mockupType === "inventory") {
+      return renderFallbackPreview(project.mockupType);
+    }
+
+    function renderFallbackPreview(mockupType) {
+      if (mockupType === "inventory") {
         return `
-          <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
+          <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
             <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
-              <span>GOOGLE SHEETS &bull; INVENTORY</span>
+              <span>NOTION &bull; INVENTORY</span>
               <span class="text-beige">SKU Tracker</span>
             </div>
             <div class="space-y-1.5 text-[10px]">
@@ -1257,9 +1302,9 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </div>
         `;
       }
-      if (project.mockupType === "returns") {
+      if (mockupType === "returns") {
         return `
-          <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
+          <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
             <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
               <span>NOTION &bull; RETURN DASHBOARD</span>
               <span class="text-beige">5 Cases &bull; $310.00</span>
@@ -1277,24 +1322,10 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </div>
         `;
       }
-      if (project.mockupType === "sop") {
-        return `
-          <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
-            <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
-              <span>NOTION &bull; CS &amp; OPS SOP</span>
-              <span class="text-beige">Priority: High</span>
-            </div>
-            <div class="space-y-1 text-[10px]">
-              <p class="text-beige font-medium">Scenario A: Shipping Update</p>
-              <p class="text-ivory/75 truncate">"Hi [Customer Name]! Your order #[Order Number] is on its way..."</p>
-            </div>
-          </div>
-        `;
-      }
       return `
-        <div class="my-3 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
+        <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2">
           <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
-            <span>GOOGLE SHEETS &bull; ORDERS</span>
+            <span>NOTION &bull; LOGISTICS</span>
             <span class="text-beige">Fulfillment Log</span>
           </div>
           <div class="space-y-1.5 text-[10px]">
@@ -1317,6 +1348,33 @@ Your Behind-the-Scenes Partner for Shopify Stores.
 
       document.getElementById("modal-project-label").textContent = project.label;
       const container = document.getElementById("case-study-content");
+
+      let galleryHtml = "";
+      if (Array.isArray(project.previewImages) && project.previewImages.length > 0) {
+        galleryHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Visual Preview Screenshots</h4>
+              <span class="text-xs text-charcoal-muted">Direct Preview Without Leaving Page</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${project.previewImages.map(img => `
+                <figure class="bg-white border hairline-dark p-3 space-y-2">
+                  <div class="aspect-[16/10] bg-cream overflow-hidden border hairline-dark">
+                    <img
+                      src="${escapeHtml(img.src)}"
+                      alt="${escapeHtml(img.alt)}"
+                      class="w-full h-full object-cover object-top"
+                      onerror="this.parentElement.innerHTML = '<div class=\\'flex items-center justify-center h-full text-xs text-charcoal-muted p-4 text-center\\'>Preview image (${escapeHtml(img.src)}) will appear once uploaded.</div>'"
+                    />
+                  </div>
+                  <figcaption class="text-xs text-charcoal-muted px-1">${escapeHtml(img.caption)}</figcaption>
+                </figure>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }
 
       let mockupHtml = "";
       if (project.mockupType === "shopify" && project.practiceBrands) {
@@ -1363,8 +1421,8 @@ Your Behind-the-Scenes Partner for Shopify Stores.
         mockupHtml = `
           <div class="space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
-              <h4 class="font-serif text-2xl text-espresso">Organized Spreadsheet Preview (Fictional Data)</h4>
-              <span class="text-xs text-charcoal-muted">Google Sheets &bull; Inventory_Master_Log</span>
+              <h4 class="font-serif text-2xl text-espresso">Organized Tracker Preview (Fictional Data)</h4>
+              <span class="text-xs text-charcoal-muted">Product Catalog &amp; Inventory Tracker</span>
             </div>
             <div class="overflow-x-auto border hairline-dark bg-white">
               <table class="w-full text-left border-collapse text-xs sm:text-sm">
@@ -1407,8 +1465,8 @@ Your Behind-the-Scenes Partner for Shopify Stores.
         mockupHtml = `
           <div class="space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
-              <h4 class="font-serif text-2xl text-espresso">Order Tracking Spreadsheet Preview (Dummy Records)</h4>
-              <span class="text-xs text-charcoal-muted">Google Sheets &bull; Daily_Order_Fulfillment</span>
+              <h4 class="font-serif text-2xl text-espresso">Order &amp; Logistics Preview (Dummy Records)</h4>
+              <span class="text-xs text-charcoal-muted">Package Tracking &amp; Logistics Dashboard</span>
             </div>
             <div class="overflow-x-auto border hairline-dark bg-white">
               <table class="w-full text-left border-collapse text-xs sm:text-sm">
@@ -1531,9 +1589,12 @@ Your Behind-the-Scenes Partner for Shopify Stores.
           </div>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <div class="lg:col-span-7 space-y-3">
-            <h4 class="font-serif text-2xl text-espresso">Project Overview</h4>
-            <p class="text-sm sm:text-base text-charcoal/90 leading-relaxed">${escapeHtml(project.overview)}</p>
+          <div class="lg:col-span-7 space-y-6">
+            <div class="space-y-3">
+              <h4 class="font-serif text-2xl text-espresso">Project Overview</h4>
+              <p class="text-sm sm:text-base text-charcoal/90 leading-relaxed">${escapeHtml(project.overview)}</p>
+            </div>
+            ${renderNotionLinksBlock(project.notionLinks, false)}
           </div>
           <div class="lg:col-span-5 bg-ivory p-6 border hairline-dark space-y-3">
             <h4 class="font-serif text-2xl text-espresso">Objectives</h4>
@@ -1547,6 +1608,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
             </ul>
           </div>
         </div>
+        ${galleryHtml}
         ${mockupHtml}
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-2">
           <div class="lg:col-span-7 space-y-4">
@@ -1732,9 +1794,9 @@ Your Behind-the-Scenes Partner for Shopify Stores.
       });
 
       document.getElementById("admin-save-btn").addEventListener("click", () => {
-        portfolioData.personal.name = document.getElementById("edit-name").value.trim() || "Rere";
+        portfolioData.personal.name = document.getElementById("edit-name").value.trim() || "rere.shopifyVA";
         portfolioData.personal.monogram = portfolioData.personal.name.charAt(0).toUpperCase();
-        portfolioData.personal.role = document.getElementById("edit-role").value.trim() || "E-commerce Virtual Assistant";
+        portfolioData.personal.role = document.getElementById("edit-role").value.trim() || "Shopify Virtual Assistant";
         portfolioData.personal.email = document.getElementById("edit-email").value.trim();
         portfolioData.personal.linkedinUrl = document.getElementById("edit-linkedin").value.trim();
         portfolioData.personal.heroPortraitUrl = document.getElementById("edit-hero-photo").value.trim();
@@ -1773,7 +1835,7 @@ Your Behind-the-Scenes Partner for Shopify Stores.
       });
 
       document.getElementById("admin-export-btn").addEventListener("click", () => {
-        const fileContent = `// Centralized Portfolio Configuration for Rere\nconst defaultPortfolioData = ${JSON.stringify(portfolioData, null, 2)};\n`;
+        const fileContent = `// Centralized Portfolio Configuration for rere.shopifyVA\nconst defaultPortfolioData = ${JSON.stringify(portfolioData, null, 2)};\n`;
         const blob = new Blob([fileContent], { type: "application/javascript" });
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
