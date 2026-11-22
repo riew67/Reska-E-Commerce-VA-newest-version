@@ -659,3 +659,1093 @@
             ],
             keySkills: [
               "Shopify Product Management",
+              "Product Listing & Copy Formatting",
+              "Variant & Pricing Configuration",
+              "SKU Naming Conventions",
+              "Collection & Category Organization"
+            ],
+            mockupType: "shopify",
+            practiceBrands: [
+              {
+                brandName: "Soleil & Co.",
+                niche: "Botanical Skincare (Fictional Practice Brand)",
+                collection: "Daily Hydration Collection",
+                products: [
+                  {
+                    title: "Neroli Dew Balancing Mist",
+                    sku: "SOL-SKN-001",
+                    price: "$28.00",
+                    category: "Facial Mists & Toners",
+                    variants: "50 ml ($28.00) / 100 ml ($44.00)",
+                    description: "Lightweight botanical facial mist formulated with neroli blossom water and glycerin to refresh skin throughout the day."
+                  },
+                  {
+                    title: "Squalane Barrier Moisture Cream",
+                    sku: "SOL-SKN-002",
+                    price: "$36.00",
+                    category: "Moisturizers",
+                    variants: "Standard Jar 50g ($36.00) / Refill Pod 50g ($30.00)",
+                    description: "Fragrance-free daily barrier cream crafted with plant-derived squalane and oat extract for lasting comfort."
+                  }
+                ]
+              },
+              {
+                brandName: "Veloce Atelier",
+                niche: "Minimalist Essentials & Activewear (Fictional Practice Brand)",
+                collection: "Studio Core Collection",
+                products: [
+                  {
+                    title: "Sculpt Seamless Studio Tank",
+                    sku: "VEL-APP-101",
+                    price: "$42.00",
+                    category: "Tops",
+                    variants: "Espresso / Ivory / Charcoal — Sizes XS, S, M, L",
+                    description: "Breathable four-way stretch ribbed tank designed with a clean square neckline for low-impact studio sessions."
+                  },
+                  {
+                    title: "Motion High-Rise 7/8 Legging",
+                    sku: "VEL-APP-102",
+                    price: "$68.00",
+                    category: "Bottoms",
+                    variants: "Espresso / Charcoal — Sizes XS, S, M, L",
+                    description: "Matte-finish high-rise legging featuring a supportive waistband and concealed interior key pocket."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: "sku-inventory-tracking",
+            number: "PROJECT 02",
+            label: "Self-Initiated Practice Project",
+            category: "Inventory Operations",
+            title: "SKU & Inventory Tracking System",
+            shortDescription: "A structured Notion & spreadsheet inventory tracker monitoring SKU records, real-time stock quantities, reorder thresholds, and stock status indicators.",
+            tools: ["Notion", "Google Sheets", "Data Organization", "SKU Management"],
+            previewImages: [],
+            notionLinks: [
+              {
+                label: "Product Catalog & Inventory Tracker",
+                url: "https://app.notion.com/p/Product-Catalog-Inventory-Tracker-416c6e19f42e804ba7c6dbfe8b6b5aa2?source=copy_link"
+              }
+            ],
+            overview: "Designed as a practical back-office tracking system for small Shopify stores, this inventory tracker centralizes product SKUs, category tags, current stock levels, and reorder points so store owners can spot low-stock items before stockouts occur.",
+            objectives: [
+              "Establish a single source of truth for all active product SKUs and variants.",
+              "Track available stock quantities against defined minimum reorder thresholds.",
+              "Use clear status indicators (In Stock, Low Stock, Restock Needed) for rapid daily review."
+            ],
+            workflow: [
+              "Structured standardized columns: SKU ID, Brand/Collection, Product Name, Variant, Stock Qty, Reorder Level, and Status.",
+              "Entered fictional practice catalog records across skincare and apparel items.",
+              "Applied clear status logic and visual hierarchy for fast operational scanning."
+            ],
+            keySkills: [
+              "SKU Management",
+              "Inventory Monitoring",
+              "Spreadsheet & Notion Structuring",
+              "Data Accuracy & Verification"
+            ],
+            mockupType: "inventory",
+            spreadsheetRows: [
+              { sku: "SOL-SKN-001-50", product: "Neroli Dew Balancing Mist (50 ml)", category: "Skincare", stock: 48, threshold: 15, status: "In Stock" },
+              { sku: "SOL-SKN-002-50", product: "Squalane Barrier Cream (50g)", category: "Skincare", stock: 11, threshold: 15, status: "Low Stock" },
+              { sku: "VEL-APP-101-ESP-M", product: "Sculpt Studio Tank — Espresso / M", category: "Apparel", stock: 34, threshold: 10, status: "In Stock" },
+              { sku: "VEL-APP-102-CHR-S", product: "Motion 7/8 Legging — Charcoal / S", category: "Apparel", stock: 4, threshold: 12, status: "Restock Needed" },
+              { sku: "VEL-APP-101-IVR-S", product: "Sculpt Studio Tank — Ivory / S", category: "Apparel", stock: 22, threshold: 10, status: "In Stock" }
+            ]
+          },
+          {
+            id: "shopify-order-tracking",
+            number: "PROJECT 03",
+            label: "Self-Initiated Practice Project",
+            category: "Fulfillment & Order Logs",
+            title: "Shopify Order & Fulfillment Tracker",
+            shortDescription: "An organized logistics & order tracking dashboard monitoring dummy order IDs, ordered items, order dates, fulfillment stages, and courier tracking statuses.",
+            tools: ["Notion", "Google Sheets", "Order Administration", "Process Tracking"],
+            previewImages: [],
+            notionLinks: [
+              {
+                label: "Package Tracking & Logistics Dashboard",
+                url: "https://app.notion.com/p/Package-Tracking-Logistics-Dashboard-411c6e19f42e8060badac42dac7a0c80?source=copy_link"
+              }
+            ],
+            overview: "This self-initiated practice project simulates a daily order and package management log used to monitor incoming customer orders from payment confirmation through packing, dispatch, and final delivery—reducing missed shipments and simplifying status updates.",
+            objectives: [
+              "Maintain a chronological log of fictional orders with unique Order IDs and dates.",
+              "Link each order accurately to product names, SKUs, and quantities.",
+              "Track fulfillment stages clearly across Pending, Processing, Shipped, and Delivered."
+            ],
+            workflow: [
+              "Built a clean order tracking table with Order ID, Order Date, Product & SKU, Qty, Fulfillment Status, and Tracking Reference.",
+              "Populated realistic dummy order scenarios covering multiple fulfillment stages.",
+              "Organized status filtering so pending shipments can be prioritized each morning."
+            ],
+            keySkills: [
+              "Order Status Tracking",
+              "Structured Data Entry",
+              "Attention to Detail",
+              "Operational Record Keeping"
+            ],
+            mockupType: "orders",
+            orderRows: [
+              { orderId: "#ORD-1041", date: "2026-10-18", item: "Neroli Dew Balancing Mist (100 ml)", sku: "SOL-SKN-001-100", qty: 1, status: "Delivered", tracking: "TRK-884920" },
+              { orderId: "#ORD-1042", date: "2026-10-19", item: "Sculpt Studio Tank — Espresso / M", sku: "VEL-APP-101-ESP-M", qty: 2, status: "Shipped", tracking: "TRK-885104" },
+              { orderId: "#ORD-1043", date: "2026-10-20", item: "Squalane Barrier Moisture Cream", sku: "SOL-SKN-002-50", qty: 1, status: "Processing", tracking: "Pending Label" },
+              { orderId: "#ORD-1044", date: "2026-10-21", item: "Motion High-Rise 7/8 Legging — S", sku: "VEL-APP-102-CHR-S", qty: 1, status: "Pending", tracking: "Awaiting Dispatch" }
+            ]
+          },
+          {
+            id: "return-refund-dashboard",
+            number: "PROJECT 04",
+            label: "Self-Initiated Practice Project",
+            category: "Post-Purchase Operations",
+            title: "Return & Refund Management Dashboard",
+            shortDescription: "Structured Notion & spreadsheet dashboard tracking return IDs, return reasons, item conditions, refund resolutions, and return distribution analytics.",
+            tools: ["Notion", "Google Sheets", "Return Analytics"],
+            previewImages: [],
+            notionLinks: [
+              {
+                label: "Return & Refund Dashboard",
+                url: "https://app.notion.com/p/Return-Refund-Dashboard-413c6e19f42e804e86f7eec2da197afd?source=copy_link"
+              }
+            ],
+            overview: "Built an organized Return & Refund Dashboard to monitor post-purchase return requests (#RET-2001 to #RET-2005), evaluate item conditions against policy rules, assign appropriate resolutions (Full Refund, Replacement/Exchange, Store Credit), and summarize refund totals ($310.00 across 5 cases).",
+            objectives: [
+              "Log every Return ID alongside its Original Order ID and customer contact details.",
+              "Standardize return reason categorization (Defective/Damaged, Wrong Size, Wrong Item Sent, Changed Mind).",
+              "Track item condition inspections to determine accurate resolution actions and analyze refund distributions."
+            ],
+            workflow: [
+              "Recorded incoming customer return requests with unique Return IDs and original order references.",
+              "Verified item condition status (Damaged, Unopened, Opened - Good) and assigned resolution actions.",
+              "Compiled a Product Return Analysis & Summary table tracking total case counts and refund amounts by reason."
+            ],
+            keySkills: [
+              "Return & Refund Administration",
+              "Policy-Based Issue Resolution",
+              "Data Summarization & Pivot Analysis",
+              "Customer Record Accuracy"
+            ],
+            mockupType: "returns",
+            returnRows: [
+              { returnId: "#RET-2001", orderId: "#VA-1004", customer: "Sarah Jenkins", reason: "Defective/Damaged", condition: "Damaged", action: "Replacement/Exchange", amount: "$30.00" },
+              { returnId: "#RET-2002", orderId: "#VA-1008", customer: "Michael Chen", reason: "Wrong Size", condition: "Unopened", action: "Store Credit", amount: "$45.00" },
+              { returnId: "#RET-2003", orderId: "#VA-1012", customer: "Amanda Vance", reason: "Wrong Item Sent", condition: "Unopened", action: "Full Refund", amount: "$120.00" },
+              { returnId: "#RET-2004", orderId: "#VA-1015", customer: "David Miller", reason: "Changed Mind", condition: "Opened - Good", action: "Full Refund", amount: "$85.00" },
+              { returnId: "#RET-2005", orderId: "#VA-1019", customer: "Jessica Taylor", reason: "Defective/Damaged", condition: "Damaged", action: "Full Refund", amount: "$30.00" }
+            ]
+          },
+          {
+            id: "customer-support-sop",
+            number: "PROJECT 05",
+            label: "Self-Initiated Practice Project",
+            category: "Customer Experience & SOP",
+            title: "Customer Support & Operations SOP",
+            shortDescription: "Standardized Notion operational handbook featuring priority workflows and ready-to-use customer support response scripts.",
+            tools: ["Notion", "Customer Support Scripts", "SOP Documentation"],
+            previewImages: [
+              { src: "porto-veloce-sop-top.jpg", alt: "Veloce Atelier Notion Customer Support & Operations SOP Header", caption: "Notion SOP Overview" },
+              { src: "porto-veloce-sop-scripts.png", alt: "Veloce Atelier Notion Customer Support Scripts Preview", caption: "Support Response Scripts" }
+            ],
+            notionLinks: [
+              {
+                label: "Customer Support Operations SOP",
+                url: "https://app.notion.com/p/Customer-Support-Operations-SOP-40bc6e19f42e80ddbfa9e721b3bf1056?source=copy_link"
+              }
+            ],
+            overview: "Created a centralized Customer Support & Operations SOP in Notion to standardize daily operational priorities and equip support workflows with clear, polite, and consistent response templates for common customer inquiries such as order status and tracking updates.",
+            objectives: [
+              "Establish clear task status tracking and priority levels (High Priority) for operational documentation.",
+              "Standardize customer communication tone with structured Trigger-and-Response scripts.",
+              "Speed up ticket handling for recurring scenarios like shipping updates and tracking link requests."
+            ],
+            workflow: [
+              "Structured the Notion SOP workspace with status properties, priority tags, and categorized script sections.",
+              "Drafted clear trigger conditions and empathetic response templates with bracketed dynamic placeholders.",
+              "Reviewed scripts for clarity, warmth, and operational accuracy."
+            ],
+            keySkills: [
+              "SOP Documentation",
+              "Customer Support Communication",
+              "Template & Script Writing",
+              "Workflow Standardization"
+            ],
+            mockupType: "sop",
+            sopScenarios: [
+              {
+                scenario: "Scenario A: Order Status & Shipping Update",
+                trigger: "Customer asks where their order is or requests tracking info.",
+                response: "\"Hi [Customer Name]! Thanks for reaching out. Your order #[Order Number] is on its way! You can track it here: [Tracking Link]. Please give the link 24–48 hours to show live updates.\""
+              },
+              {
+                scenario: "Scenario B: Out of Stock Item",
+                trigger: "Customer asks about a sold-out item.",
+                response: "\"Hi [Customer Name]! Thanks for asking about [Product Name]. It's currently out of stock, but we're restocking around [Estimated Date].\""
+              }
+            ]
+          }
+        ]
+      },
+
+      /* E. PROFESSIONAL EXPERIENCE */
+      experience: {
+        title: "Beyond the Digital Workspace",
+        position: "Production Operator | Denim Manufacturing",
+        summary: "Working in a precision-driven manufacturing environment built a strong foundation in operational discipline, meticulous attention to detail, steady productivity management, and calm problem-solving—qualities I bring directly into e-commerce store operations.",
+        metrics: [
+          {
+            value: "92%",
+            label: "OPERATIONAL EFFICIENCY",
+            description: "Achieved 92% production efficiency, the highest among three operators working under comparable production conditions."
+          },
+          {
+            value: "8%",
+            label: "QUALITY CONTROL",
+            description: "Recorded an 8% rejection rate, the lowest among the three operators."
+          },
+          {
+            value: "2,506.7",
+            label: "PRODUCTIVITY MANAGEMENT",
+            description: "Achieved 2,506.7 in total production output, exceeding the most senior operator's output while maintaining higher efficiency and a lower rejection rate."
+          }
+        ]
+      },
+
+      /* F. ABOUT ME */
+      about: {
+        title: "A Little About Me",
+        paragraphs: [
+          "I'm an aspiring Shopify Virtual Assistant with hands-on practice in Shopify store operations, Notion documentation, and Google Sheets. My background in manufacturing has taught me the importance of accuracy, consistency, accountability, and working efficiently toward goals.",
+          "I'm continuously developing my digital and administrative skills to help businesses manage their daily e-commerce operations more effectively."
+        ],
+        careerTransition: "Transitioning from physical production operations into digital e-commerce support was a natural step: both worlds rely on clean standard procedures, zero-error data handling, and reliable daily execution behind the scenes.",
+        values: [
+          { title: "Accuracy", subtitle: "Clean SKUs & listings" },
+          { title: "Consistency", subtitle: "Reliable daily routines" },
+          { title: "Accountability", subtitle: "Ownership of tasks" },
+          { title: "Efficiency", subtitle: "Structured workflows" }
+        ]
+      },
+
+      /* G. SKILLS & TOOLS */
+      skillsSection: {
+        title: "Skills & Tools",
+        categories: [
+          {
+            category: "Shopify Operations",
+            items: [
+              "Shopify Product Management",
+              "Product Listing",
+              "Product Catalog Organization",
+              "SKU Management",
+              "Inventory Tracking",
+              "Order & Return Tracking"
+            ]
+          },
+          {
+            category: "Administrative",
+            items: [
+              "Data Entry",
+              "Spreadsheet Management",
+              "SOP Documentation",
+              "Product Research",
+              "Attention to Detail"
+            ]
+          },
+          {
+            category: "Tools",
+            items: [
+              "Shopify",
+              "Notion",
+              "Google Sheets",
+              "Microsoft Excel"
+            ]
+          }
+        ]
+      },
+
+      /* H. CERTIFICATIONS */
+      certificationsSection: {
+        title: "Certifications & Professional Development",
+        items: [
+          {
+            title: "AI Career Readiness",
+            organization: "ASEAN Digital Academy",
+            date: "2026",
+            description: "Foundational training in practical AI productivity tools, digital workplace readiness, and structured problem-solving.",
+            imageUrl: "",
+            credentialUrl: ""
+          }
+        ]
+      },
+
+      /* I. CONTACT SECTION */
+      contactSection: {
+        title: "Let's Work Together.",
+        supportingText: "Looking for reliable support with your Shopify operations? I'd love to hear about your business and how I can help.",
+        primaryButtonText: "Get in Touch",
+        linkedinButtonText: "Connect on LinkedIn"
+      }
+    };
+
+    const portfolioData = defaultPortfolioData;
+  </script>
+
+  <!-- ===================================================================== -->
+  <!-- APPLICATION RENDERING & INTERACTION LOGIC                             -->
+  <!-- ===================================================================== -->
+  <script>
+    const serviceIcons = {
+      catalog: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>`,
+      research: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>`,
+      inventory: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125m0 0h17.25" /></svg>`,
+      admin: `<svg class="w-6 h-6 text-espresso" fill="none" stroke="currentColor" stroke-width="1.3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" /></svg>`
+    };
+
+    function escapeHtml(str) {
+      if (str === null || str === undefined) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById("toast-banner");
+      const msgEl = document.getElementById("toast-message");
+      msgEl.textContent = message;
+      toast.classList.remove("hidden");
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => {
+        toast.classList.add("hidden");
+      }, 3200);
+    }
+
+    function renderNotionLinksBlock(notionLinks, compact = false) {
+      if (!Array.isArray(notionLinks) || notionLinks.length === 0) return "";
+      if (compact) {
+        return `
+          <div class="space-y-1.5 pt-1">
+            <p class="text-[10px] uppercase tracking-wider text-charcoal-muted font-medium">Notion Workspace Links</p>
+            <div class="flex flex-col gap-1.5">
+              ${notionLinks.map(link => `
+                <a
+                  href="${escapeHtml(link.url)}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-xs text-espresso hover:text-beige underline underline-offset-4 truncate transition-colors"
+                >
+                  &#8599; ${escapeHtml(link.label)}
+                </a>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }
+      return `
+        <div class="p-6 bg-ivory border hairline-dark space-y-3">
+          <div class="flex items-center justify-between border-b hairline-dark pb-2">
+            <h4 class="font-serif text-2xl text-espresso">Live Notion Deliverables</h4>
+            <span class="text-[10px] uppercase tracking-editorial text-beige">Direct Access</span>
+          </div>
+          <p class="text-xs text-charcoal-muted">Open the full workspace or tracker directly in Notion:</p>
+          <div class="flex flex-wrap gap-3 pt-1">
+            ${notionLinks.map(link => `
+              <a
+                href="${escapeHtml(link.url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-editorial inline-flex items-center gap-2 px-4 py-2.5 bg-espresso text-ivory text-xs uppercase tracking-wider hover:bg-beige hover:text-espresso"
+              >
+                <span>${escapeHtml(link.label)}</span>
+                <span>&#8599;</span>
+              </a>
+            `).join("")}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderPortfolio() {
+      const { personal, hero, servicesSection, portfolioSection, experience, about, skillsSection, certificationsSection, contactSection } = portfolioData;
+
+      document.title = `${personal.name} — ${personal.role} | Personal Portfolio`;
+      document.getElementById("nav-monogram").textContent = personal.monogram || personal.name.charAt(0).toUpperCase();
+      document.getElementById("nav-brand-name").textContent = personal.name.toUpperCase();
+      document.getElementById("hero-role").textContent = personal.role.toUpperCase();
+      document.getElementById("hero-greeting").textContent = hero.greeting;
+      document.getElementById("hero-headline").textContent = hero.headline;
+      document.getElementById("hero-subheadline").textContent = hero.supportingText;
+      document.getElementById("hero-primary-cta").textContent = hero.primaryCtaLabel;
+      document.getElementById("hero-secondary-cta").textContent = hero.secondaryCtaLabel;
+      document.getElementById("hero-badge-name").textContent = personal.name;
+
+      const heroImg = document.getElementById("hero-portrait");
+      heroImg.src = personal.heroPortraitUrl || "https://placehold.co/600x800/B69A79/302019?text=Portrait";
+
+      document.getElementById("services-title").textContent = servicesSection.title;
+      const servicesGrid = document.getElementById("services-grid");
+      servicesGrid.innerHTML = servicesSection.items.map((service, idx) => `
+        <article style="transition-delay: ${idx * 90}ms" class="stagger-card bg-ivory/75 border hairline-dark p-7 sm:p-9 hover:bg-ivory hover:border-espresso/30 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 bg-cream border hairline-dark flex items-center justify-center group-hover:border-beige group-hover:scale-105 transition-all duration-300">
+                ${serviceIcons[service.icon] || serviceIcons.catalog}
+              </div>
+              <span class="font-serif text-2xl text-beige italic">${escapeHtml(service.number)}</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-[1.7rem] text-espresso font-normal mb-3">${escapeHtml(service.title)}</h3>
+            <p class="text-sm text-charcoal-muted leading-relaxed mb-6">${escapeHtml(service.description)}</p>
+          </div>
+          <ul class="space-y-2.5 pt-5 border-t hairline-dark">
+            ${service.bullets.map(b => `
+              <li class="flex items-start gap-2.5 text-sm text-charcoal">
+                <span class="text-beige mt-1 text-xs">&#9670;</span>
+                <span>${escapeHtml(b)}</span>
+              </li>
+            `).join("")}
+          </ul>
+        </article>
+      `).join("");
+
+      document.getElementById("portfolio-title").textContent = portfolioSection.title;
+      document.getElementById("portfolio-subtitle").textContent = portfolioSection.subtitle;
+      const portfolioGrid = document.getElementById("portfolio-grid");
+      portfolioGrid.innerHTML = portfolioSection.projects.map((project, idx) => `
+        <article style="transition-delay: ${idx * 100}ms" class="stagger-card bg-cream border hairline-dark flex flex-col justify-between group hover:border-espresso/40">
+          <div>
+            <div class="aspect-[16/10] bg-espresso p-4 flex flex-col justify-between relative overflow-hidden border-b hairline-dark">
+              <div class="flex items-center justify-between text-[10px] uppercase tracking-editorial text-beige z-10">
+                <span>${escapeHtml(project.number)}</span>
+                <span>${escapeHtml(project.category)}</span>
+              </div>
+              ${renderProjectThumbnailPreview(project)}
+              <div class="flex items-center justify-between text-[10px] text-ivory/70 z-10">
+                <span>${escapeHtml(project.label)}</span>
+                <span class="text-beige group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+              </div>
+            </div>
+            <div class="p-6 sm:p-7 space-y-4">
+              <div class="inline-block px-2.5 py-1 bg-ivory border hairline-dark text-[10px] uppercase tracking-wider text-espresso">
+                ${escapeHtml(project.label)}
+              </div>
+              <h3 class="font-serif text-2xl text-espresso font-normal leading-snug group-hover:text-beige transition-colors">
+                ${escapeHtml(project.title)}
+              </h3>
+              <p class="text-sm text-charcoal-muted leading-relaxed">
+                ${escapeHtml(project.shortDescription)}
+              </p>
+              ${renderNotionLinksBlock(project.notionLinks, true)}
+            </div>
+          </div>
+          <div class="px-6 sm:px-7 pb-7 pt-2 space-y-5">
+            <div class="flex flex-wrap gap-2">
+              ${project.tools.map(tool => `
+                <span class="text-[11px] px-2.5 py-1 bg-ivory text-charcoal border hairline-dark">${escapeHtml(tool)}</span>
+              `).join("")}
+            </div>
+            <button
+              type="button"
+              onclick="openCaseStudy('${escapeHtml(project.id)}')"
+              class="btn-editorial w-full py-3.5 px-5 bg-espresso text-ivory text-xs uppercase tracking-editorial hover:bg-beige hover:text-espresso flex items-center justify-center gap-2 group/btn"
+            >
+              <span>View Case Study</span>
+              <span class="group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+            </button>
+          </div>
+        </article>
+      `).join("");
+
+      document.getElementById("experience-title").textContent = experience.title;
+      document.getElementById("experience-role").textContent = experience.position;
+      document.getElementById("experience-summary").textContent = experience.summary;
+      const metricsGrid = document.getElementById("experience-metrics-grid");
+      metricsGrid.innerHTML = experience.metrics.map((m, idx) => `
+        <div style="transition-delay: ${idx * 110}ms" class="stagger-card p-8 sm:p-10 space-y-4 hover:bg-espresso-deep/40">
+          <p class="text-[11px] uppercase tracking-editorial text-beige">${escapeHtml(m.label)}</p>
+          <p class="font-serif text-5xl sm:text-6xl text-ivory font-normal tracking-tight">${escapeHtml(m.value)}</p>
+          <p class="text-sm text-ivory/75 leading-relaxed font-light">${escapeHtml(m.description)}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("about-title").textContent = about.title;
+      document.getElementById("about-caption-role").textContent = personal.role;
+      const aboutImg = document.getElementById("about-portrait");
+      aboutImg.src = personal.aboutPortraitUrl || "https://placehold.co/600x750/EDE5D7/302019?text=Portrait";
+
+      document.getElementById("about-paragraphs").innerHTML = about.paragraphs
+        .map(p => `<p>${escapeHtml(p)}</p>`)
+        .join("");
+      document.getElementById("about-transition").textContent = about.careerTransition;
+      document.getElementById("about-values").innerHTML = about.values
+        .map((v, idx) => `
+          <div style="transition-delay: ${idx * 80}ms" class="stagger-card p-3.5 bg-ivory border hairline-dark">
+            <p class="font-serif text-lg text-espresso">${escapeHtml(v.title)}</p>
+            <p class="text-[11px] text-charcoal-muted mt-0.5">${escapeHtml(v.subtitle)}</p>
+          </div>
+        `).join("");
+
+      document.getElementById("skills-title").textContent = skillsSection.title;
+      document.getElementById("skills-grid").innerHTML = skillsSection.categories.map((cat, idx) => `
+        <div style="transition-delay: ${idx * 100}ms" class="stagger-card bg-cream border hairline-dark p-7 sm:p-8">
+          <div class="flex items-center justify-between pb-4 mb-6 border-b hairline-dark">
+            <h3 class="font-serif text-2xl text-espresso">${escapeHtml(cat.category)}</h3>
+            <span class="font-serif italic text-beige text-lg">0${idx + 1}</span>
+          </div>
+          <ul class="space-y-3">
+            ${cat.items.map(skill => `
+              <li class="flex items-center justify-between text-sm text-charcoal py-1.5 border-b border-espresso/5 last:border-none hover:pl-1.5 transition-all duration-200">
+                <span>${escapeHtml(skill)}</span>
+                <span class="w-1.5 h-1.5 bg-beige"></span>
+              </li>
+            `).join("")}
+          </ul>
+        </div>
+      `).join("");
+
+      document.getElementById("certifications-title").textContent = certificationsSection.title;
+      document.getElementById("certifications-grid").innerHTML = certificationsSection.items.map((cert, idx) => `
+        <article style="transition-delay: ${idx * 100}ms" class="stagger-card bg-ivory border hairline-dark p-7 flex flex-col justify-between">
+          <div class="space-y-4">
+            ${cert.imageUrl ? `
+              <div class="aspect-[16/10] bg-cream border hairline-dark overflow-hidden">
+                <img src="${escapeHtml(cert.imageUrl)}" alt="${escapeHtml(cert.title)}" class="w-full h-full object-cover" onerror="this.parentElement.style.display='none'" />
+              </div>
+            ` : `
+              <div class="p-4 bg-cream border hairline-dark flex items-center justify-between">
+                <span class="text-[10px] uppercase tracking-editorial text-beige">Verified Credential</span>
+                <span class="font-serif italic text-espresso text-sm">${escapeHtml(cert.date)}</span>
+              </div>
+            `}
+            <div>
+              <p class="text-xs uppercase tracking-wider text-charcoal-muted">${escapeHtml(cert.organization)}</p>
+              <h3 class="font-serif text-2xl text-espresso mt-1">${escapeHtml(cert.title)}</h3>
+            </div>
+            ${cert.description ? `<p class="text-sm text-charcoal-muted leading-relaxed">${escapeHtml(cert.description)}</p>` : ""}
+          </div>
+          <div class="pt-6 mt-6 border-t hairline-dark flex items-center justify-between">
+            <span class="text-xs text-charcoal-muted">Completed: ${escapeHtml(cert.date)}</span>
+            ${cert.credentialUrl ? `
+              <a href="${escapeHtml(cert.credentialUrl)}" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-editorial text-espresso hover:text-beige font-medium underline underline-offset-4">
+                View Certificate &rarr;
+              </a>
+            ` : `
+              <span class="text-[11px] uppercase tracking-wider text-charcoal-muted/70">Credential Recorded</span>
+            `}
+          </div>
+        </article>
+      `).join("");
+
+      document.getElementById("contact-title").textContent = contactSection.title;
+      document.getElementById("contact-subtitle").textContent = contactSection.supportingText;
+      const emailCta = document.getElementById("contact-email-cta");
+      emailCta.textContent = contactSection.primaryButtonText;
+      emailCta.href = `mailto:${personal.email}?subject=${encodeURIComponent("Shopify Virtual Assistant Inquiry")}`;
+      document.getElementById("contact-email-display").textContent = personal.email;
+
+      const linkedinCta = document.getElementById("contact-linkedin-cta");
+      if (personal.linkedinUrl && personal.linkedinUrl.trim() !== "") {
+        linkedinCta.href = personal.linkedinUrl;
+        linkedinCta.textContent = contactSection.linkedinButtonText;
+        linkedinCta.classList.remove("hidden");
+      } else {
+        linkedinCta.classList.add("hidden");
+      }
+
+      document.getElementById("footer-copyright").innerHTML = `&copy; ${escapeHtml(personal.copyrightYear)} ${escapeHtml(personal.name)}. All rights reserved.`;
+    }
+
+    function renderProjectThumbnailPreview(project) {
+      if (Array.isArray(project.previewImages) && project.previewImages.length > 0) {
+        if (project.previewImages.length === 1) {
+          const img = project.previewImages[0];
+          return `
+            <div class="my-2 flex-1 relative overflow-hidden border border-ivory/15 bg-espresso-deep">
+              <img
+                src="${escapeHtml(img.src)}"
+                alt="${escapeHtml(img.alt)}"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                onerror="this.parentElement.outerHTML = renderFallbackPreview('${escapeHtml(project.mockupType)}')"
+              />
+            </div>
+          `;
+        }
+        return `
+          <div class="my-2 flex-1 grid grid-cols-2 gap-1.5 overflow-hidden">
+            ${project.previewImages.slice(0, 2).map(img => `
+              <div class="relative h-full min-h-[84px] overflow-hidden border border-ivory/15 bg-espresso-deep">
+                <img
+                  src="${escapeHtml(img.src)}"
+                  alt="${escapeHtml(img.alt)}"
+                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  onerror="this.parentElement.innerHTML = '<div class=\\'p-2 text-[10px] text-beige\\'>${escapeHtml(img.caption)}</div>'"
+                />
+              </div>
+            `).join("")}
+          </div>
+        `;
+      }
+      return renderFallbackPreview(project.mockupType);
+    }
+
+    function renderFallbackPreview(mockupType) {
+      if (mockupType === "inventory") {
+        return `
+          <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2 group-hover:border-beige/40 transition-colors">
+            <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
+              <span>NOTION &bull; INVENTORY</span>
+              <span class="text-beige">SKU Tracker</span>
+            </div>
+            <div class="space-y-1.5 text-[10px]">
+              <div class="flex justify-between text-ivory/80">
+                <span>SOL-SKN-001-50</span>
+                <span class="text-emerald-300">In Stock (48)</span>
+              </div>
+              <div class="flex justify-between text-ivory/80">
+                <span>SOL-SKN-002-50</span>
+                <span class="text-amber-300">Low Stock (11)</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      if (mockupType === "returns") {
+        return `
+          <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2 group-hover:border-beige/40 transition-colors">
+            <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
+              <span>NOTION &bull; RETURN DASHBOARD</span>
+              <span class="text-beige">5 Cases &bull; $310.00</span>
+            </div>
+            <div class="space-y-1.5 text-[10px]">
+              <div class="flex justify-between text-ivory/80">
+                <span>#RET-2001 &bull; Defective</span>
+                <span class="text-amber-300">Exchange</span>
+              </div>
+              <div class="flex justify-between text-ivory/80">
+                <span>#RET-2003 &bull; Wrong Item</span>
+                <span class="text-rose-300">Full Refund</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+      return `
+        <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2 group-hover:border-beige/40 transition-colors">
+          <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
+            <span>NOTION &bull; LOGISTICS</span>
+            <span class="text-beige">Fulfillment Log</span>
+          </div>
+          <div class="space-y-1.5 text-[10px]">
+            <div class="flex justify-between text-ivory/80">
+              <span>#ORD-1041</span>
+              <span class="text-emerald-300">Delivered</span>
+            </div>
+            <div class="flex justify-between text-ivory/80">
+              <span>#ORD-1042</span>
+              <span class="text-beige">Shipped</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function openCaseStudy(projectId) {
+      const project = portfolioData.portfolioSection.projects.find(p => p.id === projectId);
+      if (!project) return;
+
+      document.getElementById("modal-project-label").textContent = project.label;
+      const container = document.getElementById("case-study-content");
+
+      let galleryHtml = "";
+      if (Array.isArray(project.previewImages) && project.previewImages.length > 0) {
+        galleryHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Visual Preview Screenshots</h4>
+              <span class="text-xs text-charcoal-muted">Direct Preview Without Leaving Page</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${project.previewImages.map(img => `
+                <figure class="bg-white border hairline-dark p-3 space-y-2">
+                  <div class="aspect-[16/10] bg-cream overflow-hidden border hairline-dark">
+                    <img
+                      src="${escapeHtml(img.src)}"
+                      alt="${escapeHtml(img.alt)}"
+                      class="w-full h-full object-cover object-top"
+                      onerror="this.parentElement.innerHTML = '<div class=\\'flex items-center justify-center h-full text-xs text-charcoal-muted p-4 text-center\\'>Preview image (${escapeHtml(img.src)}) will appear once uploaded.</div>'"
+                    />
+                  </div>
+                  <figcaption class="text-xs text-charcoal-muted px-1">${escapeHtml(img.caption)}</figcaption>
+                </figure>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      let mockupHtml = "";
+      if (project.mockupType === "shopify" && project.practiceBrands) {
+        mockupHtml = `
+          <div class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Storefront &amp; Catalog Structure Preview</h4>
+              <span class="text-xs text-charcoal-muted">2 Fictional Practice Brands &bull; 4 Structured Listings</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${project.practiceBrands.map(brand => `
+                <div class="bg-white border hairline-dark p-5 sm:p-6 space-y-5">
+                  <div class="border-b hairline-dark pb-3">
+                    <div class="flex items-center justify-between">
+                      <h5 class="font-serif text-2xl text-espresso">${escapeHtml(brand.brandName)}</h5>
+                      <span class="text-[10px] uppercase tracking-wider px-2.5 py-1 bg-ivory text-espresso">${escapeHtml(brand.collection)}</span>
+                    </div>
+                    <p class="text-xs text-charcoal-muted mt-1">${escapeHtml(brand.niche)}</p>
+                  </div>
+                  <div class="space-y-4">
+                    ${brand.products.map(prod => `
+                      <div class="p-4 bg-cream border hairline-dark space-y-2">
+                        <div class="flex items-start justify-between gap-2">
+                          <div>
+                            <span class="text-[10px] uppercase tracking-wider text-beige font-medium">${escapeHtml(prod.category)}</span>
+                            <h6 class="font-serif text-lg text-espresso font-medium">${escapeHtml(prod.title)}</h6>
+                          </div>
+                          <span class="font-medium text-sm text-espresso">${escapeHtml(prod.price)}</span>
+                        </div>
+                        <p class="text-xs text-charcoal-muted leading-relaxed">${escapeHtml(prod.description)}</p>
+                        <div class="pt-2 border-t hairline-dark text-[11px] space-y-1 text-charcoal">
+                          <p><strong class="font-medium">SKU:</strong> <code class="bg-ivory px-1.5 py-0.5">${escapeHtml(prod.sku)}</code></p>
+                          <p><strong class="font-medium">Variants:</strong> ${escapeHtml(prod.variants)}</p>
+                        </div>
+                      </div>
+                    `).join("")}
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      } else if (project.mockupType === "inventory" && project.spreadsheetRows) {
+        mockupHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Organized Tracker Preview (Fictional Data)</h4>
+              <span class="text-xs text-charcoal-muted">Product Catalog &amp; Inventory Tracker</span>
+            </div>
+            <div class="overflow-x-auto border hairline-dark bg-white">
+              <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-espresso text-ivory text-[11px] uppercase tracking-wider">
+                    <th class="py-3 px-4">SKU Code</th>
+                    <th class="py-3 px-4">Product &amp; Variant</th>
+                    <th class="py-3 px-4">Category</th>
+                    <th class="py-3 px-4">Stock Qty</th>
+                    <th class="py-3 px-4">Reorder Min</th>
+                    <th class="py-3 px-4">Inventory Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-espresso/10">
+                  ${project.spreadsheetRows.map(row => {
+                    const badgeClass = row.status === "In Stock"
+                      ? "bg-emerald-50 text-emerald-800 border-emerald-200"
+                      : row.status === "Low Stock"
+                        ? "bg-amber-50 text-amber-800 border-amber-200"
+                        : "bg-rose-50 text-rose-800 border-rose-200";
+                    return `
+                      <tr class="hover:bg-cream/60">
+                        <td class="py-3 px-4 font-mono text-xs text-espresso">${escapeHtml(row.sku)}</td>
+                        <td class="py-3 px-4 font-medium text-charcoal">${escapeHtml(row.product)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.category)}</td>
+                        <td class="py-3 px-4 font-medium">${escapeHtml(row.stock)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.threshold)}</td>
+                        <td class="py-3 px-4">
+                          <span class="inline-block px-2.5 py-0.5 text-[11px] border ${badgeClass}">${escapeHtml(row.status)}</span>
+                        </td>
+                      </tr>
+                    `;
+                  }).join("")}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      } else if (project.mockupType === "orders" && project.orderRows) {
+        mockupHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Order &amp; Logistics Preview (Dummy Records)</h4>
+              <span class="text-xs text-charcoal-muted">Package Tracking &amp; Logistics Dashboard</span>
+            </div>
+            <div class="overflow-x-auto border hairline-dark bg-white">
+              <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-espresso text-ivory text-[11px] uppercase tracking-wider">
+                    <th class="py-3 px-4">Order ID</th>
+                    <th class="py-3 px-4">Order Date</th>
+                    <th class="py-3 px-4">Product Name</th>
+                    <th class="py-3 px-4">SKU</th>
+                    <th class="py-3 px-4">Qty</th>
+                    <th class="py-3 px-4">Status</th>
+                    <th class="py-3 px-4">Tracking Info</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-espresso/10">
+                  ${project.orderRows.map(row => {
+                    const badgeClass = row.status === "Delivered"
+                      ? "bg-emerald-50 text-emerald-800 border-emerald-200"
+                      : row.status === "Shipped"
+                        ? "bg-sky-50 text-sky-800 border-sky-200"
+                        : "bg-amber-50 text-amber-800 border-amber-200";
+                    return `
+                      <tr class="hover:bg-cream/60">
+                        <td class="py-3 px-4 font-mono text-xs font-medium text-espresso">${escapeHtml(row.orderId)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.date)}</td>
+                        <td class="py-3 px-4 font-medium text-charcoal">${escapeHtml(row.item)}</td>
+                        <td class="py-3 px-4 font-mono text-xs text-charcoal-muted">${escapeHtml(row.sku)}</td>
+                        <td class="py-3 px-4">${escapeHtml(row.qty)}</td>
+                        <td class="py-3 px-4">
+                          <span class="inline-block px-2.5 py-0.5 text-[11px] border ${badgeClass}">${escapeHtml(row.status)}</span>
+                        </td>
+                        <td class="py-3 px-4 text-xs text-charcoal-muted">${escapeHtml(row.tracking)}</td>
+                      </tr>
+                    `;
+                  }).join("")}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      } else if (project.mockupType === "returns" && project.returnRows) {
+        mockupHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Return &amp; Refund Dashboard Log (Fictional Records)</h4>
+              <span class="text-xs text-charcoal-muted">Total Summary: 5 Cases &bull; $310.00 Refunded/Credited</span>
+            </div>
+            <div class="overflow-x-auto border hairline-dark bg-white">
+              <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-espresso text-ivory text-[11px] uppercase tracking-wider">
+                    <th class="py-3 px-4">Return ID</th>
+                    <th class="py-3 px-4">Order ID</th>
+                    <th class="py-3 px-4">Customer</th>
+                    <th class="py-3 px-4">Return Reason</th>
+                    <th class="py-3 px-4">Item Condition</th>
+                    <th class="py-3 px-4">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-espresso/10">
+                  ${project.returnRows.map(row => {
+                    const badgeClass = row.action === "Full Refund"
+                      ? "bg-rose-50 text-rose-800 border-rose-200"
+                      : row.action === "Store Credit"
+                        ? "bg-purple-50 text-purple-800 border-purple-200"
+                        : "bg-amber-50 text-amber-800 border-amber-200";
+                    return `
+                      <tr class="hover:bg-cream/60">
+                        <td class="py-3 px-4 font-mono text-xs font-medium text-espresso">${escapeHtml(row.returnId)}</td>
+                        <td class="py-3 px-4 font-mono text-xs text-charcoal-muted">${escapeHtml(row.orderId)}</td>
+                        <td class="py-3 px-4 font-medium text-charcoal">${escapeHtml(row.customer)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.reason)}</td>
+                        <td class="py-3 px-4 text-charcoal-muted">${escapeHtml(row.condition)}</td>
+                        <td class="py-3 px-4">
+                          <span class="inline-block px-2.5 py-0.5 text-[11px] border ${badgeClass}">${escapeHtml(row.action)}</span>
+                        </td>
+                      </tr>
+                    `;
+                  }).join("")}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        `;
+      } else if (project.mockupType === "sop" && project.sopScenarios) {
+        mockupHtml = `
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b hairline-dark pb-3">
+              <h4 class="font-serif text-2xl text-espresso">Customer Support Scripts Preview (Notion SOP)</h4>
+              <span class="text-xs text-charcoal-muted">Status: Active SOP &bull; Priority: High</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              ${project.sopScenarios.map(item => `
+                <div class="bg-white border hairline-dark p-5 sm:p-6 space-y-3">
+                  <h5 class="font-serif text-xl text-espresso font-medium">${escapeHtml(item.scenario)}</h5>
+                  <p class="text-xs text-charcoal-muted"><strong class="text-espresso">Trigger:</strong> ${escapeHtml(item.trigger)}</p>
+                  <div class="p-4 bg-cream border-l-2 border-espresso text-xs sm:text-sm text-charcoal leading-relaxed">
+                    <p class="text-[10px] uppercase tracking-wider text-beige font-medium mb-1">Response Template</p>
+                    <p>${escapeHtml(item.response)}</p>
+                  </div>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      container.innerHTML = `
+        <div class="space-y-4 border-b hairline-dark pb-8">
+          <div class="flex flex-wrap items-center gap-3 text-xs uppercase tracking-editorial text-beige">
+            <span>${escapeHtml(project.number)}</span>
+            <span>&bull;</span>
+            <span>${escapeHtml(project.category)}</span>
+          </div>
+          <h3 id="modal-project-title" class="font-serif text-3xl sm:text-5xl text-espresso font-normal leading-tight">
+            ${escapeHtml(project.title)}
+          </h3>
+          <div class="flex flex-wrap gap-2 pt-2">
+            ${project.tools.map(t => `<span class="px-3 py-1 bg-ivory border hairline-dark text-xs text-espresso">${escapeHtml(t)}</span>`).join("")}
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div class="lg:col-span-7 space-y-6">
+            <div class="space-y-3">
+              <h4 class="font-serif text-2xl text-espresso">Project Overview</h4>
+              <p class="text-sm sm:text-base text-charcoal/90 leading-relaxed">${escapeHtml(project.overview)}</p>
+            </div>
+            ${renderNotionLinksBlock(project.notionLinks, false)}
+          </div>
+          <div class="lg:col-span-5 bg-ivory p-6 border hairline-dark space-y-3">
+            <h4 class="font-serif text-2xl text-espresso">Objectives</h4>
+            <ul class="space-y-2.5">
+              ${project.objectives.map(obj => `
+                <li class="flex items-start gap-2.5 text-sm text-charcoal">
+                  <span class="text-beige mt-1 text-xs">&#9670;</span>
+                  <span>${escapeHtml(obj)}</span>
+                </li>
+              `).join("")}
+            </ul>
+          </div>
+        </div>
+        ${galleryHtml}
+        ${mockupHtml}
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-2">
+          <div class="lg:col-span-7 space-y-4">
+            <h4 class="font-serif text-2xl text-espresso">Step-by-Step Workflow</h4>
+            <ol class="space-y-3">
+              ${project.workflow.map((step, i) => `
+                <li class="flex items-start gap-4 p-4 bg-white border hairline-dark">
+                  <span class="font-serif italic text-xl text-beige">0${i + 1}</span>
+                  <span class="text-sm text-charcoal leading-relaxed">${escapeHtml(step)}</span>
+                </li>
+              `).join("")}
+            </ol>
+          </div>
+          <div class="lg:col-span-5 space-y-4">
+            <h4 class="font-serif text-2xl text-espresso">Key Skills Demonstrated</h4>
+            <div class="bg-espresso text-ivory p-6 space-y-3">
+              ${project.keySkills.map(skill => `
+                <div class="flex items-center gap-3 text-sm border-b hairline-light pb-2.5 last:border-none last:pb-0">
+                  <span class="w-1.5 h-1.5 bg-beige"></span>
+                  <span>${escapeHtml(skill)}</span>
+                </div>
+              `).join("")}
+            </div>
+          </div>
+        </div>
+      `;
+
+      const modal = document.getElementById("case-study-modal");
+      const dialogBox = document.getElementById("case-study-dialog-box");
+      modal.classList.remove("hidden");
+      dialogBox.classList.remove("modal-animate-in");
+      void dialogBox.offsetWidth;
+      dialogBox.classList.add("modal-animate-in");
+      modal.scrollTop = 0;
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeCaseStudy() {
+      document.getElementById("case-study-modal").classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderPortfolio();
+
+      const mobileBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const iconOpen = document.getElementById("menu-icon-open");
+      const iconClose = document.getElementById("menu-icon-close");
+
+      mobileBtn.addEventListener("click", () => {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        iconOpen.classList.toggle("hidden", !isHidden);
+        iconClose.classList.toggle("hidden", isHidden);
+        mobileBtn.setAttribute("aria-expanded", String(isHidden));
+      });
+
+      document.querySelectorAll(".mobile-nav-link").forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+          mobileBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      const sections = document.querySelectorAll("main section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+      const observerOptions = { root: null, rootMargin: "-25% 0px -60% 0px", threshold: 0 };
+      const navObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            navLinks.forEach(link => {
+              const isMatch = link.getAttribute("data-nav") === id;
+              link.classList.toggle("text-beige", isMatch);
+              link.classList.toggle("border-beige", isMatch);
+              link.classList.toggle("border-transparent", !isMatch);
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(sec => navObserver.observe(sec));
+
+      // IntersectionObserver for Sections, Portraits & Staggered Cards
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll(".reveal-section, .portrait-reveal, .stagger-card").forEach(el => {
+        revealObserver.observe(el);
+      });
+
+      document.getElementById("close-case-study-top").addEventListener("click", closeCaseStudy);
+      document.getElementById("close-case-study-bottom").addEventListener("click", closeCaseStudy);
+      document.getElementById("case-study-modal").addEventListener("click", e => {
+        if (e.target.id === "case-study-modal") closeCaseStudy();
+      });
+
+      document.getElementById("copy-email-btn").addEventListener("click", () => {
+        const emailText = portfolioData.personal.email;
+        const tempInput = document.createElement("textarea");
+        tempInput.value = emailText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+          document.execCommand("copy");
+          showToast(`Copied ${emailText} to clipboard`);
+        } catch (err) {
+          showToast("Email: " + emailText);
+        }
+        document.body.removeChild(tempInput);
+      });
+
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape") {
+          closeCaseStudy();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
