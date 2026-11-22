@@ -384,12 +384,7 @@
 
         <footer class="mt-20 pt-8 border-t hairline-light flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ivory/60">
           <p id="footer-copyright">&copy; 2026 rere.shopifyVA. All rights reserved.</p>
-          <div class="flex items-center gap-6">
-            <a href="#home" class="hover:text-beige transition-colors">Back to Top</a>
-            <button id="open-admin-btn" type="button" class="hover:text-beige transition-colors underline decoration-ivory/30 underline-offset-4">
-              Owner Content Manager
-            </button>
-          </div>
+          <a href="#home" class="hover:text-beige transition-colors">Back to Top</a>
         </footer>
       </div>
     </section>
@@ -417,102 +412,6 @@
         <button id="close-case-study-bottom" type="button" class="px-6 py-3 bg-espresso text-ivory text-xs uppercase tracking-editorial hover:bg-beige hover:text-espresso transition-colors">
           &larr; Return to Portfolio
         </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===================================================================== -->
-  <!-- OWNER CONTENT MANAGER MODAL                                           -->
-  <!-- ===================================================================== -->
-  <div id="admin-modal" role="dialog" aria-modal="true" aria-labelledby="admin-modal-title" class="fixed inset-0 z-50 hidden overflow-y-auto bg-espresso/90 backdrop-blur-sm p-4 sm:p-8">
-    <div class="max-w-3xl mx-auto bg-cream text-charcoal border border-beige/50 shadow-2xl overflow-hidden my-6">
-      <div class="bg-espresso text-ivory px-6 py-4 flex items-center justify-between border-b hairline-light">
-        <div>
-          <p class="text-[10px] uppercase tracking-editorial text-beige">Owner Access</p>
-          <h3 id="admin-modal-title" class="font-serif text-xl text-ivory">Portfolio Content Manager</h3>
-        </div>
-        <button id="close-admin-btn" type="button" class="text-ivory/80 hover:text-beige text-sm uppercase tracking-wider px-3 py-1 border hairline-light">
-          Close &times;
-        </button>
-      </div>
-
-      <div id="admin-login-view" class="p-6 sm:p-10 space-y-5">
-        <p class="text-sm text-charcoal-muted leading-relaxed">
-          Enter your owner password to update personal details, links, certifications, or projects directly in your browser, or export a ready-to-save <code class="bg-ivory px-1.5 py-0.5 text-espresso">portfolioData.js</code> configuration file.
-        </p>
-        <div class="p-3 bg-ivory border hairline-dark text-xs text-charcoal-muted">
-          Demo Passcode: <strong class="text-espresso">rere2026</strong> (For permanent public updates across all visitors, export the updated configuration file and replace the data block in your hosted code.)
-        </div>
-        <form id="admin-login-form" class="space-y-4">
-          <div>
-            <label for="admin-password-input" class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1.5">Passcode</label>
-            <input id="admin-password-input" type="password" placeholder="Enter passcode..." class="w-full px-4 py-3 bg-white border hairline-dark text-sm focus:outline-none focus:border-espresso" required />
-          </div>
-          <p id="admin-login-error" class="hidden text-xs text-red-700">Incorrect passcode. Please try again.</p>
-          <button type="submit" class="px-6 py-3 bg-espresso text-ivory text-xs uppercase tracking-editorial hover:bg-beige hover:text-espresso transition-colors">
-            Unlock Editor
-          </button>
-        </form>
-      </div>
-
-      <div id="admin-editor-view" class="hidden p-6 sm:p-8 space-y-8">
-        <div class="space-y-4">
-          <h4 class="font-serif text-2xl text-espresso border-b hairline-dark pb-2">A. Personal &amp; Contact Information</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Display Name</label>
-              <input id="edit-name" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
-            </div>
-            <div>
-              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Professional Title</label>
-              <input id="edit-role" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
-            </div>
-            <div>
-              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Email Address</label>
-              <input id="edit-email" type="email" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
-            </div>
-            <div>
-              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">LinkedIn Profile URL</label>
-              <input id="edit-linkedin" type="url" placeholder="https://www.linkedin.com/in/your-profile" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
-            </div>
-            <div>
-              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Hero Portrait URL</label>
-              <input id="edit-hero-photo" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
-            </div>
-            <div>
-              <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">About Portrait URL</label>
-              <input id="edit-about-photo" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
-            </div>
-          </div>
-          <div>
-            <label class="block text-xs uppercase tracking-wider text-charcoal-muted mb-1">Hero Main Headline</label>
-            <input id="edit-headline" type="text" class="w-full px-3 py-2 bg-white border hairline-dark text-sm" />
-          </div>
-        </div>
-
-        <div class="space-y-4">
-          <div class="flex items-center justify-between border-b hairline-dark pb-2">
-            <h4 class="font-serif text-2xl text-espresso">B. Certifications</h4>
-            <button id="admin-add-cert-btn" type="button" class="px-3 py-1.5 bg-espresso text-ivory text-[11px] uppercase tracking-wider hover:bg-beige hover:text-espresso transition-colors">
-              + Add Certificate
-            </button>
-          </div>
-          <div id="admin-cert-list" class="space-y-4"></div>
-        </div>
-
-        <div class="pt-4 border-t hairline-dark flex flex-wrap items-center justify-between gap-3">
-          <button id="admin-reset-btn" type="button" class="px-4 py-2.5 border hairline-dark text-xs uppercase tracking-wider text-charcoal-muted hover:text-espresso">
-            Reset to Defaults
-          </button>
-          <div class="flex flex-wrap gap-3">
-            <button id="admin-export-btn" type="button" class="px-5 py-2.5 border border-espresso text-espresso text-xs uppercase tracking-wider hover:bg-ivory">
-              Download portfolioData.js
-            </button>
-            <button id="admin-save-btn" type="button" class="px-6 py-2.5 bg-espresso text-ivory text-xs uppercase tracking-wider hover:bg-beige hover:text-espresso transition-colors">
-              Save &amp; Apply Changes
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -972,14 +871,7 @@
       }
     };
 
-    let portfolioData = JSON.parse(JSON.stringify(defaultPortfolioData));
-    try {
-      const savedData = localStorage.getItem("rere_portfolio_data_v1");
-      if (savedData) {
-        const parsed = JSON.parse(savedData);
-        portfolioData = { ...portfolioData, ...parsed };
-      }
-    } catch (e) {}
+    const portfolioData = defaultPortfolioData;
   </script>
 
   <!-- ===================================================================== -->
@@ -1647,51 +1539,6 @@
       document.body.style.overflow = "";
     }
 
-    function openAdminModal() {
-      document.getElementById("admin-modal").classList.remove("hidden");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeAdminModal() {
-      document.getElementById("admin-modal").classList.add("hidden");
-      document.body.style.overflow = "";
-    }
-
-    function populateAdminFields() {
-      document.getElementById("edit-name").value = portfolioData.personal.name || "";
-      document.getElementById("edit-role").value = portfolioData.personal.role || "";
-      document.getElementById("edit-email").value = portfolioData.personal.email || "";
-      document.getElementById("edit-linkedin").value = portfolioData.personal.linkedinUrl || "";
-      document.getElementById("edit-hero-photo").value = portfolioData.personal.heroPortraitUrl || "";
-      document.getElementById("edit-about-photo").value = portfolioData.personal.aboutPortraitUrl || "";
-      document.getElementById("edit-headline").value = portfolioData.hero.headline || "";
-      renderAdminCertList();
-    }
-
-    function renderAdminCertList() {
-      const list = document.getElementById("admin-cert-list");
-      list.innerHTML = portfolioData.certificationsSection.items.map((cert, index) => `
-        <div class="p-4 bg-ivory border hairline-dark space-y-3" data-cert-index="${index}">
-          <div class="flex items-center justify-between">
-            <span class="text-xs font-medium uppercase tracking-wider text-espresso">Certificate #${index + 1}</span>
-            <button type="button" onclick="removeAdminCert(${index})" class="text-xs text-red-700 hover:underline">Remove</button>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input type="text" data-field="title" value="${escapeHtml(cert.title)}" placeholder="Certificate Title" class="px-3 py-2 bg-white border hairline-dark text-xs" />
-            <input type="text" data-field="organization" value="${escapeHtml(cert.organization)}" placeholder="Issuing Organization" class="px-3 py-2 bg-white border hairline-dark text-xs" />
-            <input type="text" data-field="date" value="${escapeHtml(cert.date)}" placeholder="Completion Date (e.g. Oct 2026)" class="px-3 py-2 bg-white border hairline-dark text-xs" />
-            <input type="url" data-field="credentialUrl" value="${escapeHtml(cert.credentialUrl || "")}" placeholder="Credential Link URL (optional)" class="px-3 py-2 bg-white border hairline-dark text-xs" />
-            <input type="text" data-field="imageUrl" value="${escapeHtml(cert.imageUrl || "")}" placeholder="Certificate Image URL (optional)" class="sm:col-span-2 px-3 py-2 bg-white border hairline-dark text-xs" />
-          </div>
-        </div>
-      `).join("");
-    }
-
-    window.removeAdminCert = function(index) {
-      portfolioData.certificationsSection.items.splice(index, 1);
-      renderAdminCertList();
-    };
-
     document.addEventListener("DOMContentLoaded", () => {
       renderPortfolio();
 
@@ -1765,91 +1612,9 @@
         document.body.removeChild(tempInput);
       });
 
-      document.getElementById("open-admin-btn").addEventListener("click", openAdminModal);
-      document.getElementById("close-admin-btn").addEventListener("click", closeAdminModal);
-
-      document.getElementById("admin-login-form").addEventListener("submit", e => {
-        e.preventDefault();
-        const pass = document.getElementById("admin-password-input").value;
-        if (pass === "rere2026") {
-          document.getElementById("admin-login-error").classList.add("hidden");
-          document.getElementById("admin-login-view").classList.add("hidden");
-          document.getElementById("admin-editor-view").classList.remove("hidden");
-          populateAdminFields();
-        } else {
-          document.getElementById("admin-login-error").classList.remove("hidden");
-        }
-      });
-
-      document.getElementById("admin-add-cert-btn").addEventListener("click", () => {
-        portfolioData.certificationsSection.items.push({
-          title: "New Certification Title",
-          organization: "Issuing Organization",
-          date: "2026",
-          description: "",
-          imageUrl: "",
-          credentialUrl: ""
-        });
-        renderAdminCertList();
-      });
-
-      document.getElementById("admin-save-btn").addEventListener("click", () => {
-        portfolioData.personal.name = document.getElementById("edit-name").value.trim() || "rere.shopifyVA";
-        portfolioData.personal.monogram = portfolioData.personal.name.charAt(0).toUpperCase();
-        portfolioData.personal.role = document.getElementById("edit-role").value.trim() || "Shopify Virtual Assistant";
-        portfolioData.personal.email = document.getElementById("edit-email").value.trim();
-        portfolioData.personal.linkedinUrl = document.getElementById("edit-linkedin").value.trim();
-        portfolioData.personal.heroPortraitUrl = document.getElementById("edit-hero-photo").value.trim();
-        portfolioData.personal.aboutPortraitUrl = document.getElementById("edit-about-photo").value.trim();
-        portfolioData.hero.headline = document.getElementById("edit-headline").value.trim();
-
-        const certCards = document.querySelectorAll("#admin-cert-list [data-cert-index]");
-        const updatedCerts = [];
-        certCards.forEach(card => {
-          updatedCerts.push({
-            title: card.querySelector('[data-field="title"]').value.trim(),
-            organization: card.querySelector('[data-field="organization"]').value.trim(),
-            date: card.querySelector('[data-field="date"]').value.trim(),
-            credentialUrl: card.querySelector('[data-field="credentialUrl"]').value.trim(),
-            imageUrl: card.querySelector('[data-field="imageUrl"]').value.trim(),
-            description: ""
-          });
-        });
-        portfolioData.certificationsSection.items = updatedCerts;
-
-        try {
-          localStorage.setItem("rere_portfolio_data_v1", JSON.stringify(portfolioData));
-        } catch (e) {}
-
-        renderPortfolio();
-        closeAdminModal();
-        showToast("Portfolio content updated.");
-      });
-
-      document.getElementById("admin-reset-btn").addEventListener("click", () => {
-        localStorage.removeItem("rere_portfolio_data_v1");
-        portfolioData = JSON.parse(JSON.stringify(defaultPortfolioData));
-        populateAdminFields();
-        renderPortfolio();
-        showToast("Restored default portfolio settings.");
-      });
-
-      document.getElementById("admin-export-btn").addEventListener("click", () => {
-        const fileContent = `// Centralized Portfolio Configuration for rere.shopifyVA\nconst defaultPortfolioData = ${JSON.stringify(portfolioData, null, 2)};\n`;
-        const blob = new Blob([fileContent], { type: "application/javascript" });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "portfolioData.js";
-        a.click();
-        URL.revokeObjectURL(url);
-        showToast("Downloaded portfolioData.js");
-      });
-
       document.addEventListener("keydown", e => {
         if (e.key === "Escape") {
           closeCaseStudy();
-          closeAdminModal();
         }
       });
     });
