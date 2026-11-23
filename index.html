@@ -60,36 +60,36 @@
       border-color: rgba(48, 32, 25, 0.14);
     }
 
-    /* 1. Scroll Reveal Animation */
+    /* 1. Scroll Reveal Animation (More Pronounced) */
     .reveal-section {
       opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+      transform: translateY(34px);
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .reveal-section.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* Staggered Card Reveal */
+    /* Staggered Card Reveal + Tactile Hover */
     .stagger-card {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.35s ease;
+      transform: translateY(32px) scale(0.985);
+      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.35s ease;
     }
     .stagger-card.is-visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
-    .stagger-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 14px 30px -12px rgba(48, 32, 25, 0.14);
+    .stagger-card.is-visible:hover {
+      transform: translateY(-6px) scale(1.008);
+      box-shadow: 0 18px 36px -12px rgba(48, 32, 25, 0.22);
     }
 
-    /* 2. Portrait Mini Animation (Cinematic Zoom + Floating Frame) */
+    /* 2. Portrait Mini Animation (Stronger Cinematic Zoom + Offset Frame) */
     .portrait-reveal {
       opacity: 0;
-      transform: scale(0.95) translateY(16px);
+      transform: scale(0.92) translateY(28px);
       transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .portrait-reveal.is-visible {
@@ -97,55 +97,57 @@
       transform: scale(1) translateY(0);
     }
     .portrait-reveal img {
-      transform: scale(1.08);
-      transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+      transform: scale(1.14);
+      transition: transform 1.25s cubic-bezier(0.22, 1, 0.36, 1), filter 0.5s ease;
     }
     .portrait-reveal.is-visible img {
       transform: scale(1);
     }
-    .portrait-reveal:hover img {
-      transform: scale(1.03);
+    .portrait-reveal.is-visible:hover img {
+      transform: scale(1.06);
     }
     .portrait-frame-offset {
       transform: translate(0px, 0px);
       opacity: 0;
-      transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s, opacity 0.8s ease 0.2s;
+      transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s, opacity 0.7s ease 0.15s, border-color 0.3s ease;
     }
     .portrait-reveal.is-visible .portrait-frame-offset {
-      transform: translate(10px, 10px);
+      transform: translate(14px, 14px);
       opacity: 1;
     }
-    .portrait-reveal:hover .portrait-frame-offset {
-      transform: translate(14px, 14px);
+    .portrait-reveal.is-visible:hover .portrait-frame-offset {
+      transform: translate(20px, 20px);
+      border-color: rgba(182, 154, 121, 0.85);
     }
 
-    /* 3. Interactive Button Micro-Interactions (Shimmer + Tactile Press) */
+    /* 3. Interactive Button Micro-Interactions (Bold Shimmer + Lift + Press) */
     .btn-editorial {
       position: relative;
       overflow: hidden;
-      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease;
     }
     .btn-editorial::after {
       content: "";
       position: absolute;
       top: 0;
-      left: -120%;
-      width: 70%;
+      left: -135%;
+      width: 80%;
       height: 100%;
-      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.28), transparent);
-      transform: skewX(-22deg);
-      transition: left 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+      transform: skewX(-24deg);
+      transition: left 0.6s cubic-bezier(0.22, 1, 0.36, 1);
       pointer-events: none;
     }
     .btn-editorial:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px -6px rgba(48, 32, 25, 0.25);
+      transform: translateY(-4px) scale(1.015);
+      box-shadow: 0 12px 24px -6px rgba(48, 32, 25, 0.35);
     }
     .btn-editorial:hover::after {
-      left: 150%;
+      left: 160%;
     }
     .btn-editorial:active {
-      transform: translateY(1px) scale(0.985);
+      transform: translateY(2px) scale(0.96);
+      box-shadow: 0 4px 10px -4px rgba(48, 32, 25, 0.25);
     }
 
     /* Nav Underline Micro-animation */
@@ -158,9 +160,9 @@
       bottom: -2px;
       left: 50%;
       width: 0;
-      height: 1px;
+      height: 1.5px;
       background-color: #B69A79;
-      transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1), left 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      transition: width 0.28s cubic-bezier(0.22, 1, 0.36, 1), left 0.28s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .nav-link:hover::before {
       width: 100%;
@@ -171,7 +173,7 @@
     @keyframes modalFadeUp {
       from {
         opacity: 0;
-        transform: translateY(16px) scale(0.99);
+        transform: translateY(24px) scale(0.97);
       }
       to {
         opacity: 1;
@@ -179,7 +181,7 @@
       }
     }
     .modal-animate-in {
-      animation: modalFadeUp 0.38s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation: modalFadeUp 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
 
     .portrait-backdrop {
@@ -210,7 +212,7 @@
     <div class="max-w-6xl mx-auto px-5 sm:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20">
         <a href="#home" class="group flex items-center gap-3 focus:outline-none">
-          <span class="w-8 h-8 border border-beige/60 flex items-center justify-center font-serif text-lg tracking-widest text-beige group-hover:bg-beige group-hover:text-espresso group-hover:rotate-6 transition-all duration-300" id="nav-monogram">R</span>
+          <span class="w-8 h-8 border border-beige/60 flex items-center justify-center font-serif text-lg tracking-widest text-beige group-hover:bg-beige group-hover:text-espresso group-hover:rotate-12 group-hover:scale-105 transition-all duration-300" id="nav-monogram">R</span>
           <span class="font-serif text-xl sm:text-2xl tracking-wide text-ivory font-medium" id="nav-brand-name">RERE.SHOPIFYVA</span>
         </a>
 
@@ -225,7 +227,7 @@
           <a href="#contact" data-nav="contact" class="nav-link hover:text-beige transition-colors py-1 border-b border-transparent">Contact</a>
         </nav>
 
-        <button id="mobile-menu-btn" type="button" aria-label="Open Navigation Menu" aria-expanded="false" class="lg:hidden p-2.5 text-ivory hover:text-beige focus:outline-none border border-ivory/20 active:scale-95 transition-transform">
+        <button id="mobile-menu-btn" type="button" aria-label="Open Navigation Menu" aria-expanded="false" class="lg:hidden p-2.5 text-ivory hover:text-beige focus:outline-none border border-ivory/20 active:scale-90 transition-transform">
           <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 7.5h16.5M3.75 12h16.5M3.75 16.5h16.5" />
           </svg>
@@ -292,8 +294,8 @@
 
             <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center">
               <div class="relative w-64 sm:w-72 md:w-80 portrait-reveal">
-                <div class="absolute inset-0 border border-beige/40 pointer-events-none portrait-frame-offset"></div>
-                <div class="relative portrait-backdrop aspect-[3/4] overflow-hidden border border-beige/40 flex items-end justify-center shadow-xl">
+                <div class="absolute inset-0 border border-beige/50 pointer-events-none portrait-frame-offset"></div>
+                <div class="relative portrait-backdrop aspect-[3/4] overflow-hidden border border-beige/40 flex items-end justify-center shadow-2xl">
                   <img
                     id="hero-portrait"
                     src="foto-hero.jpg"
@@ -304,7 +306,7 @@
                   <div class="absolute bottom-0 inset-x-0 bg-espresso/90 backdrop-blur-sm py-2.5 px-4 border-t border-beige/30 flex items-center justify-between text-[10px] uppercase tracking-editorial text-ivory/90">
                     <span id="hero-badge-name">rere.shopifyVA</span>
                     <span class="text-beige flex items-center gap-1.5">
-                      <span class="w-1.5 h-1.5 rounded-full bg-beige animate-pulse"></span>
+                      <span class="w-1.5 h-1.5 rounded-full bg-beige animate-ping"></span>
                       Operations &amp; Catalog
                     </span>
                   </div>
@@ -389,8 +391,8 @@
       <div class="max-w-6xl mx-auto px-5 sm:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div class="lg:col-span-5 flex justify-center">
-            <div class="relative w-full max-w-sm portrait-reveal">
-              <div class="aspect-[4/5] bg-ivory border hairline-dark p-3 shadow-sm">
+            <div class="relative w-full max-w-sm portrait-reveal group/about">
+              <div class="aspect-[4/5] bg-ivory border hairline-dark p-3 shadow-md relative z-10 group-hover/about:-translate-y-1.5 transition-transform duration-300">
                 <div class="w-full h-full bg-[#DFD5C5] overflow-hidden relative">
                   <img
                     id="about-portrait"
@@ -416,7 +418,7 @@
 
             <div class="space-y-4 text-charcoal/90 text-base leading-relaxed" id="about-paragraphs"></div>
 
-            <div class="p-6 bg-ivory border-l-2 border-espresso space-y-2 hover:bg-ivory/80 transition-colors">
+            <div class="p-6 bg-ivory border-l-2 border-espresso space-y-2 hover:bg-ivory/80 hover:border-beige transition-all">
               <h3 class="font-serif text-xl text-espresso font-medium">Career Transition</h3>
               <p id="about-transition" class="text-sm text-charcoal-muted leading-relaxed"></p>
             </div>
@@ -492,7 +494,7 @@
 
         <div class="mt-8 inline-flex items-center gap-3 px-5 py-2.5 border hairline-light bg-espresso-deep/60 text-xs text-ivory/80">
           <span id="contact-email-display">reskarliani@gmail.com</span>
-          <button id="copy-email-btn" type="button" class="text-beige hover:text-ivory uppercase tracking-wider text-[10px] border-l hairline-light pl-3 transition-all active:scale-90">
+          <button id="copy-email-btn" type="button" class="text-beige hover:text-ivory uppercase tracking-wider text-[10px] border-l hairline-light pl-3 transition-all active:scale-75 hover:scale-105">
             Copy
           </button>
         </div>
@@ -501,7 +503,7 @@
           <p id="footer-copyright">&copy; 2026 rere.shopifyVA. All rights reserved.</p>
           <a href="#home" class="hover:text-beige transition-colors inline-flex items-center gap-1.5 group">
             <span>Back to Top</span>
-            <span class="group-hover:-translate-y-0.5 transition-transform">&uarr;</span>
+            <span class="group-hover:-translate-y-1 transition-transform">&uarr;</span>
           </a>
         </footer>
       </div>
@@ -515,7 +517,7 @@
     <div id="case-study-dialog-box" class="max-w-5xl mx-auto bg-cream text-charcoal border border-beige/40 shadow-2xl overflow-hidden my-4">
       <div class="sticky top-0 z-10 bg-espresso text-ivory px-5 sm:px-8 py-4 flex items-center justify-between border-b hairline-light">
         <button id="close-case-study-top" type="button" class="inline-flex items-center gap-2 text-xs uppercase tracking-editorial text-beige hover:text-ivory transition-colors group">
-          <span class="group-hover:-translate-x-1 transition-transform">&larr;</span>
+          <span class="group-hover:-translate-x-1.5 transition-transform">&larr;</span>
           <span>Back to Selected Projects</span>
         </button>
         <span id="modal-project-label" class="hidden sm:inline-block text-[10px] uppercase tracking-editorial px-3 py-1 border border-beige/40 text-beige">
@@ -1089,10 +1091,10 @@
       document.getElementById("services-title").textContent = servicesSection.title;
       const servicesGrid = document.getElementById("services-grid");
       servicesGrid.innerHTML = servicesSection.items.map((service, idx) => `
-        <article style="transition-delay: ${idx * 90}ms" class="stagger-card bg-ivory/75 border hairline-dark p-7 sm:p-9 hover:bg-ivory hover:border-espresso/30 flex flex-col justify-between group">
+        <article style="transition-delay: ${idx * 100}ms" class="stagger-card bg-ivory/75 border hairline-dark p-7 sm:p-9 hover:bg-ivory hover:border-espresso/35 flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-6">
-              <div class="w-12 h-12 bg-cream border hairline-dark flex items-center justify-center group-hover:border-beige group-hover:scale-105 transition-all duration-300">
+              <div class="w-12 h-12 bg-cream border hairline-dark flex items-center justify-center group-hover:border-beige group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                 ${serviceIcons[service.icon] || serviceIcons.catalog}
               </div>
               <span class="font-serif text-2xl text-beige italic">${escapeHtml(service.number)}</span>
@@ -1115,7 +1117,7 @@
       document.getElementById("portfolio-subtitle").textContent = portfolioSection.subtitle;
       const portfolioGrid = document.getElementById("portfolio-grid");
       portfolioGrid.innerHTML = portfolioSection.projects.map((project, idx) => `
-        <article style="transition-delay: ${idx * 100}ms" class="stagger-card bg-cream border hairline-dark flex flex-col justify-between group hover:border-espresso/40">
+        <article style="transition-delay: ${idx * 110}ms" class="stagger-card bg-cream border hairline-dark flex flex-col justify-between group hover:border-espresso/40">
           <div>
             <div class="aspect-[16/10] bg-espresso p-4 flex flex-col justify-between relative overflow-hidden border-b hairline-dark">
               <div class="flex items-center justify-between text-[10px] uppercase tracking-editorial text-beige z-10">
@@ -1125,7 +1127,7 @@
               ${renderProjectThumbnailPreview(project)}
               <div class="flex items-center justify-between text-[10px] text-ivory/70 z-10">
                 <span>${escapeHtml(project.label)}</span>
-                <span class="text-beige group-hover:translate-x-1.5 transition-transform duration-300">&rarr;</span>
+                <span class="text-beige group-hover:translate-x-2 transition-transform duration-300">&rarr;</span>
               </div>
             </div>
             <div class="p-6 sm:p-7 space-y-4">
@@ -1153,7 +1155,7 @@
               class="btn-editorial w-full py-3.5 px-5 bg-espresso text-ivory text-xs uppercase tracking-editorial hover:bg-beige hover:text-espresso flex items-center justify-center gap-2 group/btn"
             >
               <span>View Case Study</span>
-              <span class="group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+              <span class="group-hover/btn:translate-x-1.5 transition-transform">&rarr;</span>
             </button>
           </div>
         </article>
@@ -1164,7 +1166,7 @@
       document.getElementById("experience-summary").textContent = experience.summary;
       const metricsGrid = document.getElementById("experience-metrics-grid");
       metricsGrid.innerHTML = experience.metrics.map((m, idx) => `
-        <div style="transition-delay: ${idx * 110}ms" class="stagger-card p-8 sm:p-10 space-y-4 hover:bg-espresso-deep/40">
+        <div style="transition-delay: ${idx * 120}ms" class="stagger-card p-8 sm:p-10 space-y-4 hover:bg-espresso-deep/50">
           <p class="text-[11px] uppercase tracking-editorial text-beige">${escapeHtml(m.label)}</p>
           <p class="font-serif text-5xl sm:text-6xl text-ivory font-normal tracking-tight">${escapeHtml(m.value)}</p>
           <p class="text-sm text-ivory/75 leading-relaxed font-light">${escapeHtml(m.description)}</p>
@@ -1182,7 +1184,7 @@
       document.getElementById("about-transition").textContent = about.careerTransition;
       document.getElementById("about-values").innerHTML = about.values
         .map((v, idx) => `
-          <div style="transition-delay: ${idx * 80}ms" class="stagger-card p-3.5 bg-ivory border hairline-dark">
+          <div style="transition-delay: ${idx * 90}ms" class="stagger-card p-3.5 bg-ivory border hairline-dark">
             <p class="font-serif text-lg text-espresso">${escapeHtml(v.title)}</p>
             <p class="text-[11px] text-charcoal-muted mt-0.5">${escapeHtml(v.subtitle)}</p>
           </div>
@@ -1190,14 +1192,14 @@
 
       document.getElementById("skills-title").textContent = skillsSection.title;
       document.getElementById("skills-grid").innerHTML = skillsSection.categories.map((cat, idx) => `
-        <div style="transition-delay: ${idx * 100}ms" class="stagger-card bg-cream border hairline-dark p-7 sm:p-8">
+        <div style="transition-delay: ${idx * 110}ms" class="stagger-card bg-cream border hairline-dark p-7 sm:p-8">
           <div class="flex items-center justify-between pb-4 mb-6 border-b hairline-dark">
             <h3 class="font-serif text-2xl text-espresso">${escapeHtml(cat.category)}</h3>
             <span class="font-serif italic text-beige text-lg">0${idx + 1}</span>
           </div>
           <ul class="space-y-3">
             ${cat.items.map(skill => `
-              <li class="flex items-center justify-between text-sm text-charcoal py-1.5 border-b border-espresso/5 last:border-none hover:pl-1.5 transition-all duration-200">
+              <li class="flex items-center justify-between text-sm text-charcoal py-1.5 border-b border-espresso/5 last:border-none hover:pl-2 transition-all duration-200">
                 <span>${escapeHtml(skill)}</span>
                 <span class="w-1.5 h-1.5 bg-beige"></span>
               </li>
@@ -1208,7 +1210,7 @@
 
       document.getElementById("certifications-title").textContent = certificationsSection.title;
       document.getElementById("certifications-grid").innerHTML = certificationsSection.items.map((cert, idx) => `
-        <article style="transition-delay: ${idx * 100}ms" class="stagger-card bg-ivory border hairline-dark p-7 flex flex-col justify-between">
+        <article style="transition-delay: ${idx * 110}ms" class="stagger-card bg-ivory border hairline-dark p-7 flex flex-col justify-between">
           <div class="space-y-4">
             ${cert.imageUrl ? `
               <div class="aspect-[16/10] bg-cream border hairline-dark overflow-hidden">
@@ -1267,7 +1269,7 @@
               <img
                 src="${escapeHtml(img.src)}"
                 alt="${escapeHtml(img.alt)}"
-                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
                 onerror="this.parentElement.outerHTML = renderFallbackPreview('${escapeHtml(project.mockupType)}')"
               />
             </div>
@@ -1280,7 +1282,7 @@
                 <img
                   src="${escapeHtml(img.src)}"
                   alt="${escapeHtml(img.alt)}"
-                  class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-700"
                   onerror="this.parentElement.innerHTML = '<div class=\\'p-2 text-[10px] text-beige\\'>${escapeHtml(img.caption)}</div>'"
                 />
               </div>
@@ -1294,7 +1296,7 @@
     function renderFallbackPreview(mockupType) {
       if (mockupType === "inventory") {
         return `
-          <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2 group-hover:border-beige/40 transition-colors">
+          <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2 group-hover:border-beige/50 transition-colors">
             <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
               <span>NOTION &bull; INVENTORY</span>
               <span class="text-beige">SKU Tracker</span>
@@ -1314,7 +1316,7 @@
       }
       if (mockupType === "returns") {
         return `
-          <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2 group-hover:border-beige/40 transition-colors">
+          <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2 group-hover:border-beige/50 transition-colors">
             <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
               <span>NOTION &bull; RETURN DASHBOARD</span>
               <span class="text-beige">5 Cases &bull; $310.00</span>
@@ -1333,7 +1335,7 @@
         `;
       }
       return `
-        <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2 group-hover:border-beige/40 transition-colors">
+        <div class="my-2 border border-ivory/15 bg-espresso-deep/90 p-3.5 space-y-2 group-hover:border-beige/50 transition-colors">
           <div class="flex items-center justify-between text-[10px] text-ivory/60 border-b border-ivory/10 pb-1.5">
             <span>NOTION &bull; LOGISTICS</span>
             <span class="text-beige">Fulfillment Log</span>
@@ -1713,7 +1715,7 @@
             revealObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.1 });
+      }, { threshold: 0.12 });
 
       document.querySelectorAll(".reveal-section, .portrait-reveal, .stagger-card").forEach(el => {
         revealObserver.observe(el);
