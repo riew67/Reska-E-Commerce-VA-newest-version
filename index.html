@@ -721,10 +721,13 @@ practiceBrands: [
             number: "PROJECT 02",
             label: "Self-Initiated Practice Project",
             category: "Inventory Operations",
-            title: "SKU & Inventory Tracking System",
+            title: "Product Catalog & Inventory Tracking System",
             shortDescription: "A structured Notion & spreadsheet inventory tracker monitoring SKU records, real-time stock quantities, reorder thresholds, and stock status indicators.",
             tools: ["Notion", "Google Sheets", "Data Organization", "SKU Management"],
-            previewImages: [],
+            previewImages: [
+              { src: "Project 02_Soleil", alt: "Soleil & Co. Catalog and Inventory Tracker", caption: "Soleil & Co. Inventory Tracker" },
+              { src: "Project 02_Veloce", alt: "Veloce Atelier Catalog and Inventory Tracker", caption: "Veloce Atelier Inventory Tracker" }
+            ],
             notionLinks: [
               {
                 label: "Product Catalog & Inventory Tracker",
@@ -750,11 +753,13 @@ practiceBrands: [
             ],
             mockupType: "inventory",
             spreadsheetRows: [
-              { sku: "SOL-SKN-001-50", product: "Neroli Dew Balancing Mist (50 ml)", category: "Skincare", stock: 48, threshold: 15, status: "In Stock" },
-              { sku: "SOL-SKN-002-50", product: "Squalane Barrier Cream (50g)", category: "Skincare", stock: 11, threshold: 15, status: "Low Stock" },
-              { sku: "VEL-APP-101-ESP-M", product: "Sculpt Studio Tank — Espresso / M", category: "Apparel", stock: 34, threshold: 10, status: "In Stock" },
-              { sku: "VEL-APP-102-CHR-S", product: "Motion 7/8 Legging — Charcoal / S", category: "Apparel", stock: 4, threshold: 12, status: "Restock Needed" },
-              { sku: "VEL-APP-101-IVR-S", product: "Sculpt Studio Tank — Ivory / S", category: "Apparel", stock: 22, threshold: 10, status: "In Stock" }
+{ sku: "SOL-SRM-30ML", product: "Radiance Glow Serum (30ml)", category: "Skincare", stock: 25, threshold: 10, status: "In Stock" },
+              { sku: "SOL-MST-100ML", product: "Calming Facial Mist (100ml)", category: "Skincare", stock: 3, threshold: 10, status: "Low Stock" },
+              { sku: "SOL-MST-50ML", product: "Calming Facial Mist (50ml Travel Size)", category: "Skincare", stock: 0, threshold: 10, status: "Sold Out" },
+              { sku: "VA-TEE-BLK-S", product: "Essential Oversized Black Tee (Size S)", category: "Apparel", stock: 12, threshold: 5, status: "In Stock" },
+              { sku: "VA-TEE-BLK-M", product: "Essential Oversized Black Tee (Size M)", category: "Apparel", stock: 4, threshold: 5, status: "Low Stock" },
+              { sku: "VA-TEE-BLK-L", product: "Essential Oversized Black Tee (Size L)", category: "Apparel", stock: 0, threshold: 5, status: "Sold Out" },
+              { sku: "VA-BLZ-CRM-M", product: "Linen Blazer - Cream (Size M)", category: "Apparel", stock: 5, threshold: 5, status: "Low Stock" }
             ]
           },
           {
