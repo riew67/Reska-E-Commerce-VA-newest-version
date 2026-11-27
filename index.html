@@ -764,11 +764,11 @@ practiceBrands: [
           },
           {
             id: "shopify-order-tracking",
-            number: "PROJECT 03",
+number: "PROJECT 03",
             label: "Self-Initiated Practice Project",
             category: "Fulfillment & Order Logs",
             title: "Shopify Order & Fulfillment Tracker",
-            shortDescription: "An organized logistics & order tracking dashboard monitoring dummy order IDs, ordered items, order dates, fulfillment stages, and courier tracking statuses.",
+            shortDescription: "An organized logistics & order tracking dashboard monitoring dummy order IDs, customers, ordered items, order totals, courier tracking numbers, and fulfillment statuses.",
             tools: ["Notion", "Google Sheets", "Order Administration", "Process Tracking"],
             previewImages: [],
             notionLinks: [
@@ -777,16 +777,16 @@ practiceBrands: [
                 url: "https://app.notion.com/p/Package-Tracking-Logistics-Dashboard-411c6e19f42e8060badac42dac7a0c80?source=copy_link"
               }
             ],
-            overview: "This self-initiated practice project simulates a daily order and package management log used to monitor incoming customer orders from payment confirmation through packing, dispatch, and final delivery—reducing missed shipments and simplifying status updates.",
+            overview: "This self-initiated practice project simulates a daily order and package management log used to monitor incoming customer orders, order values, shipping carriers, and tracking statuses across fulfillment stages—reducing missed shipments and simplifying status updates.",
             objectives: [
-              "Maintain a chronological log of fictional orders with unique Order IDs and dates.",
-              "Link each order accurately to product names, SKUs, and quantities.",
-              "Track fulfillment stages clearly across Pending, Processing, Shipped, and Delivered."
+              "Maintain a clear log of fictional orders with unique Order IDs and customer details.",
+              "Link each order accurately to product names, quantities, and total prices.",
+              "Track shipping carriers, tracking numbers, and fulfillment stages across Delivered, In Transit, and Unfulfilled."
             ],
             workflow: [
-              "Built a clean order tracking table with Order ID, Order Date, Product & SKU, Qty, Fulfillment Status, and Tracking Reference.",
-              "Populated realistic dummy order scenarios covering multiple fulfillment stages.",
-              "Organized status filtering so pending shipments can be prioritized each morning."
+              "Built a structured order tracking sheet with Order ID, Customer Name, Product Name, QTY, Total Price, Carrier, Tracking Number, and Fulfillment Status.",
+              "Populated realistic dummy order scenarios covering multiple shipping carriers and fulfillment stages.",
+              "Summarized order counts and total order value by fulfillment status for quick operational checks."
             ],
             keySkills: [
               "Order Status Tracking",
@@ -796,10 +796,9 @@ practiceBrands: [
             ],
             mockupType: "orders",
             orderRows: [
-              { orderId: "#ORD-1041", date: "2026-10-18", item: "Neroli Dew Balancing Mist (100 ml)", sku: "SOL-SKN-001-100", qty: 1, status: "Delivered", tracking: "TRK-884920" },
-              { orderId: "#ORD-1042", date: "2026-10-19", item: "Sculpt Studio Tank — Espresso / M", sku: "VEL-APP-101-ESP-M", qty: 2, status: "Shipped", tracking: "TRK-885104" },
-              { orderId: "#ORD-1043", date: "2026-10-20", item: "Squalane Barrier Moisture Cream", sku: "SOL-SKN-002-50", qty: 1, status: "Processing", tracking: "Pending Label" },
-              { orderId: "#ORD-1044", date: "2026-10-21", item: "Motion High-Rise 7/8 Legging — S", sku: "VEL-APP-102-CHR-S", qty: 1, status: "Pending", tracking: "Awaiting Dispatch" }
+              { orderId: "#VA-1001", customer: "Sarah Jenkins", item: "Radiance Glow Serum", qty: 2, totalPrice: "$64.00", carrier: "DHL Express", status: "Delivered", tracking: "9823410521" },
+              { orderId: "#VA-1002", customer: "Michael Chen", item: "Calming Facial Mist", qty: 1, totalPrice: "$22.00", carrier: "USPS", status: "In Transit", tracking: "9400111202003" },
+              { orderId: "#VA-1003", customer: "Emma Watson", item: "Black Graphic Tee", qty: 1, totalPrice: "$45.00", carrier: "FedEx", status: "Unfulfilled", tracking: "78123901239" }
             ]
           },
           {
